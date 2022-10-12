@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyFragment</string>
+    <string name="FragmentA">FragmentA</string>
+    <string name="FragmentB">FragmentB</string>
+    <string name="FragmentC">FragmentC</string>
+    <string name="ChangeFragment">ChangeFragment</string>
+    <string name="Text1">To_C</string>
+    <string name="Text2">This is Fragment B</string>
+    <string name="Text3">To_A</string>
+</resources>

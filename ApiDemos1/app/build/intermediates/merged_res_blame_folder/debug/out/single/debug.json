@@ -1,0 +1,2150 @@
+[
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_remote_service_binding.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\remote_service_binding.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_transition.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\transition.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_position.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_position.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_color_animator.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\color_animator.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_motogp_stat_item.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\motogp_stat_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_0.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_0.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_stat_sample.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\stat_sample.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_btn_check_on.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\btn_check_on.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_headers.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_headers.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_appwidget_provider.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\appwidget_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_9.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_9.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_focus_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\focus_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_smile.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\smile.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_ic_settings_applications.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\ic_settings_applications.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-xhdpi_ic_launcher_settings.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-xhdpi\\ic_launcher_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_black_box.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\black_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_stack.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_stack.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_hover_background_inactive.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\hover_background_inactive.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_scroll_view_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\scroll_view_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_ic_launcher_settings.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\ic_launcher_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_camera_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\camera_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_title_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_title_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_presentation_with_media_router_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\presentation_with_media_router_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_incoming_message_info.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\incoming_message_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_reorder_three.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\reorder_three.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_push_left_out.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\push_left_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_edit_text_demo.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\edit_text_demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_share_content.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\share_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_frantic.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\frantic.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_appwidget_configure.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\appwidget_configure.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_custom_pointer_icon.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\custom_pointer_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_logonodpi160.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\logonodpi160.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_icon48x48_2.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\icon48x48_2.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_popup_menu_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\popup_menu_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_animation_row_left_slide.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_animation_row_left_slide.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_log_text_box_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\log_text_box_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_action_bar_share_action_provider.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\action_bar_share_action_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_reorder_two.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\reorder_two.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_image_details.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\image_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_grid_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\grid_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_incoming_message_panel.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\incoming_message_panel.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-land_fragment_layout.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-land\\fragment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_intent_activity_flags.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\intent_activity_flags.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_appwidget_provider.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\appwidget_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_logonodpi240.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\logonodpi240.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-h974dp_resources_height.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-h974dp\\resources_height.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\animator_fragment_slide_left_exit.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\animator\\fragment_slide_left_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_progress_particle.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\progress_particle.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_rotation_animation.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\rotation_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap4.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_animator_set.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\animator_set.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_searchview_in_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\searchview_in_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_game.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\game.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_2.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_status_bar_notifications.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\status_bar_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_pick_contact.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\pick_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_13.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_13.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tabs_right_gravity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tabs_right_gravity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_arrow_up_float.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\arrow_up_float.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_random_fade.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_random_fade.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_seeking.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_seeking.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_layout_reference.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_layout_reference.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-ldpi_stylogo120dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-ldpi\\stylogo120dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_soft_input_modes.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\soft_input_modes.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_overscan_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\overscan_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_navigation_target.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_navigation_target.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_ic_launcher_settings.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\ic_launcher_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo2.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_fade.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\fade.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_number_picker.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\number_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_4.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_line.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\line.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_round_rect.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\round_rect.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_smlnpatch160dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\smlnpatch160dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_item_icon_text.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_item_icon_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_screen_off.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_screen_off.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_arrow_down_float.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\arrow_down_float.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_title_only.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\title_only.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_transition_scene3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\transition_scene3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_6.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_incoming_message.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\incoming_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_explode_move_together.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\explode_move_together.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_object_animator_pvh_kf.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\object_animator_pvh_kf.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap2.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_layout.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_forward_target.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\forward_target.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_seekbar_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\seekbar_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_navigation.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_npatch160dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\npatch160dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_scrollbar_vertical_track.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\scrollbar_vertical_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_date_widgets_example_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\date_widgets_example_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_reorder_four.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\reorder_four.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_nested_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_nested_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animator_events.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animator_events.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_game_controller_input.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\game_controller_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_mediaplayer_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\mediaplayer_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_local_sample.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\local_sample.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_reversing.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_reversing.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-ldpi_logo120dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-ldpi\\logo120dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_0.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_0.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_search_invoke.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\search_invoke.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_6.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_focus_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\focus_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_stat_neutral.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\stat_neutral.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_shape_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\shape_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_reorder_on_launch.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\reorder_on_launch.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_display_options_actions.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\display_options_actions.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_shadow_card_drag.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\shadow_card_drag.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_job_work_service_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\job_work_service_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_textclock.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\textclock.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_relative_layout_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\relative_layout_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_slide_left.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\slide_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_window_state_changed.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_window_state_changed.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animations_by_default.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animations_by_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_ic_popup_reminder.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\ic_popup_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_btn_check_off.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\btn_check_off.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_title.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_button.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\button.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_alert_dialog_icon.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\alert_dialog_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_text_switcher_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\text_switcher_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_stylogo160dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\stylogo160dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_star_big_on.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\star_big_on.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_link.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\link.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_7.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_7.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_search_query_results.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\search_query_results.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_pencil.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\pencil.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_controls_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\controls_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_6.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_apidemo_androidlogo.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\apidemo_androidlogo.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw600dp_resources_smallest_width_inner.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw600dp\\resources_smallest_width_inner.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_external_storage.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\external_storage.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_alarm_service.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\alarm_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_shake.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\shake.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap0.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap0.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_5.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_videoview.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\videoview.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_progressbar_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\progressbar_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_send_result.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\send_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_4.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_shape_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\shape_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_display_options_custom.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_display_options_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_view_focused_or_selected.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_view_focused_or_selected.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_labeled_text_edit.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\labeled_text_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_zoom_enter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\zoom_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw720dp_resources_smallest_width_inner.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw720dp\\resources_smallest_width_inner.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_dialog.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_styled_text.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\styled_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_block.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\block.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_transitions_mgr.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\transitions_mgr.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_bouncing_balls.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\bouncing_balls.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_text_view_demo.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\text_view_demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_shape_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\shape_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_shape_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\shape_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_3.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_grid_inverse_fade.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_grid_inverse_fade.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tooltips.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tooltips.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_zoom_exit.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\zoom_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_ball.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\ball.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_filled_box.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\filled_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_alert_dialog.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\alert_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_secure_dialog_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\secure_dialog_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_install_apk_session_api.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\install_apk_session_api.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_5.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_8.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_8.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_progressbar_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\progressbar_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-w720dp_resources_width.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-w720dp\\resources_width.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animations.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animations.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tabs1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tabs1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_hover_background.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\hover_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animations_main_screen.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animations_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_hello_world.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\hello_world.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_smallest_width.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_smallest_width.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_alert_dialog_text_entry.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\alert_dialog_text_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-w1024dp_resources_width.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-w1024dp\\resources_width.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_wallpaper_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\wallpaper_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_text_undo.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\text_undo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_4.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_changebounds_fadeout_sequential.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\changebounds_fadeout_sequential.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_1.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_redirect_getter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\redirect_getter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_remote_binding_options.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\remote_binding_options.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap1.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_beach.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\beach.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_test_cbr.mp3.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\test_cbr.mp3"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_shape_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\shape_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-ldpi_reslogo120dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-ldpi\\reslogo120dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_changebounds_fadein_together.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\changebounds_fadein_together.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_presentation_content.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\presentation_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_clipboard.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\clipboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw720dp_resources_smallest_width_row.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw720dp\\resources_smallest_width_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_action_bar_settings_action_provider.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\action_bar_settings_action_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_cycle_7.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\cycle_7.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_keystore_usage.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\keystore_usage.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_hide_show.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_hide_show.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_controls_material.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\controls_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_launcher_shortcuts.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\launcher_shortcuts.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_game_controller_input_text_column.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\game_controller_input_text_column.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_media_projection.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\media_projection.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_progress_circular_background.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\progress_circular_background.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_picture_in_picture.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\picture_in_picture.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_stylogo240dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\stylogo240dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animator_custom_evaluator.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animator_custom_evaluator.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_media_content_observer.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\media_content_observer.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_nested_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_nested_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_icon48x48_1.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\icon48x48_1.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_12.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_12.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_balloons.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\balloons.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_magnification_service.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\magnification_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_install_apk.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\install_apk.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_2.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_arguments.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_arguments.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_btn_default_normal.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\btn_default_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_expiration.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_expiration.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_ic_contact_picture.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\ic_contact_picture.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_transition_scene2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\transition_scene2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_push_left_in.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\push_left_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_focus_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\focus_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_dialog_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_dialog_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_slide_right.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\slide_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_quality.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_quality.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_app_sample_code.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\app_sample_code.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_grid_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\grid_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_smallest_width_inner.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_smallest_width_inner.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_cloning.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_cloning.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_encryption.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_encryption.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_stat_happy.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\stat_happy.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_radio_group_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\radio_group_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw480dp_resources_smallest_width_row.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw480dp\\resources_smallest_width_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_custom_evaluator.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_custom_evaluator.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_service_start_arguments_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\service_start_arguments_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_android_logo.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\android_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_10.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_10.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_3.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_frog.gif.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\frog.gif"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_button.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\button.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_notification_background_service.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\notification_background_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_path_animations.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\path_animations.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_presentation_with_media_router_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\presentation_with_media_router_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_consumer_ir.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\consumer_ir.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw600dp_resources_smallest_width_row.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw600dp\\resources_smallest_width_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_surface_view_overlay.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\surface_view_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_scrollbar_state2.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\scrollbar_state2.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_animation_row_right_slide.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_animation_row_right_slide.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_width_and_height.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_width_and_height.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_print_custom_content.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\print_custom_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_smlnpatch240dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\smlnpatch240dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_actions.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\actions.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-ldpi_smlnpatch120dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-ldpi\\smlnpatch120dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_magnifying_glass.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\magnifying_glass.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_hyperspace_out.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\hyperspace_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_picture_in_picture_auto_enter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\picture_in_picture_auto_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_star_big_on.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\star_big_on.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_activity_recreate.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\activity_recreate.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_secure_view_overlay.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\secure_view_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-h670dp_resources_height.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-h670dp\\resources_height.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_androids.pkm.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\androids.pkm"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_background_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_background_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\animator_fragment_slide_right_enter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\animator\\fragment_slide_right_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_pointer_types.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\pointer_types.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_2.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_changebounds.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\changebounds.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_print_html_off_screen.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\print_html_off_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_layout_reference_tablet.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_layout_reference_tablet.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_6.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-land_grid_layout_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-land\\grid_layout_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_btn_check_off.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\btn_check_off.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_image_block.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\image_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_remote_service_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\remote_service_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_foreground_dispatch.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\foreground_dispatch.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_transition_scene1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\transition_scene1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_multi_property.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_multi_property.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_11.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_11.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_progressbar_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\progressbar_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_logo240dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\logo240dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-w600dp_resources_width.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-w600dp\\resources_width.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_incoming_message_view.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\incoming_message_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_progress_circular_background.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\progress_circular_background.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_move_image.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\move_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tabs_scroll.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tabs_scroll.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_activity_finish_affinity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\activity_finish_affinity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_visibility_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\visibility_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_apidemo_androidlogo.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\apidemo_androidlogo.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_simple_list_item_checkable_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\simple_list_item_checkable_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_box_white.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\box_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_animation_table.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_animation_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_icon48x48_2.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\icon48x48_2.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_local_service_binding.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\local_service_binding.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_process_text_send.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\process_text_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_view_hover_enter.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_view_hover_enter.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_general.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_general.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_10.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_10.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_activity_animation.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\activity_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_alert_dialog_icon.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\alert_dialog_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_smallest_width_row.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_smallest_width_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_focus_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\focus_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_display_options.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_display_options.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_loading.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_robot.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\robot.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_presentation_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\presentation_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_animation_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\animation_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_incoming_message_interstitial.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\incoming_message_interstitial.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_arguments_fragment.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_arguments_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_scroll_view_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\scroll_view_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_sms_demo.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\sms_demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_jellies.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\jellies.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_split_touch_view.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\split_touch_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_hover.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\hover.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_motogp_stats.html.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\motogp_stats.html"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_animated_gif.gif.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\animated_gif.gif"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_smile.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\smile.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_activity_transition_mgr.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\activity_transition_mgr.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_disabled.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_ringer_normal.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_ringer_normal.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_settings_action_provider.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_settings_action_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_google_login.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\google_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_bottom_to_top_slide.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_bottom_to_top_slide.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_woot.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\woot.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_mapview.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\mapview.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_12.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_12.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_redirect_enter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\redirect_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_chronometer.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_8.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_8.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_5.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_object_animator_pvh.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\object_animator_pvh.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_1.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_text_to_speech.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\text_to_speech.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_date_widgets_example_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\date_widgets_example_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_stat_neutral.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\stat_neutral.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo1.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_rotating_list.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\rotating_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo3.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_relative_layout_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\relative_layout_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_btn_circle_normal.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\btn_circle_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_submenu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\submenu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_foreground_service_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\foreground_service_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_density_image_views.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\density_image_views.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_3.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap3.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-ldpi_npatch120dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-ldpi\\npatch120dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_picture_in_picture_source_rect_hint.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\picture_in_picture_source_rect_hint.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_searchview_actionbar.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\searchview_actionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_6.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_tab_content.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_tab_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_sample.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_sample.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animation_6.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animation_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_save_restore_state.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\save_restore_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_spinner_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\spinner_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_dialog_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\dialog_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_app_sample_code.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\app_sample_code.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_view_accessibility.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_view_accessibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_table_layout_6.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\table_layout_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_shadow_card_stack.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\shadow_card_stack.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_tabs_fragment.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_tabs_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_searchable.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\searchable.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_ic_settings_display.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\ic_settings_display.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_nested_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_nested_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_context_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_context_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_progress_particle.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\progress_particle.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_shape_drawable_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\shape_drawable_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_8.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_8.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_wave_scale.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_wave_scale.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_hold.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\hold.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_hover_background_active.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\hover_background_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_external_storage_item.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\external_storage_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_secure_view.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\secure_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_filter_nfc.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\filter_nfc.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_print_html_from_screen.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\print_html_from_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_game_controller_input_heading.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\game_controller_input_heading.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_5.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_wave_scale.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\wave_scale.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_secure_surface_view_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\secure_surface_view_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_value_animator_pvh_kf.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\value_animator_pvh_kf.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_redirect_main.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\redirect_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_ic_contact_picture.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\ic_contact_picture.png"
+    },
+    {
+        "merged": "com.example.android.apis.app-merged_res-5:/layout_fragment_dialog.xml.flat",
+        "source": "com.example.android.apis.app-main-7:/layout/fragment_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_stat_sad.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\stat_sad.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_morse_code.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\morse_code.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_push_up_out.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\push_up_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_layout_grid_fade.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\layout_grid_fade.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_dialog_or_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_dialog_or_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_receive_result.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\receive_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_autocomplete_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\autocomplete_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-land_fragment_arguments.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-land\\fragment_arguments.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_btn_default_normal.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\btn_default_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_videoviewdemo.mp4.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\videoviewdemo.mp4"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_npatch240dpi.9.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\npatch240dpi.9.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_ringer_silent.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_ringer_silent.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_layout_animations_hideshow.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\layout_animations_hideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_retain_instance.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_retain_instance.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-h550dp_resources_height.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-h550dp\\resources_height.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_contacts_filter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\contacts_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_ic_popup_reminder.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\ic_popup_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_logonodpi120.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\logonodpi120.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_custom_view_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\custom_view_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_category_order.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\category_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tasklist_row.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tasklist_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_push_up_in.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\push_up_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_trigger_sensors.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\trigger_sensors.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_slide_top_to_bottom.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\slide_top_to_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_width.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_width.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_mediaplayer_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\mediaplayer_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_6.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_horizontal_scroll_view1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\horizontal_scroll_view1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_object_animator.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\object_animator.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_groups.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\groups.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_local_service_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\local_service_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_image_view_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\image_view_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_resources_height.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\resources_height.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_quick_contacts.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\quick_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_mms_demo.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\mms_demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_image_button_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\image_button_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_list_select_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\list_select_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo6.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_translucent_background.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\translucent_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_grid_layout_2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\grid_layout_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_switches.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\switches.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_device_admin_lock_wipe.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\device_admin_lock_wipe.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_scrollbar1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\scrollbar1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_ducky.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\ducky.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_translucent_bars.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\translucent_bars.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_btn_check_on.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\btn_check_on.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_alarm_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\alarm_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_presentation_list_item.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\presentation_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_read_asset.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\read_asset.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_7.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_7.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_accessibility_service.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\accessibility_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_forwarding.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\forwarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_circular_progress.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\circular_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_arrow_down_float.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\arrow_down_float.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_drag_layout.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\drag_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_video_player.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\video_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_status_bar_balloon.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\status_bar_balloon.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_rotating_view.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\rotating_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_animator.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\animator.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_btn_circle_normal.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\btn_circle_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo4.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_buttons_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\buttons_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_menu.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_shortcuts.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\shortcuts.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_ratingbar_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\ratingbar_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_search_view.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_scrollbar_state2.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\scrollbar_state2.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_stat_happy.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\stat_happy.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_reslogo240dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\reslogo240dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_list_item_checkbox.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\list_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_visible.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\visible.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_box.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\box.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_black_opaque_box.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\black_opaque_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_fragment_layout.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\fragment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_linear_layout_9.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\linear_layout_9.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_system_ui_modes.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\system_ui_modes.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_7.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_7.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_stat_sad.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\stat_sad.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_scrollbar2.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\scrollbar2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_order.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\order.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_overlay_window.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\overlay_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_presentation_with_media_router_content.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\presentation_with_media_router_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_notifying_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\notifying_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_notify_with_text.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\notify_with_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_intents.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\intents.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_object_animator_pvh_kf_interpolated.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\object_animator_pvh_kf_interpolated.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\transition_explode.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\transition\\explode.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_process_text_main.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\process_text_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_checkable.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_view_clicked.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_view_clicked.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_scrollbar_vertical_thumb.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\scrollbar_vertical_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout-sw480dp_resources_smallest_width_inner.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout-sw480dp\\resources_smallest_width_inner.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-mdpi_stat_sample.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-mdpi\\stat_sample.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_picture_in_picture_seamless_resize.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\picture_in_picture_seamless_resize.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_picture_frame.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\picture_frame.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_title_icon.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\title_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-hdpi_arrow_up_float.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-hdpi\\arrow_up_float.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_reslogo160dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\reslogo160dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_scrollbar3.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\scrollbar3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_searchview_filter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\searchview_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_screen_orientation.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\screen_orientation.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_voice_recognition.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\voice_recognition.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_popup.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_grid_layout_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\grid_layout_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_content_browser_nav.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\content_browser_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_logo160dpi.png.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\logo160dpi.png"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\xml_taskbackconfig.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\xml\\taskbackconfig.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\animator_fragment_slide_right_exit.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\animator\\fragment_slide_right_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_action_bar_tabs.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\action_bar_tabs.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_skycubemap5.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\skycubemap5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_scissors.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\scissors.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_webview_1.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\webview_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_photo5.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\photo5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_sample_thumb_1.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\sample_thumb_1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_print_bitmap.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\print_bitmap.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_baseline_4.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\baseline_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_marquee.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\marquee.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_isolated_service_controller.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\isolated_service_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_tasklist_main.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\tasklist_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_screen_on.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_screen_on.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_content_browser.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\content_browser.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable_gallery_photo_8.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable\\gallery_photo_8.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_messenger_service_binding.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\messenger_service_binding.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_density_styled_image_views.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\density_styled_image_views.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\menu_content_actions.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\menu\\content_actions.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_window_focus_observer.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\window_focus_observer.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_secure_window_activity.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\secure_window_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\anim_hyperspace_in.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\anim\\hyperspace_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\animator_fragment_slide_left_enter.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\animator\\fragment_slide_left_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\layout_select_dialog.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\layout\\select_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\raw_sound_ringer_vibrate.ogg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\raw\\sound_ringer_vibrate.ogg"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-merged_res-5:\\drawable-nodpi_mug.jpg.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.android.apis.app-main-7:\\drawable-nodpi\\mug.jpg"
+    }
+]

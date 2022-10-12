@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.android.apis.app-mergeDebugResources-3:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\HHcode\\ApiDemos1\\app\\src\\main\\res\\values-land\\integers.xml",
+                    "from": {
+                        "startLines": "19",
+                        "startColumns": "2",
+                        "startOffsets": "856",
+                        "endColumns": "50",
+                        "endOffsets": "904"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endColumns": "52",
+                        "endOffsets": "312"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SWL\\.gradle\\caches\\transforms-3\\3c9be549a48b342277e2b30ac73eddd1\\transformed\\appcompat-1.2.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}
