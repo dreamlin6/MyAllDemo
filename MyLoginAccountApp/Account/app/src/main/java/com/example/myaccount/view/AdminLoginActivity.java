@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 
@@ -15,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.R;
 import com.example.myaccount.databinding.ActivityAdminloginBinding;
+import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 
 public class AdminLoginActivity extends AppCompatActivity {
@@ -25,6 +28,7 @@ public class AdminLoginActivity extends AppCompatActivity {
     private final String LOGIN_FAIL = "登录失败!";
     private ActivityAdminloginBinding activityAdminloginBinding;
     private AdminLoginViewModel adminLoginViewModel;
+    private MyDialog myDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,8 +55,9 @@ public class AdminLoginActivity extends AppCompatActivity {
 
         activityAdminloginBinding.editAdminUser.addTextChangedListener(watcher); //监听输入框变化
         activityAdminloginBinding.editAdminPass.addTextChangedListener(watcher);
+        activityAdminloginBinding.editAdminPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//隐藏密码显示
         activityAdminloginBinding.loginTips.addTextChangedListener(watcher1);
-//        adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
+        adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -91,17 +96,32 @@ public class AdminLoginActivity extends AppCompatActivity {
         }
     };
 
-//    private Observer<Integer> loginObserve = new Observer<Integer>() {
-//        @Override
-//        public void onChanged(@Nullable Integer isLogin) {
-//            Log.i(TAG,"LoginActivity onChanged isLogin = " + isLogin);
-//            if (isLogin == 1) {
-//                activityAdminloginBinding.loginTips.setText(LOGIN_SUCCESS);
-//            } else if (isLogin == 2) {
-//                activityAdminloginBinding.loginTips.setText(LOGIN_FAIL);
-//            } else {
-//            }
-//        }
-//    };
+    private Observer<Integer> loginObserve = new Observer<Integer>() {
+
+        @Override
+        public void onChanged(@Nullable Integer isLogin) {
+            Log.i(TAG,"LoginActivity onChanged isLogin = " + isLogin);
+            if (isLogin == 1) {
+                if (myDialog == null) {
+                    myDialog = new MyDialog(AdminLoginActivity.this);
+                    myDialog.setsCancel("取消", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            myDialog.dismiss();
+                            activityAdminloginBinding.loginTips.setText(WAIT_LOGIN);
+                        }
+                    }).setsConfirm("确定", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).show();
+                } else {
+                    myDialog.show();
+                }
+            } else {
+            }
+        }
+    };
 
 }

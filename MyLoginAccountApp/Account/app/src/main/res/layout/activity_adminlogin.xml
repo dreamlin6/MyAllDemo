@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@{adminloginvm.mLoginStatusTips}"
             android:textSize="@dimen/textSize30"
-            android:textColor="@color/black"
+            android:textColor="@color/red"
             android:layout_marginTop="@dimen/dimen_60"
             app:loginStatus="@{adminloginvm.mAdminLoginStatus}"/>
         <EditText
@@ -38,7 +38,6 @@
             android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
             android:hint="@string/pass_tips"
-            android:inputType="textPassword"
             android:layout_marginTop="@dimen/layout_marginTop30"/>
         <Button
             android:id="@+id/adminLogin"

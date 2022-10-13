@@ -11,6 +11,7 @@
     <dimen name="layout_marginRight10">10dp</dimen>
     <dimen name="layout_marginRight5">5dp</dimen>
     <dimen name="layout_marginTop5">5dp</dimen>
+    <dimen name="layout_marginTop15">15dp</dimen>
     <dimen name="layout_marginLeft20">20dp</dimen>
     <dimen name="layout_marginRight20">20dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
