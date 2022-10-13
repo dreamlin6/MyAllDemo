@@ -1,10 +1,10 @@
 package com.example.myaccount.view;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
@@ -113,7 +113,8 @@ public class AdminLoginActivity extends AppCompatActivity {
                     }).setsConfirm("确定", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-
+                            Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
+                            startActivity(intent);
                         }
                     }).show();
                 } else {

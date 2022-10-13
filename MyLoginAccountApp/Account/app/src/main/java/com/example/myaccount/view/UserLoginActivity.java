@@ -1,6 +1,7 @@
 package com.example.myaccount.view;
 
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,5 +29,7 @@ public class UserLoginActivity extends AppCompatActivity {
                         .getInstance(getApplication()); //viewmodel实例
         userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
+
+        activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
     }
 }
