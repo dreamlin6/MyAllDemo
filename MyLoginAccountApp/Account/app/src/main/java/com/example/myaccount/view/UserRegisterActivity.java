@@ -9,12 +9,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.R;
 import com.example.myaccount.databinding.ActivityRegisterBinding;
-import com.example.myaccount.viewmodel.AdminViewModel;
 import com.example.myaccount.viewmodel.UserRegisterViewModel;
 
 
 public class UserRegisterActivity extends AppCompatActivity {
 
+    private final String TAG = "TestLog";
     private ActivityRegisterBinding activityRegisterBinding;
     private UserRegisterViewModel userRegisterViewModel;
 

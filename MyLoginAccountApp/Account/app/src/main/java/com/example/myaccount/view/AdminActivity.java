@@ -13,6 +13,7 @@ import com.example.myaccount.viewmodel.AdminViewModel;
 
 public class AdminActivity extends AppCompatActivity {
 
+    private final String TAG = "TestLog";
     private ActivityAdminBinding activityAdminBinding;
     private AdminViewModel adminViewModel;
 

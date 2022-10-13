@@ -7,6 +7,7 @@
     <string name="admin">Admin</string>
     <string name="login">LOGIN</string>
     <string name="loginFail">Login Failed</string>
+    <string name="loginSuccess">Login Successful</string>
     <string name="username">USERNAME</string>
     <string name="acconut">ACCOUNT</string>
     <string name="password">PASSWORD</string>

@@ -13,6 +13,7 @@ import com.example.myaccount.viewmodel.UserLoginViewModel;
 
 public class UserLoginActivity extends AppCompatActivity {
 
+    private final String TAG = "TestLog";
     private UserLoginViewModel userLoginViewModel;
     private ActivityLoginBinding activityLoginBinding;
 

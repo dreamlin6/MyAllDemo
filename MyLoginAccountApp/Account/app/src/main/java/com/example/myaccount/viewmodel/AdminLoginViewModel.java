@@ -9,17 +9,29 @@ import com.example.myaccount.constant.Constant;
 
 public class AdminLoginViewModel extends ViewModel {
 
-    private final String TAG = "AdminLoginViewModel";
-    public MutableLiveData<Boolean> mAdminLoginStatus;
+    private final String TAG = "TestLog";
+    private final String LOGIN_SUCCESS = "登录成功!";
+    private final String LOGIN_FAIL = "登录失败!";
+    private final String ADMIN_USER = "1";
+    private final String ADMIN_PASS = "1";
+    private final int ONE = 1;
+    private final int TWO = 2;
+    public MutableLiveData<Integer> mAdminLoginStatus;
     public MutableLiveData<Boolean> mEditStatus;
+    public MutableLiveData<String> mLoginStatusTips;
 
     public AdminLoginViewModel() {
-        this.mAdminLoginStatus = new MutableLiveData<>(Constant.mBool);
+        this.mAdminLoginStatus = new MutableLiveData<>();
         this.mEditStatus = new MutableLiveData<>(Constant.mBool);
+        this.mLoginStatusTips = new MutableLiveData<>(Constant.mWAIT);
     }
 
-    public void setmAdminLoginStatus(boolean isLogin) {
+    public void setmAdminLoginStatus(Integer isLogin) {
         mAdminLoginStatus.postValue(isLogin);
+    }
+
+    public MutableLiveData<Integer> getmAdminLoginStatus() {
+        return mAdminLoginStatus;
     }
 
     public void setmEditStatus(boolean isEdit) {
@@ -27,13 +39,15 @@ public class AdminLoginViewModel extends ViewModel {
     }
 
     public void mAdminLogin(String user, String pass) {
-        if (user.equals("1") && pass.equals("1")) {
-            Log.i("TAG", "mAdminLogin TRUE");
-            mAdminLoginStatus.setValue(true);
+        if (user.equals(ADMIN_USER) && pass.equals(ADMIN_PASS)) {
+            Log.i(TAG, "mAdminLogin TRUE");
+            setmAdminLoginStatus(ONE);
+            mLoginStatusTips.setValue(LOGIN_SUCCESS);
             updateLoginDialog();
         } else {
-            Log.i("TAG", "mAdminLogin FALSE");
-            mAdminLoginStatus.setValue(false);
+            Log.i(TAG, "mAdminLogin FALSE");
+            setmAdminLoginStatus(TWO);
+            mLoginStatusTips.setValue(LOGIN_FAIL);
         }
     }
 
