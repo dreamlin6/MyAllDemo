@@ -5,7 +5,7 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="@dimen/dimen_300"
+        android:layout_width="@dimen/dimen_280"
         android:layout_height="@dimen/dimen_60"
         android:orientation="horizontal">
         <TextView
@@ -13,7 +13,9 @@
             android:layout_width="@dimen/dimen_120"
             android:layout_height="@dimen/dimen_30"
             android:text="@string/user"
+            android:textColor="@color/lime"
             android:gravity="center"
+            android:textSize="@dimen/textSize26"
             android:layout_gravity="center"/>
         <LinearLayout
             android:layout_width="@dimen/dimen_180"
@@ -26,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_marginTop5"
                 android:layout_marginLeft="@dimen/layout_marginLeft5"
+                android:textColor="@color/black"
                 android:text="@string/acconut"/>
             <TextView
                 android:id="@+id/ul_pass"
@@ -33,13 +36,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_marginTop5"
                 android:layout_marginLeft="@dimen/layout_marginLeft5"
-                android:text="@string/pass"/>
+                android:text="@string/pass"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
     <Button
         android:id="@+id/ul_bt"
         android:layout_width="@dimen/dimen_100"
         android:layout_height="@dimen/dimen_60"
-        android:layout_marginLeft="@dimen/layout_marginLeft5"
+        android:textColor="@color/red"
+        android:layout_marginLeft="@dimen/layout_marginLeft10"
         android:text="@string/delete"/>
 </LinearLayout>

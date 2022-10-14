@@ -16,13 +16,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.R;
+import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminloginBinding;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 
 public class AdminLoginActivity extends AppCompatActivity {
 
-    private final String TAG = "TestLog";
     private final String WAIT_LOGIN = "未登录";
     private final String LOGIN_SUCCESS = "登录成功!";
     private final String LOGIN_FAIL = "登录失败!";
@@ -90,7 +90,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         @Override
         public void afterTextChanged(Editable s) {
             if (s.toString().equals(WAIT_LOGIN)) {
-                Log.i(TAG,"afterTextChanged s = " + s);
+                Log.i(Constant.TAG,"AdminLoginActivity afterTextChanged s = " + s);
                 activityAdminloginBinding.loginTips.setTextColor(Color.parseColor("#ffa500"));
             }
         }
@@ -100,7 +100,7 @@ public class AdminLoginActivity extends AppCompatActivity {
 
         @Override
         public void onChanged(@Nullable Integer isLogin) {
-            Log.i(TAG,"LoginActivity onChanged isLogin = " + isLogin);
+            Log.i(Constant.TAG,"AdminLoginActivity LoginActivity onChanged isLogin = " + isLogin);
             if (isLogin == 1) {
                 if (myDialog == null) {
                     myDialog = new MyDialog(AdminLoginActivity.this);

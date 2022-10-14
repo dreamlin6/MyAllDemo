@@ -14,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myaccount.R;
 import com.example.myaccount.bean.UserListBean;
+import com.example.myaccount.constant.Constant;
 
 import java.util.List;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListViewHodler>{
 
-    private final String TAG = "TestLog";
     private Context context;
     private List<UserListBean> list;
     private UserListBean userListBean;
@@ -65,7 +65,14 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
             mBtDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i(TAG, "UserListAdapter DeleteBtn onClick");
+                    Log.i(Constant.TAG, "UserListAdapter DeleteBtn onClick");
+                    UserListBean bean = new UserListBean();
+                    list.clear();
+                    bean.setUserName("123");
+                    bean.setAccount("123");
+                    bean.setPassWord("123");
+                    list.add(bean);
+                    notifyDataSetChanged();
                 }
             });
         }

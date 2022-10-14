@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.R;
+import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityRegisterBinding;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserRegisterViewModel;
@@ -22,7 +23,6 @@ import com.example.myaccount.viewmodel.UserRegisterViewModel;
 
 public class UserRegisterActivity extends AppCompatActivity {
 
-    private final String TAG = "TestLog";
     private ActivityRegisterBinding activityRegisterBinding;
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
@@ -51,7 +51,6 @@ public class UserRegisterActivity extends AppCompatActivity {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
         }
-
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
@@ -62,14 +61,13 @@ public class UserRegisterActivity extends AppCompatActivity {
             userRegisterViewModel.setmRegisterBtnEnable(activityRegisterBinding.editAccount.getText().length() > 0 &&
                     activityRegisterBinding.editUser.getText().length() > 0 &&
                     activityRegisterBinding.editPass.getText().length() > 0);
-
         }
     };
 
     private Observer<Boolean> registerObserver = new Observer<Boolean>() {
         @Override
         public void onChanged(@Nullable Boolean isRegister) {
-            Log.i(TAG,"UserRegisterActivity onChanged isRegister = " + isRegister);
+            Log.i(Constant.TAG,"UserRegisterActivity onChanged isRegister = " + isRegister);
             if (isRegister) {
                 if (myDialog == null) {
                     myDialog = new MyDialog(UserRegisterActivity.this);

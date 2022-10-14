@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSize30">30dp</dimen>
+    <dimen name="textSize26">26dp</dimen>
     <dimen name="textSize24">24dp</dimen>
     <dimen name="textSize20">20dp</dimen>
     <dimen name="textSize16">16dp</dimen>
@@ -28,4 +29,6 @@
     <dimen name="dimen_120">120dp</dimen>
     <dimen name="dimen_180">180dp</dimen>
     <dimen name="dimen_200">200dp</dimen>
+    <dimen name="dimen_280">280dp</dimen>
+    <dimen name="dimen_260">260dp</dimen>
 </resources>

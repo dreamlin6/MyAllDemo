@@ -12,7 +12,6 @@ import com.example.myaccount.R;
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final String TAG = "TestLog";
     private Button register;
     private Button login;
 

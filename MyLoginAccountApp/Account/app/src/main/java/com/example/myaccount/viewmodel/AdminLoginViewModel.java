@@ -9,7 +9,6 @@ import com.example.myaccount.constant.Constant;
 
 public class AdminLoginViewModel extends ViewModel {
 
-    private final String TAG = "TestLog";
     private final String LOGIN_SUCCESS = "登录成功!";
     private final String LOGIN_FAIL = "登录失败!";
     private final String ADMIN_USER = "1";
@@ -40,12 +39,12 @@ public class AdminLoginViewModel extends ViewModel {
 
     public void mAdminLogin(String user, String pass) {
         if (user.equals(ADMIN_USER) && pass.equals(ADMIN_PASS)) {
-            Log.i(TAG, "mAdminLogin TRUE");
+            Log.i(Constant.TAG, "AdminLoginViewModel mAdminLogin TRUE");
             setmAdminLoginStatus(ONE);
             mLoginStatusTips.setValue(LOGIN_SUCCESS);
             updateLoginDialog();
         } else {
-            Log.i(TAG, "mAdminLogin FALSE");
+            Log.i(Constant.TAG, "AdminLoginViewModel mAdminLogin FALSE");
             setmAdminLoginStatus(TWO);
             mLoginStatusTips.setValue(LOGIN_FAIL);
         }

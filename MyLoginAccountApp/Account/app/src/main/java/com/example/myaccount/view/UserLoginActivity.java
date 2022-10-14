@@ -1,6 +1,8 @@
 package com.example.myaccount.view;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
 
 import androidx.annotation.Nullable;
@@ -14,7 +16,6 @@ import com.example.myaccount.viewmodel.UserLoginViewModel;
 
 public class UserLoginActivity extends AppCompatActivity {
 
-    private final String TAG = "TestLog";
     private UserLoginViewModel userLoginViewModel;
     private ActivityLoginBinding activityLoginBinding;
 
@@ -31,5 +32,26 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
 
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+        activityLoginBinding.editUser.addTextChangedListener(watcher);
+        activityLoginBinding.editPass.addTextChangedListener(watcher);
     }
+
+    TextWatcher watcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            userLoginViewModel.setmLoginEnableStatus(activityLoginBinding.editUser.getText().length() > 0 && activityLoginBinding.editPass.getText().length() > 0);
+
+        }
+    };
 }

@@ -1,19 +1,23 @@
 package com.example.myaccount.provider;
 
 import android.content.ContentProvider;
+import android.content.ContentProviderResult;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
+import android.widget.Switch;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.myaccount.bean.UserListBean;
 
 public class MyContentProvider extends ContentProvider {
 
     private static final String AUTHORITY = "com.example.myaccount";
     //数据路径
-    public static final String PATH_USERS = "user";
+    public static final String PATH_USERS = "bean/UserListBean";
     //访问ContentProvider的URL
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + PATH_USERS);
     //返回代码
@@ -40,12 +44,13 @@ public class MyContentProvider extends ContentProvider {
     @Nullable
     @Override
     public String getType(@NonNull Uri uri) {
-        return null;
+       return null;
     }
 
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
+        ContentValues contentValues = new ContentValues();
         return null;
     }
 

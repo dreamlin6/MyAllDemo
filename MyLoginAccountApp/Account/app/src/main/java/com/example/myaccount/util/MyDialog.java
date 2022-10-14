@@ -66,8 +66,6 @@ public class MyDialog extends Dialog implements View.OnClickListener{
 
         mConfirm.setOnClickListener(this);
         mCancel.setOnClickListener(this);
-
-
     }
 
     public MyDialog(@NonNull Context context) {
