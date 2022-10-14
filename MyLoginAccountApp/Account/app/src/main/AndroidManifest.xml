@@ -49,6 +49,11 @@
             android:launchMode="singleTask"
             android:exported="true">
         </activity>
+
+        <provider
+            android:authorities="com.example.myaccount"
+            android:name=".provider.MyContentProvider"
+            android:exported="true"/>
     </application>
 
 </manifest>

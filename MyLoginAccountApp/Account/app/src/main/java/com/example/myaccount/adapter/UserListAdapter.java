@@ -1,6 +1,7 @@
 package com.example.myaccount.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,10 @@ import java.util.List;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListViewHodler>{
 
+    private final String TAG = "TestLog";
     private Context context;
     private List<UserListBean> list;
+    private UserListBean userListBean;
     private TextView mTvUser;
     private TextView mTvAccount;
     private TextView mTvPass;
@@ -38,12 +41,16 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     }
     @Override
     public void onBindViewHolder(@NonNull UserListAdapter.ListViewHodler holder, int position) {
-
+        userListBean = list.get(position);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        if (list == null) {
+            return 0;
+        } else {
+            return list.size();
+        }
     }
 
     public class ListViewHodler extends RecyclerView.ViewHolder {
@@ -58,7 +65,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
             mBtDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Log.i(TAG, "UserListAdapter DeleteBtn onClick");
                 }
             });
         }
