@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent1);
                 break;
             case R.id.toUser:
-                Intent intent2 = new Intent(MainActivity.this, UserActivity.class);
+                Intent intent2 = new Intent(MainActivity.this, UserLoginActivity.class);
                 startActivity(intent2);
                 break;
         }
