@@ -1,57 +1,53 @@
-package com.example.myaccount.provider;
+package com.example.myaccount.bean;
 
 import android.content.ContentProvider;
-import android.content.ContentProviderResult;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.widget.Switch;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.myaccount.bean.UserListBean;
+public class UserProvider extends ContentProvider {
+    private SQLiteDatabase db;
+    private MyDbOpenhelper dbOpenhelper;
 
-public class MyContentProvider extends ContentProvider {
+    static UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-    private static final String AUTHORITY = "com.example.myaccount";
-    //数据路径
-    public static final String PATH_USERS = "bean/UserListBean";
-    //访问ContentProvider的URL
-    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + PATH_USERS);
-    //返回代码
-    public static final int USER_INFO = 1;
-    //创建UriMatcher对象
-    private static UriMatcher uriMatcher;
+    static {
+        matcher.addURI("com.example.myaccount","users",100);
+    }
+    public UserProvider() {
 
-    static { //创建静态代码块
-        uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(AUTHORITY, PATH_USERS, USER_INFO);
     }
 
     @Override
     public boolean onCreate() {
+        dbOpenhelper = new MyDbOpenhelper(getContext());
+        db = dbOpenhelper.getWritableDatabase();
         return false;
     }
 
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-        return null;
+        return db.query("users",null,null,null,null,null,null);
     }
 
     @Nullable
     @Override
     public String getType(@NonNull Uri uri) {
-       return null;
+        return null;
     }
 
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
-        ContentValues contentValues = new ContentValues();
-        return null;
+        db.insert("users", null, values);
+        return uri;
     }
 
     @Override

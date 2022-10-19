@@ -1,11 +1,15 @@
 package com.example.myaccount.view;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +30,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding activityRegisterBinding;
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
+    private ContentResolver resolver;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +47,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.editAccount.addTextChangedListener(watcher);
         activityRegisterBinding.editUser.addTextChangedListener(watcher);
         activityRegisterBinding.editPass.addTextChangedListener(watcher);
+        activityRegisterBinding.editPass2.addTextChangedListener(watcher);
 
         userRegisterViewModel.getmRegisterDialogCtrl().observe(this, registerObserver);
     }
@@ -60,7 +66,8 @@ public class UserRegisterActivity extends AppCompatActivity {
         public void afterTextChanged(Editable s) {
             userRegisterViewModel.setmRegisterBtnEnable(activityRegisterBinding.editAccount.getText().length() > 0 &&
                     activityRegisterBinding.editUser.getText().length() > 0 &&
-                    activityRegisterBinding.editPass.getText().length() > 0);
+                    activityRegisterBinding.editPass.getText().length() > 0 &&
+                    activityRegisterBinding.editPass2.getText().length() > 0);
         }
     };
 
@@ -69,25 +76,57 @@ public class UserRegisterActivity extends AppCompatActivity {
         public void onChanged(@Nullable Boolean isRegister) {
             Log.i(Constant.TAG,"UserRegisterActivity onChanged isRegister = " + isRegister);
             if (isRegister) {
-                if (myDialog == null) {
-                    myDialog = new MyDialog(UserRegisterActivity.this);
-                    myDialog.setsMessage("注册成功!是否跳转到登录?")
-                            .setsCancel("否", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                myDialog.dismiss();
-                            }
-                            }).setsConfirm("是", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
-                                startActivity(intent);
-                            }
-                    }).show();
+                String username = activityRegisterBinding.editUser.getText().toString();
+                String account = activityRegisterBinding.editAccount.getText().toString();
+                String password = activityRegisterBinding.editPass.getText().toString();
+                String password2 = activityRegisterBinding.editPass2.getText().toString();
+                if (password.equals(password2)) {
+                    reselover(username, account, password);
+                    if (myDialog == null) {
+                        myDialog = new MyDialog(UserRegisterActivity.this);
+                        myDialog.setsMessage("注册成功!是否跳转到登录?")
+                                .setsCancel("否", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        myDialog.dismiss();
+                                        activityRegisterBinding.editUser.setText(null);
+                                        activityRegisterBinding.editAccount.setText(null);
+                                        activityRegisterBinding.editPass.setText(null);
+                                        activityRegisterBinding.editPass2.setText(null);
+                                    }
+                                }).setsConfirm("是", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
+                                        startActivity(intent);
+                                    }
+                                }).show();
+                    } else {
+                        myDialog.show();
+                    }
                 } else {
-                    myDialog.show();
+                    Toast.makeText(UserRegisterActivity.this, "两次密码输入不一致! 请正确输入!", Toast.LENGTH_SHORT).show();
                 }
             }
         }
     };
+
+    public void reselover(String username, String account, String password) {
+        Uri uri = Uri.parse("content://com.example.myaccount/users");
+        resolver = getContentResolver();
+        ContentValues values = new ContentValues();
+        values.put("username", username);
+        values.put("account", account);
+        values.put("password", password);
+        resolver.insert(uri, values);
+        Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
+        super.onDestroy();
+    }
 }

@@ -35,6 +35,11 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".view.InfoActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".view.UserLoginActivity"
             android:launchMode="singleTask"
             android:exported="true">
@@ -47,15 +52,9 @@
 
         <provider
             android:authorities="com.example.myaccount"
-            android:name=".provider.MyContentProvider"
+            android:name="com.example.myaccount.bean.UserProvider"
             android:enabled="true"
             android:exported="true"/>
     </application>
-
-    <!--允许应用程序写出到联系人-->
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
-    <!--允许应用程序读取到联系人-->
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-
 
 </manifest>
