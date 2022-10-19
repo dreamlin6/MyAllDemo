@@ -1,7 +1,13 @@
 package com.example.myaccount.view;
 
+import android.annotation.SuppressLint;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +32,7 @@ public class AdminActivity extends AppCompatActivity {
     private AdminViewModel adminViewModel;
     private List<UserListBean> userLists;
     private UserListAdapter userListAdapter;
+    private ContentResolver resolver;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,13 +60,21 @@ public class AdminActivity extends AppCompatActivity {
 
     public void updateUserList(List<UserListBean> list, UserListAdapter adapter) {
         list.clear();
-        UserListBean bean = new UserListBean();
-        bean.setUserName("SWL");
-        bean.setAccount("123");
-        bean.setPassWord("123");
+        resolver = getContentResolver();
+        Uri uri = Uri.parse("content://com.example.myaccount/users");
+        Cursor cursor = resolver.query(uri, null, null, null, null);
+        while (cursor.moveToNext()) {  //循环读取数据
+            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+            @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
+            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+            UserListBean bean = new UserListBean();
+            bean.setUserName(username);
+            bean.setAccount(account);
+            bean.setPassWord(password);
 
-        Log.i(Constant.TAG, "AdminActivity updateUserList " + bean.getUserName() + bean.getAccount() + bean.getPassWord());
-        list.add(bean);
+            Log.i(Constant.TAG, "AdminActivity updateUserList " + username + " " + account + " " + password);
+            list.add(bean);
+        }
         adapter.notifyDataSetChanged();
     }
 

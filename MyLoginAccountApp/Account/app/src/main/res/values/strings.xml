@@ -4,13 +4,14 @@
     <string name="no">NO</string>
     <string name="user">User</string>
     <string name="pass">Pass</string>
+    <string name="account1">ACCOUNT</string>
     <string name="admin">Admin</string>
     <string name="login">LOGIN</string>
     <string name="loginFail">Login Failed</string>
     <string name="loginSuccess">Login Successful</string>
-    <string name="username">USERNAME</string>
-    <string name="acconut">ACCOUNT</string>
-    <string name="password">PASSWORD</string>
+    <string name="username">USERNAME:</string>
+    <string name="acconut">ACCOUNT:</string>
+    <string name="password">PASSWORD:</string>
     <string name="register">REGISTER</string>
     <string name="welcome">欢迎!</string>
     <string name="set">SET</string>

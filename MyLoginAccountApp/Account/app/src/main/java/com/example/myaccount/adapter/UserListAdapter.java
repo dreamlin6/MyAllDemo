@@ -41,10 +41,9 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     }
     @Override
     public void onBindViewHolder(@NonNull UserListAdapter.ListViewHodler holder, int position) {
-        userListBean = list.get(position);
-        mTvUser.setText(userListBean.getUserName());
-        mTvAccount.setText(userListBean.getAccount());
-        mTvPass.setText(userListBean.getPassWord());
+        mTvUser.setText(list.get(position).getUserName());
+        mTvAccount.setText(list.get(position).getAccount());
+        mTvPass.setText(list.get(position).getPassWord());
     }
 
     @Override
@@ -69,8 +68,10 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
                 @Override
                 public void onClick(View v) {
                     Log.i(Constant.TAG, "UserListAdapter DeleteBtn onClick");
-
-
+                    int position = getPosition();
+                    list.remove(position);
+                    notifyItemRemoved(position);
+                    notifyDataSetChanged();
                 }
             });
         }

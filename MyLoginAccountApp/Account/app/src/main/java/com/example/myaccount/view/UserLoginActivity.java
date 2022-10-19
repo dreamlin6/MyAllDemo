@@ -62,7 +62,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
                 resolver = getContentResolver();
                 Cursor cursor = resolver.query(uri, null, null, null, null);
-                while (cursor.moveToNext()) {
+                while (cursor.moveToNext()) {  //循环读取数据
                     account1 = cursor.getString(cursor.getColumnIndex("account"));
                     pass1 = cursor.getString(cursor.getColumnIndex("password"));
                     Log.i(Constant.TAG, "UserLoginActivity cursor user1 pass1 " + account1 + " " + pass1);
