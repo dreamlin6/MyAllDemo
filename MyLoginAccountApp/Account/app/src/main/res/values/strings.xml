@@ -9,9 +9,9 @@
     <string name="login">LOGIN</string>
     <string name="loginFail">Login Failed</string>
     <string name="loginSuccess">Login Successful</string>
-    <string name="username">USERNAME:</string>
-    <string name="acconut">ACCOUNT:</string>
-    <string name="password">PASSWORD:</string>
+    <string name="username">用户名:</string>
+    <string name="acconut">账号:</string>
+    <string name="password">密码:</string>
     <string name="register">REGISTER</string>
     <string name="welcome">欢迎!</string>
     <string name="set">SET</string>
@@ -21,11 +21,14 @@
     <string name="toHome">ToHome</string>
     <string name="reset">Reset</string>
     <string name="logout">Logout</string>
+    <string name="change">Change Password</string>
     <string name="userList">UserList</string>
     <string name="delete">Delete</string>
     <string name="user_tips">Please input username</string>
     <string name="account_tips">Please input account</string>
     <string name="pass_tips">Please input password</string>
+    <string name="old_pass_tips">Please input old password</string>
+    <string name="new_pass_tips">Please input new password</string>
     <string name="dialog_tips">提示</string>
     <string name="dialog_login_tips">登录成功!确定跳转到管理员界面?</string>
     <string name="cancel">取消</string>

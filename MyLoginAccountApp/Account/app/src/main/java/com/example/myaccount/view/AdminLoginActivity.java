@@ -115,6 +115,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                         public void onClick(View view) {
                             Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
                             startActivity(intent);
+                            myDialog.dismiss();
                         }
                     }).show();
                 } else {

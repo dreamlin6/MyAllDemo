@@ -52,11 +52,15 @@ public class UserProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        int resultId = 0;
+        resultId = db.delete("users", selection, selectionArgs);	//返回删除成功的行号值,失败返回-1
+        return resultId;
     }
 
     @Override
     public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        int resultId = 0;
+        resultId = db.update("users", values, selection, selectionArgs);
+        return resultId;
     }
 }

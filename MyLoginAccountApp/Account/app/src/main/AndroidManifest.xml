@@ -49,6 +49,11 @@
             android:launchMode="singleTask"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".view.UserChangeActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+        </activity>
 
         <provider
             android:authorities="com.example.myaccount"
