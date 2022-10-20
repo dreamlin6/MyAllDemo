@@ -3,12 +3,14 @@ package com.example.myaccount.view;
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,7 @@ import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminBinding;
+import com.example.myaccount.util.MyObserver;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
 import java.util.ArrayList;
@@ -35,6 +38,7 @@ public class AdminActivity extends AppCompatActivity {
     private UserListAdapter userListAdapter;
     private ContentResolver resolver;
     private ReentrantReadWriteLock readWriteLock;
+    private ContentObserver MyObserver;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +60,6 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
         initAdapter();
     }
 
@@ -74,6 +77,7 @@ public class AdminActivity extends AppCompatActivity {
         readWriteLock.readLock().lock();
         resolver = getContentResolver();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
+//        resolver.registerContentObserver(uri, true, MyObserver);
         Cursor cursor = resolver.query(uri, null, null, null, null);
         while (cursor.moveToNext()) {  //循环读取数据
             @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
@@ -91,4 +95,13 @@ public class AdminActivity extends AppCompatActivity {
         readWriteLock.readLock().unlock();
     }
 
+    public void show(String info){
+        Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        resolver.unregisterContentObserver(MyObserver);
+    }
 }

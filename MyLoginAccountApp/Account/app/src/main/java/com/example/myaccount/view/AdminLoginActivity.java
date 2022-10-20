@@ -111,13 +111,13 @@ public class AdminLoginActivity extends AppCompatActivity {
             if (isLogin == 1) {
                 if (myDialog == null) {
                     myDialog = new MyDialog(AdminLoginActivity.this);
-                    myDialog.setsCancel("取消", new View.OnClickListener() {
+                    myDialog.setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             myDialog.dismiss();
                             activityAdminloginBinding.loginTips.setText(WAIT_LOGIN);
                         }
-                    }).setsConfirm("确定", new View.OnClickListener() {
+                    }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);

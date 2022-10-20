@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.BaseObservable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -85,11 +84,11 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
                 if (password.equals(password2)) {
-                    reselover(username, account, password);
+                    mInsertUser(username, account, password);
                     if (myDialog == null) {
                         myDialog = new MyDialog(UserRegisterActivity.this);
-                        myDialog.setsMessage("注册成功!是否跳转到登录?")
-                                .setsCancel("否", new View.OnClickListener() {
+                        myDialog.setsMessage("注册成功!确认跳转到登录吗?")
+                                .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
                                         myDialog.dismiss();
@@ -98,7 +97,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                                         activityRegisterBinding.editPass.setText(null);
                                         activityRegisterBinding.editPass2.setText(null);
                                     }
-                                }).setsConfirm("是", new View.OnClickListener() {
+                                }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
                                         Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
@@ -115,7 +114,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         }
     };
 
-    public void reselover(String username, String account, String password) {
+    public void mInsertUser(String username, String account, String password) {
         readWriteLock.writeLock().lock();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         resolver = getContentResolver();
@@ -124,6 +123,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         values.put("account", account);
         values.put("password", password);
         resolver.insert(uri, values);
+        resolver.notifyChange(uri, null);
         readWriteLock.writeLock().unlock();
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
     }

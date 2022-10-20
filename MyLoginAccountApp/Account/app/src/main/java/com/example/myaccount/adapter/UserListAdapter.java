@@ -25,6 +25,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     private TextView mTvAccount;
     private TextView mTvPass;
     private Button mBtDelete;
+    private boolean mDelete;
 
     public UserListAdapter(Context context, List<UserListBean> list) {
         this.context = context;
@@ -68,11 +69,20 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
                     int position = getLayoutPosition();
                     Log.i(Constant.TAG, "UserListAdapter DeleteBtn onClick position = " + position);
                     list.remove(position);
+                    setmDelete(true);
                     notifyItemRemoved(position);
                     notifyItemRangeChanged(0, list.size());
                 }
             });
         }
+    }
+
+    public void setmDelete(Boolean isDelete) {
+        this.mDelete = isDelete;
+    }
+
+    public Boolean getmDelete() {
+        return mDelete;
     }
 
 }

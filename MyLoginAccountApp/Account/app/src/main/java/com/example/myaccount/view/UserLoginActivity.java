@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,7 +12,6 @@ import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,6 +50,23 @@ public class UserLoginActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        activityLoginBinding.change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(UserLoginActivity.this, UserChangeActivity.class);
+                startActivity(intent2);
+            }
+        });
+        activityLoginBinding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                userLoginViewModel.setmTvllVisibleStatus(false);
+                activityLoginBinding.editUser.setText(null);
+                activityLoginBinding.editPass.setText(null);
+            }
+        });
         activityLoginBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,15 +91,19 @@ public class UserLoginActivity extends AppCompatActivity {
                     pass1 = cursor.getString(cursor.getColumnIndex("password"));
                     Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
                     if (account.equals(account1) && pass.equals(pass1)) {
-                        Toast.makeText(UserLoginActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
                         name = cursor.getString(cursor.getColumnIndex("username"));
-
-                        Intent intent = new Intent(UserLoginActivity.this, InfoActivity.class);
-                        intent.putExtra("name", name);
-                        startActivity(intent);
+                        activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
+                        activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
+                        userLoginViewModel.setmBtLoginedVisibleStatus(true);
+                        userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                        userLoginViewModel.setmTvllVisibleStatus(true);
                         break;
                     } else {
-                        Toast.makeText(UserLoginActivity.this, "登录失败！", Toast.LENGTH_SHORT).show();
+                        activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
+                        activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
+                        userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                        userLoginViewModel.setmTvllVisibleStatus(true);
                     }
                 }
             }
@@ -102,7 +123,6 @@ public class UserLoginActivity extends AppCompatActivity {
         @Override
         public void afterTextChanged(Editable s) {
             userLoginViewModel.setmLoginEnableStatus(activityLoginBinding.editUser.getText().length() > 0 && activityLoginBinding.editPass.getText().length() > 0);
-
         }
     };
 }
