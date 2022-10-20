@@ -24,6 +24,8 @@ import com.example.myaccount.databinding.ActivityRegisterBinding;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserRegisterViewModel;
 
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 
 public class UserRegisterActivity extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
     private ContentResolver resolver;
+    private ReentrantReadWriteLock readWriteLock;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register);
         activityRegisterBinding.setLifecycleOwner(this);
 
+        readWriteLock = new ReentrantReadWriteLock();
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
@@ -112,6 +116,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     };
 
     public void reselover(String username, String account, String password) {
+        readWriteLock.writeLock().lock();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         resolver = getContentResolver();
         ContentValues values = new ContentValues();
@@ -119,6 +124,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         values.put("account", account);
         values.put("password", password);
         resolver.insert(uri, values);
+        readWriteLock.writeLock().unlock();
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
     }
 

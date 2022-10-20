@@ -52,6 +52,13 @@ public class AdminLoginActivity extends AppCompatActivity {
                 activityAdminloginBinding.editAdminPass.setText(null);
             }
         });
+        activityAdminloginBinding.tohome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(AdminLoginActivity.this, MainActivity.class);
+                startActivity(intent1);
+            }
+        });
 
         activityAdminloginBinding.editAdminUser.addTextChangedListener(watcher); //监听输入框变化
         activityAdminloginBinding.editAdminPass.addTextChangedListener(watcher);

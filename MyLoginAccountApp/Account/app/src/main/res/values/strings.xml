@@ -13,6 +13,7 @@
     <string name="acconut">账号:</string>
     <string name="password">密码:</string>
     <string name="register">REGISTER</string>
+    <string name="tohome">Home</string>
     <string name="welcome">欢迎!</string>
     <string name="set">SET</string>
     <string name="theUser">CURRENT USER:</string>

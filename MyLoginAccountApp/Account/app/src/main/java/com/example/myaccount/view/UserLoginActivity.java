@@ -43,11 +43,18 @@ public class UserLoginActivity extends AppCompatActivity {
 
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
+        activityLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(UserLoginActivity.this, MainActivity.class);
+                startActivity(intent1);
+            }
+        });
         activityLoginBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
-                startActivity(intent1);
+                Intent intent2 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
+                startActivity(intent2);
             }
         });
         activityLoginBinding.login.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +72,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 while (cursor.moveToNext()) {  //循环读取数据
                     account1 = cursor.getString(cursor.getColumnIndex("account"));
                     pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                    Log.i(Constant.TAG, "UserLoginActivity cursor user1 pass1 " + account1 + " " + pass1);
+                    Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
                     if (account.equals(account1) && pass.equals(pass1)) {
                         Toast.makeText(UserLoginActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
                         name = cursor.getString(cursor.getColumnIndex("username"));
@@ -73,6 +80,7 @@ public class UserLoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(UserLoginActivity.this, InfoActivity.class);
                         intent.putExtra("name", name);
                         startActivity(intent);
+                        break;
                     } else {
                         Toast.makeText(UserLoginActivity.this, "登录失败！", Toast.LENGTH_SHORT).show();
                     }
@@ -87,7 +95,6 @@ public class UserLoginActivity extends AppCompatActivity {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
-
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
         }

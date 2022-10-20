@@ -2,10 +2,13 @@ package com.example.myaccount.view;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,7 @@ import com.example.myaccount.viewmodel.AdminViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -30,6 +34,7 @@ public class AdminActivity extends AppCompatActivity {
     private List<UserListBean> userLists;
     private UserListAdapter userListAdapter;
     private ContentResolver resolver;
+    private ReentrantReadWriteLock readWriteLock;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +47,15 @@ public class AdminActivity extends AppCompatActivity {
                         .getInstance(getApplication()); //viewmodel实例
         adminViewModel = new ViewModelProvider(this, instance).get(AdminViewModel.class);  //创建viewmodel
         activityAdminBinding.setAdminvm(adminViewModel); //设置绑定 XML和Adapter
+        readWriteLock = new ReentrantReadWriteLock();
+
+        activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
+                startActivity(intent1);
+            }
+        });
 
         initAdapter();
     }
@@ -57,6 +71,7 @@ public class AdminActivity extends AppCompatActivity {
 
     public void updateUserList(List<UserListBean> list, UserListAdapter adapter) {
         list.clear();
+        readWriteLock.readLock().lock();
         resolver = getContentResolver();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         Cursor cursor = resolver.query(uri, null, null, null, null);
@@ -73,6 +88,7 @@ public class AdminActivity extends AppCompatActivity {
             list.add(bean);
         }
         adapter.notifyDataSetChanged();
+        readWriteLock.readLock().unlock();
     }
 
 }

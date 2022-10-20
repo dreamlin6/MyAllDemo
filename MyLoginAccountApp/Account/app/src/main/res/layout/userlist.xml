@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/acconut"
                 android:textSize="@dimen/textSize24"
+                android:gravity="center"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/usettext"/>
             <TextView
@@ -56,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/password"
                 android:textSize="@dimen/textSize24"
+                android:gravity="center"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/accounttext"/>
             <TextView

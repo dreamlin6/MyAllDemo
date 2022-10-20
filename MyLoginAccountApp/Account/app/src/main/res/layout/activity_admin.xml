@@ -17,17 +17,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/userList"
-            android:textSize="@dimen/textSize30"
-            android:background="@color/purple_200"
-            android:gravity="center" />
-
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_200"
+                android:src="@drawable/left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/userList"
+                android:textSize="@dimen/textSize30"
+                android:background="@color/white"
+                android:gravity="center" />
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/userList"
             android:layout_width="match_parent"
