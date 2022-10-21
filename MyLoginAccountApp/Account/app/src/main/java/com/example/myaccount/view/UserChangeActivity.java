@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.R;
+import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityChangeBinding;
 import com.example.myaccount.viewmodel.UserChangeViewModel;
 
@@ -46,7 +48,8 @@ public class UserChangeActivity extends AppCompatActivity {
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
                 ContentValues values = new ContentValues();
                 values.put("password", activityChangeBinding.newpass.getText().toString());
-                int id = resolver.update(uri, values, null, null);
+                int id = resolver.update(uri, values, "_id = ?", new String[]{getIntent().getStringExtra("mId")});
+                Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,getIntent().getStringExtra("mId"), id));
                 if(id > 0){
                     show("更新成功！");
                 }else{
@@ -79,4 +82,8 @@ public class UserChangeActivity extends AppCompatActivity {
         Toast.makeText(this, tips, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

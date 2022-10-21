@@ -31,7 +31,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private ContentResolver resolver;
     private MyDialog myDialog;
     private Cursor cursor;
-    private String account, pass, account1, pass1, name;
+    private String mid, account, pass, account1, pass1, name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +58,7 @@ public class UserLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(UserLoginActivity.this, UserChangeActivity.class);
+                intent2.putExtra("mId", mid);
                 startActivity(intent2);
             }
         });
@@ -90,7 +91,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 resolver = getContentResolver();
                 cursor = resolver.query(uri, null, null, null, null);
                 Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.getCount() = " + cursor.getCount());
-                if (!cursor.moveToNext()) {
+                if (!cursor.moveToFirst()) {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.moveToNext() isNull");
                     if (myDialog == null) {
                         myDialog = new MyDialog(UserLoginActivity.this);
@@ -111,14 +112,16 @@ public class UserLoginActivity extends AppCompatActivity {
                     } else {
                         myDialog.show();
                     }
-                    cursor.moveToFirst();
                 } else {
+                    cursor.moveToFirst();
+                    cursor.moveToPrevious();
                     if (cursor != null) {
                         while (cursor.moveToNext()) {  //循环读取数据
                             account1 = cursor.getString(cursor.getColumnIndex("account"));
                             pass1 = cursor.getString(cursor.getColumnIndex("password"));
                             Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
                             if (account.equals(account1) && pass.equals(pass1)) {
+                                mid = cursor.getString(cursor.getColumnIndex("_id"));
                                 name = cursor.getString(cursor.getColumnIndex("username"));
                                 activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
@@ -158,4 +161,11 @@ public class UserLoginActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    protected void onDestroy() {
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
+        super.onDestroy();
+    }
 }

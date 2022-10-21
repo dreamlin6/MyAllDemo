@@ -34,6 +34,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
     private ContentResolver resolver;
+    private Cursor cursor;
     private ReentrantReadWriteLock readWriteLock;
 
     @Override
@@ -147,17 +148,19 @@ public class UserRegisterActivity extends AppCompatActivity {
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         boolean bool = false;
         resolver = getContentResolver();
-        Cursor cursor = resolver.query(uri, null, null, null, null, null);
-        cursor.moveToFirst();
-        for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
-            cursor.moveToNext();
-            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
-            Log.i(Constant.TAG, "UserRegisterActivity mQueryUser username = " + username);
-            if (name.equals(username)) {
-                bool = true;
-                break;
-            } else {
-                bool = false;
+        cursor = resolver.query(uri, null, null, null, null, null);
+        if (cursor.moveToFirst()) {
+            cursor.moveToPrevious();
+            for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
+                cursor.moveToNext();
+                @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+                Log.i(Constant.TAG, "UserRegisterActivity mQueryUser username = " + username);
+                if (name.equals(username)) {
+                    bool = true;
+                    break;
+                } else {
+                    bool = false;
+                }
             }
         }
         Log.i(Constant.TAG, "UserRegisterActivity mQueryUser bool = " + bool);

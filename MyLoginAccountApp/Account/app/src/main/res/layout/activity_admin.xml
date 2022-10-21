@@ -67,12 +67,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/delete"
-                android:enabled="@{adminvm.mDeletBbtEnableStatus}"/>
+                android:enabled="@{adminvm.mDeleteBtEnableStatus}"/>
             <Button
                 android:id="@+id/deleteall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/deleteall"/>
+                android:text="@string/deleteall"
+                android:enabled="@{adminvm.mDeleteAllBbtEnableStatus}"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"

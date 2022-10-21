@@ -27,6 +27,7 @@ import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminBinding;
+import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.util.MyObserver;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
@@ -44,6 +45,7 @@ public class AdminActivity extends AppCompatActivity {
     private ReentrantReadWriteLock readWriteLock;
     private ContentObserver MyObserver;
     private Cursor cursor;
+    private MyDialog myDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,6 +68,34 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        activityAdminBinding.deleteall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(Constant.TAG, "AdminActivity deleteall onClick getItemCount = " + userListAdapter.getItemCount());
+                if (myDialog == null) {
+                    myDialog = new MyDialog(AdminActivity.this);
+                    myDialog.setsMessage("确定删除全部用户吗？")
+                            .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    myDialog.dismiss();
+                                }
+                            }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    resolver = getContentResolver();
+                                    Uri uri = Uri.parse("content://com.example.myaccount/users");
+                                    int id = resolver.delete(uri, null, null);
+                                    Log.i(Constant.TAG, "AdminActivity deleteall onClick id = " + id);
+                                    initAdapter();
+                                    myDialog.dismiss();
+                                }
+                            }).show();
+                } else {
+                    myDialog.show();
+                }
+            }
+        });
         activityAdminBinding.edit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -77,7 +107,6 @@ public class AdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 resolver = getContentResolver();
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
-                ContentValues values = new ContentValues();
                 int id = resolver.delete(uri, "_id = ?", new String[]{activityAdminBinding.mId.getText().toString()});
                 activityAdminBinding.mId.setText(null);
                 Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
@@ -99,6 +128,7 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.userList.setLayoutManager(new GridLayoutManager(this,1)); // 一列
         activityAdminBinding.userList.setAdapter(userListAdapter);
         updateUserList(userLists, userListAdapter);
+        adminViewModel.setmDeleteAllBbtEnableStatus(userListAdapter.getItemCount() > 0);
     }
 
     public void updateUserList(List<UserListBean> list, UserListAdapter adapter) {
@@ -138,7 +168,7 @@ public class AdminActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            adminViewModel.setmDeletBbtEnableStatus(s.length() > 0);
+            adminViewModel.setmDeleteBbtEnableStatus(s.length() > 0);
         }
     };
 
@@ -149,6 +179,9 @@ public class AdminActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
 //        resolver.unregisterContentObserver(MyObserver);
     }
 }
