@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
             <ImageButton
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
@@ -28,13 +29,45 @@
                 android:background="@color/purple_200"
                 android:src="@drawable/left"/>
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/dimen_300"
                 android:layout_height="wrap_content"
                 android:text="@string/userList"
                 android:textSize="@dimen/textSize30"
                 android:background="@color/white"
                 android:gravity="center"
                 android:paddingRight="@dimen/dimen_40"/>
+            <ToggleButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/out"
+                android:textOff="@string/edit"
+                android:checked="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="@{adminvm.mDeleteEnableStatus ? View.VISIBLE : View.GONE}">
+            <TextView
+                android:layout_width="@dimen/dimen_220"
+                android:layout_height="wrap_content"
+                android:text="@string/idtip"
+                android:gravity="right"
+                android:textSize="@dimen/textSize24"
+                android:paddingRight="@dimen/dimen_10"/>
+            <EditText
+                android:id="@+id/mId"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize30"
+                android:background="@color/white" />
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"

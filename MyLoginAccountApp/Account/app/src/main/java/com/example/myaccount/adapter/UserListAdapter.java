@@ -21,11 +21,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
 
     private Context context;
     private List<UserListBean> list;
-    private TextView mTvUser;
-    private TextView mTvAccount;
-    private TextView mTvPass;
-    private Button mBtDelete;
-    private boolean mDelete;
+    private TextView mTvId, mTvUser, mTvAccount, mTvPass;
 
     public UserListAdapter(Context context, List<UserListBean> list) {
         this.context = context;
@@ -40,6 +36,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     }
     @Override
     public void onBindViewHolder(@NonNull UserListAdapter.ListViewHodler holder, int position) {
+        mTvId.setText(list.get(position).getmId());
         mTvUser.setText(list.get(position).getUserName());
         mTvAccount.setText(list.get(position).getAccount());
         mTvPass.setText(list.get(position).getPassWord());
@@ -54,25 +51,25 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
         }
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
     public class ListViewHodler extends RecyclerView.ViewHolder {
         public ListViewHodler(@NonNull View userlist) {
             super(userlist);
 
+            mTvId = (TextView) itemView.findViewById(R.id.ul_id);
             mTvUser = (TextView) itemView.findViewById(R.id.ul_user);
             mTvAccount = (TextView) itemView.findViewById(R.id.ul_account);
             mTvPass = (TextView) itemView.findViewById(R.id.ul_pass);
-            mBtDelete = (Button) itemView.findViewById(R.id.ul_bt);
 
-            mBtDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getLayoutPosition();
-                    Log.i(Constant.TAG, "UserListAdapter DeleteBtn onClick position = " + position);
-                    list.remove(position);
-                    notifyItemRemoved(position);
-                    notifyItemRangeChanged(0, list.size());
-                }
-            });
         }
     }
 

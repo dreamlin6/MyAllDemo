@@ -53,6 +53,14 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.editPass2.addTextChangedListener(watcher);
 
         userRegisterViewModel.getmRegisterDialogCtrl().observe(this, registerObserver);
+
+        activityRegisterBinding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(UserRegisterActivity.this, AdminLoginActivity.class);
+                startActivity(intent1);
+            }
+        });
     }
 
     TextWatcher watcher = new TextWatcher() {

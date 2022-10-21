@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -58,17 +59,31 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
-//                startActivity(intent1);
+                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
+                startActivity(intent1);
+            }
+        });
+        activityAdminBinding.edit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                adminViewModel.setmDeleteEnableStatus(isChecked);
+            }
+        });
+        activityAdminBinding.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 resolver = getContentResolver();
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
                 ContentValues values = new ContentValues();
-                int id = resolver.delete(uri, "_id = ?", new String[1]);
+                int id = resolver.delete(uri, "_id = ?", new String[]{activityAdminBinding.mId.getText().toString()});
+                activityAdminBinding.mId.setText(null);
+                Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 if (id > 0) {
                     show("OK");
                 } else {
                     show("Failed");
                 }
+                initAdapter();
             }
         });
         initAdapter();
@@ -91,15 +106,17 @@ public class AdminActivity extends AppCompatActivity {
 //        resolver.registerContentObserver(uri, true, MyObserver);
         cursor = resolver.query(uri, new String[]{"_id", "username", "account", "password"}, null, null, null, null);
         while (cursor.moveToNext()) {  //循环读取数据
+            @SuppressLint("Range") String mid = cursor.getString(cursor.getColumnIndex("_id"));
             @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
             @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
             @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
             UserListBean bean = new UserListBean();
+            bean.setmId(mid);
             bean.setUserName(username);
             bean.setAccount(account);
             bean.setPassWord(password);
 
-            Log.i(Constant.TAG, "AdminActivity updateUserList " + username + " " + account + " " + password);
+            Log.i(Constant.TAG, "AdminActivity updateUserList " + mid + " " + username + " " + account + " " + password);
             list.add(bean);
         }
         adapter.notifyDataSetChanged();
@@ -107,7 +124,7 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void show(String info){
-        Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
+        Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -89,29 +89,54 @@ public class UserLoginActivity extends AppCompatActivity {
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
                 resolver = getContentResolver();
                 cursor = resolver.query(uri, null, null, null, null);
-                if (cursor != null) {
-                    while (cursor.moveToNext()) {  //循环读取数据
-                        account1 = cursor.getString(cursor.getColumnIndex("account"));
-                        pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                        Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
-                        if (account.equals(account1) && pass.equals(pass1)) {
-                            name = cursor.getString(cursor.getColumnIndex("username"));
-                            activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
-                            activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
-                            userLoginViewModel.setmBtLoginedVisibleStatus(true);
-                            userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
-                            userLoginViewModel.setmTvllVisibleStatus(true);
-                            break;
-                        } else {
-                            activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
-                            activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                            userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                            userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
-                            userLoginViewModel.setmTvllVisibleStatus(true);
-                        }
+                Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.getCount() = " + cursor.getCount());
+                if (!cursor.moveToNext()) {
+                    Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.moveToNext() isNull");
+                    if (myDialog == null) {
+                        myDialog = new MyDialog(UserLoginActivity.this);
+                        myDialog.setsMessage("未注册任何用户！是否去注册新用户？")
+                                .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        myDialog.dismiss();
+                                    }
+                                }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
+                                        startActivity(intent);
+                                        myDialog.dismiss();
+                                    }
+                                }).show();
+                    } else {
+                        myDialog.show();
                     }
+                    cursor.moveToFirst();
                 } else {
-                    Log.i(Constant.TAG, "cursor = null");
+                    if (cursor != null) {
+                        while (cursor.moveToNext()) {  //循环读取数据
+                            account1 = cursor.getString(cursor.getColumnIndex("account"));
+                            pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                            Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
+                            if (account.equals(account1) && pass.equals(pass1)) {
+                                name = cursor.getString(cursor.getColumnIndex("username"));
+                                activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
+                                activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
+                                userLoginViewModel.setmBtLoginedVisibleStatus(true);
+                                userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                                userLoginViewModel.setmTvllVisibleStatus(true);
+                                break;
+                            } else {
+                                activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
+                                activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
+                                userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                userLoginViewModel.setmTvllVisibleStatus(true);
+                            }
+                        }
+                    } else {
+                        Log.i(Constant.TAG, "UserLoginActivity cursor = null");
+                    }
                 }
             }
         });

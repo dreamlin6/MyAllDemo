@@ -3,6 +3,7 @@
     <string name="user">User</string>
     <string name="pass">Pass</string>
     <string name="account1">ACCOUNT</string>
+    <string name="id">ID</string>
     <string name="admin">Admin</string>
     <string name="login">登 录</string>
     <string name="loginFail">登录失败！</string>
@@ -17,7 +18,10 @@
     <string name="logout">退出登录</string>
     <string name="change">修改密码</string>
     <string name="userList">用户列表</string>
+    <string name="idtip">请输入要删除的ID:</string>
     <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="out">退出</string>
     <string name="user_tips">请输入用户名</string>
     <string name="account_tips">请输入账号</string>
     <string name="pass_tips">请输入密码</string>

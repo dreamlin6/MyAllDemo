@@ -7,7 +7,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_100"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/ul_id"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_60"
+            android:text="@string/id"
+            android:textSize="@dimen/textSize24"
+            android:gravity="center"/>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/dimen_280"
             android:layout_height="@dimen/dimen_100">
@@ -76,14 +84,14 @@
                 app:layout_constraintLeft_toRightOf="@id/passwordtext"
                 app:layout_constraintTop_toBottomOf="@id/ul_account"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <Button
-            android:id="@+id/ul_bt"
-            android:layout_width="@dimen/dimen_100"
-            android:layout_height="@dimen/dimen_60"
-            android:textColor="@color/red"
-            android:layout_marginLeft="@dimen/layout_marginLeft10"
-            android:layout_gravity="center"
-            android:text="@string/delete"/>
+<!--        <Button-->
+<!--            android:id="@+id/ul_bt"-->
+<!--            android:layout_width="@dimen/dimen_100"-->
+<!--            android:layout_height="@dimen/dimen_60"-->
+<!--            android:textColor="@color/red"-->
+<!--            android:layout_marginLeft="@dimen/layout_marginLeft10"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="@string/delete"/>-->
     </LinearLayout>
     <View
         android:layout_width="match_parent"
