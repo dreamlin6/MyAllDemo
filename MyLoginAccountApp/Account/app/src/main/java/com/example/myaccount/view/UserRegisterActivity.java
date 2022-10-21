@@ -123,7 +123,6 @@ public class UserRegisterActivity extends AppCompatActivity {
         values.put("account", account);
         values.put("password", password);
         resolver.insert(uri, values);
-        resolver.notifyChange(uri, null);
         readWriteLock.writeLock().unlock();
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
     }

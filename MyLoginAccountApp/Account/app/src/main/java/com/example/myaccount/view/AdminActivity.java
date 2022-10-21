@@ -2,6 +2,7 @@ package com.example.myaccount.view;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.ContentObserver;
 import android.database.Cursor;
@@ -39,6 +40,7 @@ public class AdminActivity extends AppCompatActivity {
     private ContentResolver resolver;
     private ReentrantReadWriteLock readWriteLock;
     private ContentObserver MyObserver;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,8 +58,17 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
-                startActivity(intent1);
+//                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
+//                startActivity(intent1);
+                resolver = getContentResolver();
+                Uri uri = Uri.parse("content://com.example.myaccount/users");
+                ContentValues values = new ContentValues();
+                int id = resolver.delete(uri, "_id = ?", new String[1]);
+                if (id > 0) {
+                    show("OK");
+                } else {
+                    show("Failed");
+                }
             }
         });
         initAdapter();
@@ -78,7 +89,7 @@ public class AdminActivity extends AppCompatActivity {
         resolver = getContentResolver();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
 //        resolver.registerContentObserver(uri, true, MyObserver);
-        Cursor cursor = resolver.query(uri, null, null, null, null);
+        cursor = resolver.query(uri, new String[]{"_id", "username", "account", "password"}, null, null, null, null);
         while (cursor.moveToNext()) {  //循环读取数据
             @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
             @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));

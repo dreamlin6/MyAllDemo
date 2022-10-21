@@ -33,13 +33,19 @@
                 android:text="@string/userList"
                 android:textSize="@dimen/textSize30"
                 android:background="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:paddingRight="@dimen/dimen_40"/>
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/userList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/layout_marginTop5">
+            android:layout_marginTop="@dimen/layout_marginTop5"
+            android:layout_marginLeft="@dimen/layout_marginLeft5">
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </layout>

@@ -31,7 +31,7 @@
             android:id="@+id/editAdminUser"
             android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
-            android:hint="@string/user_tips"
+            android:hint="@string/account_tips"
             android:layout_marginTop="@dimen/layout_marginTop30"/>
         <EditText
             android:id="@+id/editAdminPass"

@@ -17,17 +17,19 @@
                 android:layout_height="wrap_content"
                 android:text="@string/username"
                 android:textSize="@dimen/textSize24"
+                android:gravity="center"
                 android:textColor="@color/lime"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
             <TextView
                 android:id="@+id/ul_user"
-                android:layout_width="@dimen/dimen_180"
+                android:layout_width="@dimen/dimen_175"
                 android:layout_height="@dimen/dimen_30"
                 android:text="@string/user"
                 android:textColor="@color/lime"
                 android:gravity="left"
                 android:textSize="@dimen/textSize24"
+                android:layout_marginLeft="@dimen/layout_marginLeft5"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/usettext"/>
             <TextView
@@ -35,13 +37,14 @@
                 android:layout_width="@dimen/dimen_100"
                 android:layout_height="wrap_content"
                 android:text="@string/acconut"
-                android:textSize="@dimen/textSize24"
                 android:gravity="center"
+                android:typeface="monospace"
+                android:textSize="@dimen/textSize24"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/usettext"/>
             <TextView
                 android:id="@+id/ul_account"
-                android:layout_width="@dimen/dimen_180"
+                android:layout_width="@dimen/dimen_175"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/layout_marginLeft5"
                 android:textColor="@color/black"
@@ -58,11 +61,12 @@
                 android:text="@string/password"
                 android:textSize="@dimen/textSize24"
                 android:gravity="center"
+                android:typeface="monospace"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/accounttext"/>
             <TextView
                 android:id="@+id/ul_pass"
-                android:layout_width="@dimen/dimen_180"
+                android:layout_width="@dimen/dimen_175"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/layout_marginLeft5"
                 android:text="@string/pass"

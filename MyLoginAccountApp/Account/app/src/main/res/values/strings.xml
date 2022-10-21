@@ -8,8 +8,8 @@
     <string name="loginFail">登录失败！</string>
     <string name="loginSuccess">登录成功！</string>
     <string name="username">用户名:</string>
-    <string name="acconut">账 号:</string>
-    <string name="password">密 码:</string>
+    <string name="acconut">账&#8195;号:</string>
+    <string name="password">密&#8195;码:</string>
     <string name="register">注 册</string>
     <string name="welcome">欢迎! %s</string>
     <string name="toLogin">去登陆</string>

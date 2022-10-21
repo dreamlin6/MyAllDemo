@@ -21,6 +21,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityLoginBinding;
+import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserLoginViewModel;
 
 public class UserLoginActivity extends AppCompatActivity {
@@ -28,6 +29,9 @@ public class UserLoginActivity extends AppCompatActivity {
     private UserLoginViewModel userLoginViewModel;
     private ActivityLoginBinding activityLoginBinding;
     private ContentResolver resolver;
+    private MyDialog myDialog;
+    private Cursor cursor;
+    private String account, pass, account1, pass1, name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -79,32 +83,35 @@ public class UserLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(Constant.TAG, "UserLoginActivity login onClick");
-                String account = activityLoginBinding.editUser.getText().toString();
-                String pass = activityLoginBinding.editPass.getText().toString();
-                String account1, pass1, name;
+                account = activityLoginBinding.editUser.getText().toString();
+                pass = activityLoginBinding.editPass.getText().toString();
 
                 Uri uri = Uri.parse("content://com.example.myaccount/users");
                 resolver = getContentResolver();
-                Cursor cursor = resolver.query(uri, null, null, null, null);
-                while (cursor.moveToNext()) {  //循环读取数据
-                    account1 = cursor.getString(cursor.getColumnIndex("account"));
-                    pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                    Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
-                    if (account.equals(account1) && pass.equals(pass1)) {
-                        name = cursor.getString(cursor.getColumnIndex("username"));
-                        activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
-                        activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
-                        userLoginViewModel.setmBtLoginedVisibleStatus(true);
-                        userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
-                        userLoginViewModel.setmTvllVisibleStatus(true);
-                        break;
-                    } else {
-                        activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
-                        activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                        userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
-                        userLoginViewModel.setmTvllVisibleStatus(true);
+                cursor = resolver.query(uri, null, null, null, null);
+                if (cursor != null) {
+                    while (cursor.moveToNext()) {  //循环读取数据
+                        account1 = cursor.getString(cursor.getColumnIndex("account"));
+                        pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                        Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
+                        if (account.equals(account1) && pass.equals(pass1)) {
+                            name = cursor.getString(cursor.getColumnIndex("username"));
+                            activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
+                            activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
+                            userLoginViewModel.setmBtLoginedVisibleStatus(true);
+                            userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                            userLoginViewModel.setmTvllVisibleStatus(true);
+                            break;
+                        } else {
+                            activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
+                            activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
+                            userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                            userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                            userLoginViewModel.setmTvllVisibleStatus(true);
+                        }
                     }
+                } else {
+                    Log.i(Constant.TAG, "cursor = null");
                 }
             }
         });
@@ -125,4 +132,5 @@ public class UserLoginActivity extends AppCompatActivity {
             userLoginViewModel.setmLoginEnableStatus(activityLoginBinding.editUser.getText().length() > 0 && activityLoginBinding.editPass.getText().length() > 0);
         }
     };
+
 }

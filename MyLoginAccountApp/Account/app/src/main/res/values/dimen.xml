@@ -35,6 +35,7 @@
     <dimen name="dimen_135">135dp</dimen>
     <dimen name="dimen_140">140dp</dimen>
     <dimen name="dimen_150">150dp</dimen>
+    <dimen name="dimen_175">175dp</dimen>
     <dimen name="dimen_180">180dp</dimen>
     <dimen name="dimen_200">200dp</dimen>
     <dimen name="dimen_220">220dp</dimen>
