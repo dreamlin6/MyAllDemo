@@ -1,8 +1,10 @@
 package com.example.myaccount.view;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -91,32 +93,38 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String account = activityRegisterBinding.editAccount.getText().toString();
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
-                if (password.equals(password2)) {
-                    mInsertUser(username, account, password);
-                    if (myDialog == null) {
-                        myDialog = new MyDialog(UserRegisterActivity.this);
-                        myDialog.setsMessage("注册成功!确认跳转到登录吗?")
-                                .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        myDialog.dismiss();
-                                        activityRegisterBinding.editUser.setText(null);
-                                        activityRegisterBinding.editAccount.setText(null);
-                                        activityRegisterBinding.editPass.setText(null);
-                                        activityRegisterBinding.editPass2.setText(null);
-                                    }
-                                }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
-                                        startActivity(intent);
-                                    }
-                                }).show();
-                    } else {
-                        myDialog.show();
-                    }
+                if (mQueryUser(username)) {
+                    Toast.makeText(UserRegisterActivity.this, "此用户名已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
+                    activityRegisterBinding.editUser.setText(null);
+                    Log.i(Constant.TAG, "UserRegisterActivity onChanged username repeat");
                 } else {
-                    Toast.makeText(UserRegisterActivity.this, "两次密码输入不一致! 请正确输入!", Toast.LENGTH_SHORT).show();
+                    if (password.equals(password2)) {
+                        mInsertUser(username, account, password);
+                        if (myDialog == null) {
+                            myDialog = new MyDialog(UserRegisterActivity.this);
+                            myDialog.setsMessage("注册成功!确认跳转到登录吗?")
+                                    .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            myDialog.dismiss();
+                                            activityRegisterBinding.editUser.setText(null);
+                                            activityRegisterBinding.editAccount.setText(null);
+                                            activityRegisterBinding.editPass.setText(null);
+                                            activityRegisterBinding.editPass2.setText(null);
+                                        }
+                                    }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
+                                            startActivity(intent);
+                                        }
+                                    }).show();
+                        } else {
+                            myDialog.show();
+                        }
+                    } else {
+                        Toast.makeText(UserRegisterActivity.this, "两次密码输入不一致! 请正确输入!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         }
@@ -133,6 +141,27 @@ public class UserRegisterActivity extends AppCompatActivity {
         resolver.insert(uri, values);
         readWriteLock.writeLock().unlock();
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
+    }
+
+    public boolean mQueryUser(String name) {
+        Uri uri = Uri.parse("content://com.example.myaccount/users");
+        boolean bool = false;
+        resolver = getContentResolver();
+        Cursor cursor = resolver.query(uri, null, null, null, null, null);
+        cursor.moveToFirst();
+        for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
+            cursor.moveToNext();
+            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+            Log.i(Constant.TAG, "UserRegisterActivity mQueryUser username = " + username);
+            if (name.equals(username)) {
+                bool = true;
+                break;
+            } else {
+                bool = false;
+            }
+        }
+        Log.i(Constant.TAG, "UserRegisterActivity mQueryUser bool = " + bool);
+        return bool;
     }
 
     @Override

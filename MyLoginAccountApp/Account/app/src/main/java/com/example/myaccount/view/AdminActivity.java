@@ -9,6 +9,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -56,6 +58,7 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.setAdminvm(adminViewModel); //设置绑定 XML和Adapter
         readWriteLock = new ReentrantReadWriteLock();
 
+        activityAdminBinding.mId.addTextChangedListener(watcher);
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,6 +125,22 @@ public class AdminActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         readWriteLock.readLock().unlock();
     }
+
+    TextWatcher watcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            adminViewModel.setmDeletBbtEnableStatus(s.length() > 0);
+        }
+    };
 
     public void show(String info){
         Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();

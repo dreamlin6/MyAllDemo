@@ -30,6 +30,7 @@
     <dimen name="dimen_300">300dp</dimen>
     <dimen name="dimen_100">100dp</dimen>
     <dimen name="dimen_102">102dp</dimen>
+    <dimen name="dimen_110">110dp</dimen>
     <dimen name="dimen_120">120dp</dimen>
     <dimen name="dimen_130">130dp</dimen>
     <dimen name="dimen_135">135dp</dimen>
