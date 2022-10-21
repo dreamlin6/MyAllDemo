@@ -39,7 +39,9 @@ public class AdminLoginActivity extends AppCompatActivity {
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
-        adminLoginViewModel = new ViewModelProvider(this, instance).get(AdminLoginViewModel.class);  //创建viewmodel
+        if (adminLoginViewModel == null) {
+            adminLoginViewModel = new ViewModelProvider(this, instance).get(AdminLoginViewModel.class);  //创建viewmodel
+        }
         activityAdminloginBinding.setAdminloginvm(adminLoginViewModel); //设置绑定 XML和Adapter
 
 

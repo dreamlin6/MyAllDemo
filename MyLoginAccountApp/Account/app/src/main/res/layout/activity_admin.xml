@@ -34,8 +34,7 @@
                 android:text="@string/userList"
                 android:textSize="@dimen/textSize30"
                 android:background="@color/white"
-                android:gravity="center"
-                android:paddingRight="@dimen/dimen_40"/>
+                android:gravity="center" />
             <ToggleButton
                 android:id="@+id/edit"
                 android:layout_width="wrap_content"
@@ -51,14 +50,14 @@
             android:gravity="center"
             android:visibility="@{adminvm.mDeleteEnableStatus ? View.VISIBLE : View.GONE}">
             <TextView
-                android:layout_width="@dimen/dimen_110"
+                android:layout_width="@dimen/dimen_100"
                 android:layout_height="wrap_content"
                 android:text="@string/idtip"
                 android:gravity="center"
                 android:textSize="@dimen/textSize24" />
             <EditText
                 android:id="@+id/mId"
-                android:layout_width="@dimen/dimen_110"
+                android:layout_width="@dimen/dimen_120"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/textSize30"
                 android:background="@color/white" />

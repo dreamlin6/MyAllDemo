@@ -31,7 +31,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private ContentResolver resolver;
     private MyDialog myDialog;
     private Cursor cursor;
-    private String mid, account, pass, account1, pass1, name;
+    private String mid, account, pass, account1, pass1, name, pass2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +42,9 @@ public class UserLoginActivity extends AppCompatActivity {
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
-        userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
+        if (userLoginViewModel == null) {
+            userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
+        }
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
 
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
@@ -59,6 +61,7 @@ public class UserLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent2 = new Intent(UserLoginActivity.this, UserChangeActivity.class);
                 intent2.putExtra("mId", mid);
+                intent2.putExtra("mPass", pass2);
                 startActivity(intent2);
             }
         });
@@ -75,8 +78,8 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
-                startActivity(intent2);
+                Intent intent3 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
+                startActivity(intent3);
             }
         });
         activityLoginBinding.login.setOnClickListener(new View.OnClickListener() {
@@ -93,25 +96,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.getCount() = " + cursor.getCount());
                 if (!cursor.moveToFirst()) {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.moveToNext() isNull");
-                    if (myDialog == null) {
-                        myDialog = new MyDialog(UserLoginActivity.this);
-                        myDialog.setsMessage("未注册任何用户！是否去注册新用户？")
-                                .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        myDialog.dismiss();
-                                    }
-                                }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
-                                        startActivity(intent);
-                                        myDialog.dismiss();
-                                    }
-                                }).show();
-                    } else {
-                        myDialog.show();
-                    }
+                    mDialogShow();
                 } else {
                     cursor.moveToFirst();
                     cursor.moveToPrevious();
@@ -123,6 +108,7 @@ public class UserLoginActivity extends AppCompatActivity {
                             if (account.equals(account1) && pass.equals(pass1)) {
                                 mid = cursor.getString(cursor.getColumnIndex("_id"));
                                 name = cursor.getString(cursor.getColumnIndex("username"));
+                                pass2 = cursor.getString(cursor.getColumnIndex("password"));
                                 activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
                                 userLoginViewModel.setmBtLoginedVisibleStatus(true);
@@ -160,6 +146,28 @@ public class UserLoginActivity extends AppCompatActivity {
             userLoginViewModel.setmLoginEnableStatus(activityLoginBinding.editUser.getText().length() > 0 && activityLoginBinding.editPass.getText().length() > 0);
         }
     };
+
+    public void mDialogShow() {
+        if (myDialog == null) {
+            myDialog = new MyDialog(UserLoginActivity.this);
+            myDialog.setsMessage("未注册任何用户！是否去注册新用户？")
+                    .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            myDialog.dismiss();
+                        }
+                    }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
+                            startActivity(intent);
+                            myDialog.dismiss();
+                        }
+                    }).show();
+        } else {
+            myDialog.show();
+        }
+    }
 
     @Override
     protected void onDestroy() {

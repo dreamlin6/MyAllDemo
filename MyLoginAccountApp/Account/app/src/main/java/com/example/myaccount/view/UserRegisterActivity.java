@@ -47,7 +47,9 @@ public class UserRegisterActivity extends AppCompatActivity {
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
-        userRegisterViewModel = new ViewModelProvider(this, instance).get(UserRegisterViewModel.class);  //创建viewmodel
+        if (userRegisterViewModel == null) {
+            userRegisterViewModel = new ViewModelProvider(this, instance).get(UserRegisterViewModel.class);  //创建viewmodel
+        }
         activityRegisterBinding.setUserregistervm(userRegisterViewModel); //设置绑定 XML和Adapter
 
         activityRegisterBinding.editAccount.addTextChangedListener(watcher);
@@ -94,7 +96,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String account = activityRegisterBinding.editAccount.getText().toString();
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
-                if (mQueryUser(username)) {
+                if (mExistUser(username)) {
                     Toast.makeText(UserRegisterActivity.this, "此用户名已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
                     activityRegisterBinding.editUser.setText(null);
                     Log.i(Constant.TAG, "UserRegisterActivity onChanged username repeat");
@@ -144,7 +146,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
     }
 
-    public boolean mQueryUser(String name) {
+    public boolean mExistUser(String name) {
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         boolean bool = false;
         resolver = getContentResolver();
@@ -154,7 +156,7 @@ public class UserRegisterActivity extends AppCompatActivity {
             for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
                 cursor.moveToNext();
                 @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
-                Log.i(Constant.TAG, "UserRegisterActivity mQueryUser username = " + username);
+                Log.i(Constant.TAG, "UserRegisterActivity mExistUser username = " + username);
                 if (name.equals(username)) {
                     bool = true;
                     break;

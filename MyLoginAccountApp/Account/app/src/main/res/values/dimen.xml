@@ -7,6 +7,7 @@
     <dimen name="textSize16">16dp</dimen>
     <dimen name="layout_marginTop30">30dp</dimen>
     <dimen name="layout_marginLeft30">30dp</dimen>
+    <dimen name="layout_marginLeft50">50dp</dimen>
     <dimen name="layout_marginLeft5">5dp</dimen>
     <dimen name="layout_marginLeft10">10dp</dimen>
     <dimen name="layout_marginRight10">10dp</dimen>
@@ -40,6 +41,9 @@
     <dimen name="dimen_180">180dp</dimen>
     <dimen name="dimen_200">200dp</dimen>
     <dimen name="dimen_220">220dp</dimen>
-    <dimen name="dimen_280">280dp</dimen>
     <dimen name="dimen_260">260dp</dimen>
+    <dimen name="dimen_270">270dp</dimen>
+    <dimen name="dimen_280">280dp</dimen>
+    <dimen name="dimen_290">290dp</dimen>
+
 </resources>

@@ -2,6 +2,7 @@ package com.example.myaccount.view;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -34,7 +35,9 @@ public class UserChangeActivity extends AppCompatActivity {
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
-        userChangeViewModel = new ViewModelProvider(this, instance).get(UserChangeViewModel.class);  //创建viewmodel
+        if (userChangeViewModel == null) {
+            userChangeViewModel = new ViewModelProvider(this, instance).get(UserChangeViewModel.class);  //创建viewmodel
+        }
         activityChangeBinding.setChangevm(userChangeViewModel); //设置绑定 XML和Adapter
 
         activityChangeBinding.oldpass.addTextChangedListener(watcher);
@@ -44,17 +47,29 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.changepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resolver = getContentResolver();
-                Uri uri = Uri.parse("content://com.example.myaccount/users");
-                ContentValues values = new ContentValues();
-                values.put("password", activityChangeBinding.newpass.getText().toString());
-                int id = resolver.update(uri, values, "_id = ?", new String[]{getIntent().getStringExtra("mId")});
-                Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,getIntent().getStringExtra("mId"), id));
-                if(id > 0){
-                    show("更新成功！");
-                }else{
-                    show("更新失败！");
+                Log.i(Constant.TAG, "UserChangeActivity changepass onClick mPass = " + getIntent().getStringExtra("mPass"));
+                if (activityChangeBinding.oldpass.getText().toString().equals(getIntent().getStringExtra("mPass"))) {
+                    resolver = getContentResolver();
+                    Uri uri = Uri.parse("content://com.example.myaccount/users");
+                    ContentValues values = new ContentValues();
+                    values.put("password", activityChangeBinding.newpass.getText().toString());
+                    int id = resolver.update(uri, values, "_id = ?", new String[]{getIntent().getStringExtra("mId")});
+                    Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,getIntent().getStringExtra("mId"), id));
+                    if(id > 0){
+                        show("密码更新成功！");
+                    }else{
+                        show("密码更新失败！");
+                    }
+                } else {
+                    show("密码输入错误！");
                 }
+            }
+        });
+        activityChangeBinding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserChangeActivity.this, UserLoginActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -79,7 +94,7 @@ public class UserChangeActivity extends AppCompatActivity {
     };
 
     public void show(String tips) {
-        Toast.makeText(this, tips, Toast.LENGTH_SHORT).show();
+        Toast.makeText(UserChangeActivity.this, tips, Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -28,7 +28,6 @@ import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminBinding;
 import com.example.myaccount.util.MyDialog;
-import com.example.myaccount.util.MyObserver;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
 import java.util.ArrayList;
@@ -43,7 +42,6 @@ public class AdminActivity extends AppCompatActivity {
     private UserListAdapter userListAdapter;
     private ContentResolver resolver;
     private ReentrantReadWriteLock readWriteLock;
-    private ContentObserver MyObserver;
     private Cursor cursor;
     private MyDialog myDialog;
 
@@ -136,7 +134,6 @@ public class AdminActivity extends AppCompatActivity {
         readWriteLock.readLock().lock();
         resolver = getContentResolver();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
-//        resolver.registerContentObserver(uri, true, MyObserver);
         cursor = resolver.query(uri, new String[]{"_id", "username", "account", "password"}, null, null, null, null);
         while (cursor.moveToNext()) {  //循环读取数据
             @SuppressLint("Range") String mid = cursor.getString(cursor.getColumnIndex("_id"));
@@ -182,6 +179,5 @@ public class AdminActivity extends AppCompatActivity {
         if (myDialog != null) {
             myDialog.dismiss();
         }
-//        resolver.unregisterContentObserver(MyObserver);
     }
 }
