@@ -38,6 +38,7 @@ public class UserLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.setLifecycleOwner(this);
+        getSupportActionBar().setTitle("登录");
 
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
@@ -96,12 +97,12 @@ public class UserLoginActivity extends AppCompatActivity {
                 Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.getCount() = " + cursor.getCount());
                 if (!cursor.moveToFirst()) {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.moveToNext() isNull");
-                    mDialogShow();
+                    mDialogShow("未注册任何用户！是否去注册新用户？");
                 } else {
-                    cursor.moveToFirst();
-                    cursor.moveToPrevious();
+                    cursor.moveToFirst(); //第一行
+                    cursor.moveToPrevious(); //前一行
                     if (cursor != null) {
-                        while (cursor.moveToNext()) {  //循环读取数据
+                        while (cursor.moveToNext()) {  //下一行 循环读取数据
                             account1 = cursor.getString(cursor.getColumnIndex("account"));
                             pass1 = cursor.getString(cursor.getColumnIndex("password"));
                             Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
@@ -147,10 +148,10 @@ public class UserLoginActivity extends AppCompatActivity {
         }
     };
 
-    public void mDialogShow() {
+    public void mDialogShow(String str) {
         if (myDialog == null) {
             myDialog = new MyDialog(UserLoginActivity.this);
-            myDialog.setsMessage("未注册任何用户！是否去注册新用户？")
+            myDialog.setsMessage(str)
                     .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

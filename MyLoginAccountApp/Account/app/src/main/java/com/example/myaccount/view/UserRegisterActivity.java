@@ -42,6 +42,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register);
         activityRegisterBinding.setLifecycleOwner(this);
+        getSupportActionBar().setTitle("注册");
 
         readWriteLock = new ReentrantReadWriteLock();
         ViewModelProvider.AndroidViewModelFactory instance =
