@@ -97,7 +97,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String account = activityRegisterBinding.editAccount.getText().toString();
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
-                if (mExistUser(username)) {
+                if (isExistUser(username)) {
                     Toast.makeText(UserRegisterActivity.this, "此用户名已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
                     activityRegisterBinding.editUser.setText(null);
                     Log.i(Constant.TAG, "UserRegisterActivity onChanged username repeat");
@@ -147,7 +147,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         Log.i(Constant.TAG, "UserRegisterActivity reselover insert " + uri + values);
     }
 
-    public boolean mExistUser(String name) {
+    public boolean isExistUser(String name) {
         Uri uri = Uri.parse("content://com.example.myaccount/users");
         boolean bool = false;
         resolver = getContentResolver();

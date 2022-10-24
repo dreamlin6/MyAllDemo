@@ -100,6 +100,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/layout_marginTop30"
             android:visibility="@{userloginvm.mBtLoginedVisibleStatus ? View.VISIBLE : View.INVISIBLE}"/>
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/quit"
+            app:layout_constraintTop_toBottomOf="@+id/logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:visibility="@{userloginvm.mBtLoginedVisibleStatus ? View.VISIBLE : View.INVISIBLE}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

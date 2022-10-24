@@ -109,9 +109,9 @@ public class AdminActivity extends AppCompatActivity {
                 activityAdminBinding.mId.setText(null);
                 Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 if (id > 0) {
-                    show("OK");
+                    show("删除成功！");
                 } else {
-                    show("Failed");
+                    show("删除失败！");
                 }
                 initAdapter();
             }

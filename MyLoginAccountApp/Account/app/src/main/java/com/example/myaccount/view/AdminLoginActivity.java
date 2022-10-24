@@ -24,8 +24,6 @@ import com.example.myaccount.viewmodel.AdminLoginViewModel;
 public class AdminLoginActivity extends AppCompatActivity {
 
     private final String WAIT_LOGIN = "未登录";
-    private final String LOGIN_SUCCESS = "登录成功!";
-    private final String LOGIN_FAIL = "登录失败!";
     private ActivityAdminloginBinding activityAdminloginBinding;
     private AdminLoginViewModel adminLoginViewModel;
     private MyDialog myDialog;
