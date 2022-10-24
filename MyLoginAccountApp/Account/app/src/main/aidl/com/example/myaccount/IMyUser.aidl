@@ -22,4 +22,6 @@ interface IMyUser {
     int mDeleteUser(String mId);
 
     int mDeleteAllUser();
+
+    boolean isExistUser(String name);
 }

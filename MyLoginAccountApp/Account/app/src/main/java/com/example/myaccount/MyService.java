@@ -1,12 +1,16 @@
 package com.example.myaccount;
 
+import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.IBinder;
 import android.util.Log;
+
+import com.example.myaccount.constant.Constant;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -59,7 +63,7 @@ public class MyService extends Service {
         public void mQurey() {
             Log.i(TAG, "MyService mQurey");
             resolver = getContentResolver();
-            resolver.query(uri, null, null, null, null);
+            Cursor cursor = resolver.query(uri, null, null, null, null);
         }
 
         @Override
@@ -84,6 +88,30 @@ public class MyService extends Service {
             resolver = getContentResolver();
             Log.i(TAG, "MyService mDeleteAllUser");
             return resolver.delete(uri, null, null);
+        }
+
+        @Override
+        public boolean isExistUser(String name) {
+            Uri uri = Uri.parse("content://com.example.myaccount/users");
+            boolean bool = false;
+            resolver = getContentResolver();
+            Cursor cursor = resolver.query(uri, null, null, null, null, null);
+            if (cursor.moveToFirst()) {
+                cursor.moveToPrevious();
+                for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
+                    cursor.moveToNext();
+                    @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+                    Log.i(Constant.TAG, "MyService mExistUser username = " + username);
+                    if (name.equals(username)) {
+                        bool = true;
+                        break;
+                    } else {
+                        bool = false;
+                    }
+                }
+            }
+            Log.i(Constant.TAG, "MyService mQueryUser bool = " + bool);
+            return bool;
         }
     }
 

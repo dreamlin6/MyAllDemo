@@ -1,10 +1,13 @@
 package com.example.myaccount.view;
 
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -16,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myaccount.IMyUser;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityChangeBinding;
@@ -25,6 +29,7 @@ public class UserChangeActivity extends AppCompatActivity {
     private ActivityChangeBinding activityChangeBinding;
     private UserChangeViewModel userChangeViewModel;
     private ContentResolver resolver;
+    private IMyUser iMyUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +49,18 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.oldpass.addTextChangedListener(watcher);
         activityChangeBinding.newpass.addTextChangedListener(watcher);
         activityChangeBinding.newpass2.addTextChangedListener(watcher);
+
+        ServiceConnection connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "UserChangeActivity onServiceDisconnected");
+            }
+        };
 
         activityChangeBinding.changepass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +90,11 @@ public class UserChangeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Intent intent = new Intent();
+        intent.setAction("com.example.service.action");
+        intent.setPackage("com.example.myaccount");
+        bindService(intent,connection,BIND_AUTO_CREATE);
     }
 
     TextWatcher watcher = new TextWatcher() {

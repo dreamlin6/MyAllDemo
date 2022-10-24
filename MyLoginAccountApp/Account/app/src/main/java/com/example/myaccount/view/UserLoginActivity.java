@@ -1,12 +1,15 @@
 package com.example.myaccount.view;
 
 import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
@@ -18,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myaccount.IMyUser;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityLoginBinding;
@@ -32,6 +36,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private MyDialog myDialog;
     private Cursor cursor;
     private String mid, account, pass, account1, pass1, name, pass2;
+    private IMyUser iMyUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,8 +52,19 @@ public class UserLoginActivity extends AppCompatActivity {
             userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
         }
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
+        activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//输入框密码格式
 
-        activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+        ServiceConnection connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "UserLoginActivity onServiceDisconnected");
+            }
+        };
 
         activityLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +159,11 @@ public class UserLoginActivity extends AppCompatActivity {
         });
         activityLoginBinding.editUser.addTextChangedListener(watcher);
         activityLoginBinding.editPass.addTextChangedListener(watcher);
+
+        Intent intent = new Intent();
+        intent.setAction("com.example.service.action");
+        intent.setPackage("com.example.myaccount");
+        bindService(intent,connection,BIND_AUTO_CREATE);
     }
 
     TextWatcher watcher = new TextWatcher() {

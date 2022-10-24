@@ -71,16 +71,11 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
-                try {
-                    iMyUser.mDeleteAllUser();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
             }
 
             @Override
             public void onServiceDisconnected(ComponentName name) {
-
+                Log.i(Constant.TAG, "AdminActivity onServiceDisconnected");
             }
         };
 
@@ -106,11 +101,13 @@ public class AdminActivity extends AppCompatActivity {
                             }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    resolver = getContentResolver();
-                                    Uri uri = Uri.parse("content://com.example.myaccount/users");
-                                    int id = resolver.delete(uri, null, null);
-                                    Log.i(Constant.TAG, "AdminActivity deleteall onClick id = " + id);
-                                    initAdapter();
+                                    try {
+                                        int id = iMyUser.mDeleteAllUser();
+                                        Log.i(Constant.TAG, "AdminActivity deleteall onClick id = " + id);
+                                        initAdapter();
+                                    } catch (RemoteException e) {
+                                        e.printStackTrace();
+                                    }
                                     myDialog.dismiss();
                                 }
                             }).show();
@@ -128,11 +125,14 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resolver = getContentResolver();
-                Uri uri = Uri.parse("content://com.example.myaccount/users");
-                int id = resolver.delete(uri, "_id = ?", new String[]{activityAdminBinding.mId.getText().toString()});
-                activityAdminBinding.mId.setText(null);
-                Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
+                int id = 0;
+                try {
+                    id = iMyUser.mDeleteUser(activityAdminBinding.mId.getText().toString());
+                    activityAdminBinding.mId.setText(null);
+                    Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
                 if (id > 0) {
                     show("删除成功！");
                 } else {
@@ -163,7 +163,7 @@ public class AdminActivity extends AppCompatActivity {
         readWriteLock.readLock().lock();
         resolver = getContentResolver();
         Uri uri = Uri.parse("content://com.example.myaccount/users");
-        cursor = resolver.query(uri, new String[]{"_id", "username", "account", "password"}, null, null, null, null);
+        cursor = resolver.query(uri, null, null, null, null, null);
         while (cursor.moveToNext()) {  //循环读取数据
             @SuppressLint("Range") String mid = cursor.getString(cursor.getColumnIndex("_id"));
             @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
