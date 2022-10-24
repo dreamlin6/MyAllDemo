@@ -11,7 +11,7 @@ interface IMyUser {
 
     //增加接口
 
-    int mLogin(String editUser, String editPass, String theUser, String thePass);
+    int mLogin(String theUser, String thePass);
 
     void mRegister(String username, String account, String password);
 

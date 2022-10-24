@@ -1,13 +1,8 @@
 package com.example.myaccount.view;
 
-import android.annotation.SuppressLint;
 import android.content.ComponentName;
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -38,10 +33,9 @@ public class UserRegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding activityRegisterBinding;
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
-    private ContentResolver resolver;
-    private Cursor cursor;
     private ReentrantReadWriteLock readWriteLock;
     private IMyUser iMyUser;
+    private ServiceConnection connection;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,7 +58,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.editPass.addTextChangedListener(watcher);
         activityRegisterBinding.editPass2.addTextChangedListener(watcher);
 
-        ServiceConnection connection = new ServiceConnection() {
+        connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
@@ -171,5 +165,6 @@ public class UserRegisterActivity extends AppCompatActivity {
             myDialog.dismiss();
         }
         super.onDestroy();
+        this.unbindService(connection);
     }
 }

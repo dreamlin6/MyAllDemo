@@ -37,6 +37,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private Cursor cursor;
     private String mid, account, pass, account1, pass1, name, pass2;
     private IMyUser iMyUser;
+    private ServiceConnection connection;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//输入框密码格式
 
-        ServiceConnection connection = new ServiceConnection() {
+        connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
@@ -147,7 +148,6 @@ public class UserLoginActivity extends AppCompatActivity {
                                     userLoginViewModel.setmBtLoginedVisibleStatus(false);
                                     userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
                                     userLoginViewModel.setmTvllVisibleStatus(true);
-                                    break;
                                 }
                             }
                         } else {
@@ -230,5 +230,6 @@ public class UserLoginActivity extends AppCompatActivity {
             myDialog.dismiss();
         }
         super.onDestroy();
+        this.unbindService(connection);
     }
 }

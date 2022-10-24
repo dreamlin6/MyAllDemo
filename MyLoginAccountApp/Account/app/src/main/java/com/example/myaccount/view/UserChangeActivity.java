@@ -30,6 +30,7 @@ public class UserChangeActivity extends AppCompatActivity {
     private UserChangeViewModel userChangeViewModel;
     private ContentResolver resolver;
     private IMyUser iMyUser;
+    private ServiceConnection connection;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,7 +51,7 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.newpass.addTextChangedListener(watcher);
         activityChangeBinding.newpass2.addTextChangedListener(watcher);
 
-        ServiceConnection connection = new ServiceConnection() {
+        connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
@@ -122,5 +123,6 @@ public class UserChangeActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        this.unbindService(connection);
     }
 }

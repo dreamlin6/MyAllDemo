@@ -3,14 +3,11 @@ package com.example.myaccount.view;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.text.Editable;
@@ -51,6 +48,7 @@ public class AdminActivity extends AppCompatActivity {
     private Cursor cursor;
     private MyDialog myDialog;
     private IMyUser iMyUser;
+    private ServiceConnection connection;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +65,7 @@ public class AdminActivity extends AppCompatActivity {
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
-        ServiceConnection connection = new ServiceConnection() {
+        connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
@@ -209,5 +207,6 @@ public class AdminActivity extends AppCompatActivity {
         if (myDialog != null) {
             myDialog.dismiss();
         }
+        this.unbindService(connection);
     }
 }

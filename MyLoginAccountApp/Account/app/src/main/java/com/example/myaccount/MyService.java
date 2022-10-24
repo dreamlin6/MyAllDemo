@@ -38,8 +38,8 @@ public class MyService extends Service {
     public class MyBinder extends IMyUser.Stub {
         //实现接口
         @Override
-        public int mLogin(String editUser, String editPass, String theUser, String thePass) {
-            if (editUser.equals(theUser) && editPass.equals(thePass)) {
+        public int mLogin(String theUser, String thePass) {
+            if ("".equals(theUser) && "".equals(thePass)) {
                 return 1;
             } else {
                 return 2;
