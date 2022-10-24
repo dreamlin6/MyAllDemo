@@ -27,6 +27,7 @@
     <string name="user_tips">请输入用户名</string>
     <string name="account_tips">请输入账号</string>
     <string name="pass_tips">请输入密码</string>
+    <string name="pass2_tips">请再次输入密码</string>
     <string name="old_pass_tips">请输入旧密码</string>
     <string name="new_pass_tips">请输入新密码</string>
     <string name="dialog_tips">提示</string>

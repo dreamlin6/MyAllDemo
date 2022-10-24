@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
@@ -204,16 +205,19 @@ public class UserLoginActivity extends AppCompatActivity {
                                     myDialog.dismiss();
                                     break;
                                 case 3:
-                                    resolver = getContentResolver();
-                                    Uri uri = Uri.parse("content://com.example.myaccount/users");
-                                    int id = resolver.delete(uri, "_id = ?", new String[]{mid});
+                                    int id = 0;
+                                    try {
+                                        id = iMyUser.mDeleteUser(mid);
+                                        userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                                        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                        userLoginViewModel.setmTvllVisibleStatus(false);
+                                    } catch (RemoteException e) {
+                                        e.printStackTrace();
+                                    }
                                     Log.i(Constant.TAG, "UserLoginActivity resolver.delete id = " + id);
                                     if (id > 0) {
                                         Log.i(Constant.TAG, "UserLoginActivity delete logout OK!");
                                     }
-                                    userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                    userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
-                                    userLoginViewModel.setmTvllVisibleStatus(false);
                                     myDialog.dismiss();
                                     break;
                             }

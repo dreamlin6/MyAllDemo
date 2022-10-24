@@ -47,7 +47,7 @@
             android:id="@+id/editPass2"
             android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
-            android:hint="@string/pass_tips"
+            android:hint="@string/pass2_tips"
             app:layout_constraintTop_toBottomOf="@+id/editPass"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

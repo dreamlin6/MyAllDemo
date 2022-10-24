@@ -149,7 +149,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         } else {
-                            Toast.makeText(UserRegisterActivity.this, "两次密码输入不一致! 请正确输入!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UserRegisterActivity.this, "两次密码输入不一致! 请重新输入!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 } catch (RemoteException e) {
