@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MyAccount"
 include ':app'
-include ':mservice'

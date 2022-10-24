@@ -13,11 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAccount"
         tools:targetApi="31">
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="com.example.service.action"/>
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".view.MainActivity"
-            android:launchMode="singleTask"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,35 +34,30 @@
         </activity>
         <activity
             android:name=".view.AdminActivity"
-            android:launchMode="singleTop"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name=".view.AdminLoginActivity"
-            android:launchMode="singleTop"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name=".view.UserLoginActivity"
-            android:launchMode="singleTop"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name=".view.UserRegisterActivity"
-            android:launchMode="singleTop"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name=".view.UserChangeActivity"
-            android:launchMode="singleTop"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
 
         <provider
+            android:name=".bean.UserProvider"
             android:authorities="com.example.myaccount"
-            android:name="com.example.myaccount.bean.UserProvider"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

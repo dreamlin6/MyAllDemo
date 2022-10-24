@@ -1,14 +1,18 @@
 package com.example.myaccount.view;
 
 import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -22,6 +26,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyService;
 import com.example.myaccount.R;
 import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
@@ -44,6 +50,7 @@ public class AdminActivity extends AppCompatActivity {
     private ReentrantReadWriteLock readWriteLock;
     private Cursor cursor;
     private MyDialog myDialog;
+    private IMyUser iMyUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,6 +66,24 @@ public class AdminActivity extends AppCompatActivity {
         readWriteLock = new ReentrantReadWriteLock();
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
+
+        ServiceConnection connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+                try {
+                    iMyUser.mDeleteAllUser();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+
+            }
+        };
+
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,6 +142,10 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
         initAdapter();
+        Intent intent = new Intent();
+        intent.setAction("com.example.service.action");
+        intent.setPackage("com.example.myaccount");
+        bindService(intent,connection,BIND_AUTO_CREATE);
     }
 
     public void initAdapter() {
@@ -141,6 +170,7 @@ public class AdminActivity extends AppCompatActivity {
             @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
             @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
             UserListBean bean = new UserListBean();
+
             bean.setmId(mid);
             bean.setUserName(username);
             bean.setAccount(account);

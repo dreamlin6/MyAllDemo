@@ -111,7 +111,7 @@ public class UserLoginActivity extends AppCompatActivity {
                         cursor.moveToFirst(); //第一行
                         cursor.moveToPrevious(); //前一行
                         if (cursor != null) {
-                            while (cursor.moveToNext()) {  //下一行 循环读取数据
+                            while (cursor.moveToNext()) {  //下一行 循环
                                 account1 = cursor.getString(cursor.getColumnIndex("account"));
                                 pass1 = cursor.getString(cursor.getColumnIndex("password"));
                                 Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
@@ -131,6 +131,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                     userLoginViewModel.setmBtLoginedVisibleStatus(false);
                                     userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
                                     userLoginViewModel.setmTvllVisibleStatus(true);
+                                    break;
                                 }
                             }
                         } else {

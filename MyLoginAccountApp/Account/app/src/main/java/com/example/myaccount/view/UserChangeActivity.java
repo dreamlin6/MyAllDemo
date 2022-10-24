@@ -31,6 +31,7 @@ public class UserChangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityChangeBinding = DataBindingUtil.setContentView(this, R.layout.activity_change);
         activityChangeBinding.setLifecycleOwner(this);
+        getSupportActionBar().setTitle("修改密码");
 
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
@@ -79,7 +80,6 @@ public class UserChangeActivity extends AppCompatActivity {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
         }
-
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
