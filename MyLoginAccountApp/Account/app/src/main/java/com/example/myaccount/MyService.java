@@ -6,8 +6,10 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
 
 import com.example.myaccount.constant.Constant;
@@ -37,13 +39,58 @@ public class MyService extends Service {
 
     public class MyBinder extends IMyUser.Stub {
         //实现接口
+        @SuppressLint("Range")
         @Override
-        public boolean mLogin(String theUser, String thePass) {
-            if ("".equals(theUser) && "".equals(thePass)) {
-                return true;
+        public String[] mLogin(String theUser, String thePass) {
+            String[] mString = new String[3];
+            Uri uri = Uri.parse("content://com.example.myaccount/users");
+            resolver = getContentResolver();
+            Cursor cursor = resolver.query(uri, null, null, null, null);
+            cursor.moveToFirst(); //第一行
+            cursor.moveToPrevious(); //前一行
+            if (cursor != null) {
+                while (cursor.moveToNext()) {  //下一行 循环
+                    String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                    String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                    Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                    if (theUser.equals(account1) && thePass.equals(pass1)) {
+                        mString[0] = cursor.getString(cursor.getColumnIndex("_id"));
+                        mString[1] = cursor.getString(cursor.getColumnIndex("username"));
+                        mString[2] = cursor.getString(cursor.getColumnIndex("password"));
+                        return mString;
+                    }
+                }
+                return mString;
             } else {
-                return false;
+                Log.i(Constant.TAG, "MyService cursor = null");
+                return mString;
             }
+        }
+
+        @Override
+        public boolean mLoginVerify(String theUser, String thePass) {
+            Boolean mBool = false;
+            Uri uri = Uri.parse("content://com.example.myaccount/users");
+            resolver = getContentResolver();
+            Cursor cursor = resolver.query(uri, null, null, null, null);
+            cursor.moveToFirst(); //第一行
+            cursor.moveToPrevious(); //前一行
+            if (cursor != null) {
+                while (cursor.moveToNext()) {  //下一行 循环
+                    @SuppressLint("Range") String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                    @SuppressLint("Range") String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                    Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                    if (theUser.equals(account1) && thePass.equals(pass1)) {
+                        mBool = true;
+                    } else {
+                        mBool = false;
+                    }
+                }
+            } else {
+                Log.i(Constant.TAG, "MyService cursor = null");
+            }
+            Log.i(Constant.TAG, "MyService mLoginVerify mBool = " + mBool);
+            return mBool;
         }
 
         @Override
@@ -67,10 +114,12 @@ public class MyService extends Service {
         }
 
         @Override
-        public int mUpdate(String mId) {
+        public int mUpdate(String mId, String newPass) {
             resolver = getContentResolver();
             readWriteLock.readLock().lock();
-            int id = resolver.update(uri, null, "_id = ?", new String[]{mId});
+            ContentValues values = new ContentValues();
+            values.put("password", newPass);
+            int id = resolver.update(uri, values, "_id = ?", new String[]{mId});
             readWriteLock.readLock().unlock();
             Log.i(TAG, "MyService mUpdate id = " + id);
             return id;
@@ -88,6 +137,19 @@ public class MyService extends Service {
             resolver = getContentResolver();
             Log.i(TAG, "MyService mDeleteAllUser");
             return resolver.delete(uri, null, null);
+        }
+
+        @Override
+        public boolean isNoUser() {
+            Uri uri = Uri.parse("content://com.example.myaccount/users");
+            resolver = getContentResolver();
+            Cursor cursor = resolver.query(uri, null, null, null, null);
+            if (!cursor.moveToFirst()) {
+                Log.i(Constant.TAG, "MyService isNoUser true");
+                return true;
+            } else {
+                return false;
+            }
         }
 
         @Override

@@ -2,12 +2,10 @@ package com.example.myaccount.view;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -33,10 +31,9 @@ public class UserLoginActivity extends AppCompatActivity {
 
     private UserLoginViewModel userLoginViewModel;
     private ActivityLoginBinding activityLoginBinding;
-    private ContentResolver resolver;
     private MyDialog myDialog;
-    private Cursor cursor;
-    private String mid, account, pass, account1, pass1, name, pass2;
+    private String mid, account, pass, name, pass2;
+    private String[] mString;
     private IMyUser iMyUser;
     private ServiceConnection connection;
 
@@ -79,6 +76,7 @@ public class UserLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(UserLoginActivity.this, UserChangeActivity.class);
+                Log.i(Constant.TAG, String.format("UserLoginActivity change onclick mid = %s pass2 = %s", mid, pass2));
                 intent2.putExtra("mId", mid);
                 intent2.putExtra("mPass", pass2);
                 startActivity(intent2);
@@ -111,49 +109,39 @@ public class UserLoginActivity extends AppCompatActivity {
             @SuppressLint("Range")
             @Override
             public void onClick(View v) {
+                mString = new String[3];
                 account = activityLoginBinding.editUser.getText().toString();
                 pass = activityLoginBinding.editPass.getText().toString();
-                if (account.equals("1") && pass.equals("1") ) {
+                if (account.equals("1") && pass.equals("1")) {
                     mDialogShow("当前登录用户为管理员用户，是否跳转到管理员界面！", 2);
                 } else {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick");
-
-                    Uri uri = Uri.parse("content://com.example.myaccount/users");
-                    resolver = getContentResolver();
-                    cursor = resolver.query(uri, null, null, null, null);
-                    Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.getCount() = " + cursor.getCount());
-                    if (!cursor.moveToFirst()) {
-                        Log.i(Constant.TAG, "UserLoginActivity login onClick cursor.moveToNext() isNull");
-                        mDialogShow("未注册任何用户！是否去注册新用户？", 1);
-                    } else {
-                        cursor.moveToFirst(); //第一行
-                        cursor.moveToPrevious(); //前一行
-                        if (cursor != null) {
-                            while (cursor.moveToNext()) {  //下一行 循环
-                                account1 = cursor.getString(cursor.getColumnIndex("account"));
-                                pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                                Log.i(Constant.TAG, String.format("UserLoginActivity cursor user1 = %s pass1 = %s", account1, pass1));
-                                if (account.equals(account1) && pass.equals(pass1)) {
-                                    mid = cursor.getString(cursor.getColumnIndex("_id"));
-                                    name = cursor.getString(cursor.getColumnIndex("username"));
-                                    pass2 = cursor.getString(cursor.getColumnIndex("password"));
-                                    activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
-                                    activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
-                                    userLoginViewModel.setmBtLoginedVisibleStatus(true);
-                                    userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
-                                    userLoginViewModel.setmTvllVisibleStatus(true);
-                                    break;
-                                } else {
-                                    activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
-                                    activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                                    userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                    userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
-                                    userLoginViewModel.setmTvllVisibleStatus(true);
-                                }
-                            }
+                    try {
+                        if (iMyUser.isNoUser()) {
+                            Log.i(Constant.TAG, "UserLoginActivity login onClick isNoUser Null");
+                            mDialogShow("未注册任何用户！是否去注册新用户？", 1);
                         } else {
-                            Log.i(Constant.TAG, "UserLoginActivity cursor = null");
+                            if (iMyUser.mLoginVerify(account, pass)) {
+                                mString = iMyUser.mLogin(account, pass);
+                                mid = mString[0];
+                                name = mString[1];
+                                pass2 = mString[2];
+                                Log.i(Constant.TAG, String.format("UserLoginActivity Login mid = %s name = %s pass2 = %s", mid, name, pass2));
+                                activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
+                                activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
+                                userLoginViewModel.setmBtLoginedVisibleStatus(true);
+                                userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                                userLoginViewModel.setmTvllVisibleStatus(true);
+                            } else {
+                                activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
+                                activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
+                                userLoginViewModel.setmBtLoginedVisibleStatus(false);
+                                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                userLoginViewModel.setmTvllVisibleStatus(true);
+                            }
                         }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
                     }
                 }
             }

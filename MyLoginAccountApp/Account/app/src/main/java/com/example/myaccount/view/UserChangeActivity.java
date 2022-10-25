@@ -1,13 +1,11 @@
 package com.example.myaccount.view;
 
 import android.content.ComponentName;
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -28,9 +26,9 @@ import com.example.myaccount.viewmodel.UserChangeViewModel;
 public class UserChangeActivity extends AppCompatActivity {
     private ActivityChangeBinding activityChangeBinding;
     private UserChangeViewModel userChangeViewModel;
-    private ContentResolver resolver;
     private IMyUser iMyUser;
     private ServiceConnection connection;
+    private String mId, mPass;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,18 +64,20 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.changepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(Constant.TAG, "UserChangeActivity changepass onClick mPass = " + getIntent().getStringExtra("mPass"));
-                if (activityChangeBinding.oldpass.getText().toString().equals(getIntent().getStringExtra("mPass"))) {
-                    resolver = getContentResolver();
-                    Uri uri = Uri.parse("content://com.example.myaccount/users");
-                    ContentValues values = new ContentValues();
-                    values.put("password", activityChangeBinding.newpass.getText().toString());
-                    int id = resolver.update(uri, values, "_id = ?", new String[]{getIntent().getStringExtra("mId")});
-                    Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,getIntent().getStringExtra("mId"), id));
-                    if(id > 0){
-                        show("密码更新成功！");
-                    }else{
-                        show("密码更新失败！");
+                mId = getIntent().getStringExtra("mId");
+                mPass = getIntent().getStringExtra("mPass");
+                Log.i(Constant.TAG, "UserChangeActivity changepass onClick mPass = " + mPass);
+                if (activityChangeBinding.oldpass.getText().toString().equals(mPass)) {
+                    try {
+                        int id = iMyUser.mUpdate(mId, activityChangeBinding.newpass.getText().toString());
+                        Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,mId, id));
+                        if(id > 0){
+                            show("密码更新成功！");
+                        }else{
+                            show("密码更新失败！");
+                        }
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
                     }
                 } else {
                     show("密码输入错误！");

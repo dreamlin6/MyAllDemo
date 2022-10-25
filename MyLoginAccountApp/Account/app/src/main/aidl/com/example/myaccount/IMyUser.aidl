@@ -11,17 +11,21 @@ interface IMyUser {
 
     //增加接口
 
-    boolean mLogin(String theUser, String thePass);
+    String[] mLogin(String theUser, String thePass);
 
     void mRegister(String username, String account, String password);
 
     void mQurey();
 
-    int mUpdate(String mId);
+    int mUpdate(String mId, String newPass);
 
     int mDeleteUser(String mId);
 
     int mDeleteAllUser();
 
     boolean isExistUser(String name);
+
+    boolean isNoUser();
+
+    boolean mLoginVerify(String theUser, String thePass);
 }
