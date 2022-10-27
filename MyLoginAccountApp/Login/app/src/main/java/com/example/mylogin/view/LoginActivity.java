@@ -91,12 +91,11 @@ public class LoginActivity extends AppCompatActivity {
                             mainBinding.info1.setText(String.format(getResources().getString(R.string.welcome), name));
                             loginViewModel.mInfo.setValue("登录成功！");
                             mainBinding.info.setTextColor(Color.parseColor("#008000"));
-                            loginViewModel.mIsLoginVisible.setValue(true);
+                            loginViewModel.setmIsLoginVisible(true);
                         } else {
                             loginViewModel.mInfo.setValue("登录失败！");
-                            mainBinding.editPass.setText(null);
+                            unLogin();
                             mainBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                            loginViewModel.mIsLoginVisible.setValue(false);
                         }
                     }
                 } catch (RemoteException e) {
@@ -125,9 +124,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loginViewModel.mInfo.setValue("未登录！");
                 mainBinding.info.setTextColor(Color.parseColor("#ffa500"));
-                loginViewModel.setmIsLoginVisible(false);
-                mainBinding.editUser.setText(null);
-                mainBinding.editPass.setText(null);
+                unLogin();
             }
         });
 
@@ -175,13 +172,13 @@ public class LoginActivity extends AppCompatActivity {
                                     int id = 0;
                                     try {
                                         id = iMyUser.mDeleteUser(mid);
-                                        loginViewModel.mIsLoginVisible.setValue(false);
+                                        Log.i(TAG, "resolver.delete id = " + id);
+                                        if (id > 0) {
+                                            Log.i(TAG, "delete logout OK!");
+                                        }
+                                        unLogin();
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
-                                    }
-                                    Log.i(TAG, "resolver.delete id = " + id);
-                                    if (id > 0) {
-                                        Log.i(TAG, "delete logout OK!");
                                     }
                                     myDialog.dismiss();
                                     break;
@@ -193,11 +190,18 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    public void unLogin() {
+        loginViewModel.setmIsLoginVisible(false);
+        mainBinding.editUser.setText(null);
+        mainBinding.editPass.setText(null);
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if (myDialog != null) {
             myDialog.dismiss();
         }
+        unbindService(connection);
     }
 }

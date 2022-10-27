@@ -30,7 +30,7 @@
             android:id="@+id/editUser"
             android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
-            android:hint="@string/user_tips"
+            android:hint="@string/account_tips"
             app:layout_constraintTop_toBottomOf="@+id/info"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

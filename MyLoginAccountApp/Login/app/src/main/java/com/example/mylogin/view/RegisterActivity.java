@@ -164,5 +164,6 @@ public class RegisterActivity extends AppCompatActivity {
         if (myDialog != null) {
             myDialog.dismiss();
         }
+        unbindService(connection);
     }
 }

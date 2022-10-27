@@ -30,6 +30,7 @@
     <string name="pass2_tips">请再次输入密码</string>
     <string name="old_pass_tips">请输入旧密码</string>
     <string name="new_pass_tips">请输入新密码</string>
+    <string name="new_pass2_tips">请再次输入新密码</string>
     <string name="dialog_tips">提示</string>
     <string name="dialog_login_tips">登录成功!确定跳转到管理员界面?</string>
     <string name="cancel">取消</string>

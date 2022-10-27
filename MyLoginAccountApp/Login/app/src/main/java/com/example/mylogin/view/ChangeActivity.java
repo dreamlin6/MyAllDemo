@@ -120,5 +120,6 @@ public class ChangeActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        unbindService(connection);
     }
 }
