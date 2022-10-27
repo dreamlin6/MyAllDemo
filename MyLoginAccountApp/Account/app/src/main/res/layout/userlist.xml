@@ -38,7 +38,8 @@
             android:layout_width="@dimen/dimen_270"
             android:layout_height="@dimen/dimen_100"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="@dimen/dimen_50">
             <TextView
                 android:id="@+id/usettext"
                 android:layout_width="@dimen/dimen_100"
@@ -47,7 +48,6 @@
                 android:textSize="@dimen/textSize24"
                 android:gravity="center"
                 android:textColor="@color/lime"
-                android:layout_marginLeft="@dimen/layout_marginLeft50"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
             <TextView
@@ -71,7 +71,6 @@
                 android:textSize="@dimen/textSize24"
                 android:textColor="@color/black"
                 android:layout_marginTop="@dimen/layout_marginTop5"
-                android:layout_marginLeft="@dimen/layout_marginLeft50"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/usettext"/>
             <TextView
@@ -95,7 +94,6 @@
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:typeface="monospace"
-                android:layout_marginLeft="@dimen/layout_marginLeft50"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/accounttext"/>
             <TextView
@@ -110,14 +108,6 @@
                 app:layout_constraintLeft_toRightOf="@id/passwordtext"
                 app:layout_constraintTop_toBottomOf="@id/ul_account"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-<!--        <Button-->
-<!--            android:id="@+id/ul_bt"-->
-<!--            android:layout_width="@dimen/dimen_100"-->
-<!--            android:layout_height="@dimen/dimen_60"-->
-<!--            android:textColor="@color/red"-->
-<!--            android:layout_marginLeft="@dimen/layout_marginLeft10"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:text="@string/delete"/>-->
     </LinearLayout>
     <View
         android:layout_width="match_parent"

@@ -12,6 +12,9 @@ public class UserLoginBindingAdapter {
 
     @BindingAdapter({"mBtLogin"})
     public static void setBtUnLoginVisible(Button view, boolean isStatus) {
+        if (view == null) {
+            return;
+        }
         Log.i(Constant.TAG, "UserLoginBindingAdapter setBtUnLoginVisible isStatus = " + isStatus);
         view.setVisibility(isStatus ? View.VISIBLE : View.INVISIBLE);
     }

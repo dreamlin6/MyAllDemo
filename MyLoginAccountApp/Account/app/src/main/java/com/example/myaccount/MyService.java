@@ -6,10 +6,8 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
 
 import com.example.myaccount.constant.Constant;
@@ -17,9 +15,9 @@ import com.example.myaccount.constant.Constant;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class MyService extends Service {
-    private final String TAG = "TestLog";
-    private ContentResolver resolver;
-    private Uri uri;
+    public final String TAG = "TestLog";
+    public ContentResolver resolver;
+    public Uri uri;
     private ReentrantReadWriteLock readWriteLock;
 
     public MyService () {
@@ -82,6 +80,7 @@ public class MyService extends Service {
                     Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
                     if (theUser.equals(account1) && thePass.equals(pass1)) {
                         mBool = true;
+                        break;
                     } else {
                         mBool = false;
                     }
@@ -141,6 +140,7 @@ public class MyService extends Service {
 
         @Override
         public boolean isNoUser() {
+            Log.i(Constant.TAG, "MyService isNoUser");
             Uri uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
             Cursor cursor = resolver.query(uri, null, null, null, null);

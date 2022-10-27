@@ -63,7 +63,24 @@ public class AdminLoginActivity extends AppCompatActivity {
         activityAdminloginBinding.editAdminUser.addTextChangedListener(watcher); //监听输入框变化
         activityAdminloginBinding.editAdminPass.addTextChangedListener(watcher);
         activityAdminloginBinding.editAdminPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//隐藏密码显示
-        activityAdminloginBinding.loginTips.addTextChangedListener(watcher1);
+        activityAdminloginBinding.loginTips.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.toString().equals(WAIT_LOGIN)) {
+                    Log.i(Constant.TAG,"AdminLoginActivity afterTextChanged s = " + s);
+                    activityAdminloginBinding.loginTips.setTextColor(Color.parseColor("#ffa500"));
+                }
+            }
+        });
         adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
     }
 
@@ -84,27 +101,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         }
     };
 
-    TextWatcher watcher1 = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            if (s.toString().equals(WAIT_LOGIN)) {
-                Log.i(Constant.TAG,"AdminLoginActivity afterTextChanged s = " + s);
-                activityAdminloginBinding.loginTips.setTextColor(Color.parseColor("#ffa500"));
-            }
-        }
-    };
-
     private Observer<Integer> loginObserve = new Observer<Integer>() {
-
         @Override
         public void onChanged(@Nullable Integer isLogin) {
             Log.i(Constant.TAG,"AdminLoginActivity LoginActivity onChanged isLogin = " + isLogin);
@@ -114,8 +111,8 @@ public class AdminLoginActivity extends AppCompatActivity {
                     myDialog.setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            myDialog.dismiss();
                             activityAdminloginBinding.loginTips.setText(WAIT_LOGIN);
+                            myDialog.dismiss();
                         }
                     }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                         @Override
@@ -133,4 +130,11 @@ public class AdminLoginActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
+    }
 }

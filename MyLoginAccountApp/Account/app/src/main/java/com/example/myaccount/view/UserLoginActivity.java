@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -131,14 +130,13 @@ public class UserLoginActivity extends AppCompatActivity {
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
                                 userLoginViewModel.setmBtLoginedVisibleStatus(true);
                                 userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
-                                userLoginViewModel.setmTvllVisibleStatus(true);
                             } else {
                                 activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
                                 userLoginViewModel.setmBtLoginedVisibleStatus(false);
                                 userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
-                                userLoginViewModel.setmTvllVisibleStatus(true);
                             }
+                            userLoginViewModel.setmTvllVisibleStatus(true);
                         }
                     } catch (RemoteException e) {
                         e.printStackTrace();
