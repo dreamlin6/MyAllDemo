@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="loginvm"
+            type="com.example.mylogin.viewmodel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|top">
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{loginvm.mInfo}"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:textSize="@dimen/textSize30" />
+        <EditText
+            android:id="@+id/etuser"
+            android:layout_width="@dimen/dimen_280"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_tips"
+            android:layout_marginTop="@dimen/layout_marginTop30" />
+        <EditText
+            android:id="@+id/etpass"
+            android:layout_width="@dimen/dimen_280"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass_tips"
+            android:layout_marginTop="@dimen/layout_marginTop30" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/dimen_50"
+            android:text="@string/login"
+            android:layout_marginTop="30dp"
+            android:enabled="@{loginvm.mLoginBtEnable}"/>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:text="@string/register"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.INVISIBLE : View.VISIBLE}"/>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="@dimen/dimen_50"
+            android:text="@string/logout"
+            android:layout_marginTop="@dimen/layout_marginTop_50"
+            android:enabled="true"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="@dimen/dimen_50"
+            android:text="@string/quit"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:enabled="true"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
+    </LinearLayout>
+</layout>
