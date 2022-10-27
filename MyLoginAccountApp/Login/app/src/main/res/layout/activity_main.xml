@@ -11,59 +11,108 @@
             type="com.example.mylogin.viewmodel.LoginViewModel" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center|top">
+        android:layout_height="match_parent">
         <TextView
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
+            android:id="@+id/info"
+            android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
             android:text="@{loginvm.mInfo}"
-            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_60"
             android:textSize="@dimen/textSize30" />
         <EditText
-            android:id="@+id/etuser"
-            android:layout_width="@dimen/dimen_280"
+            android:id="@+id/editUser"
+            android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
             android:hint="@string/user_tips"
-            android:layout_marginTop="@dimen/layout_marginTop30" />
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.INVISIBLE : View.VISIBLE}"/>
         <EditText
-            android:id="@+id/etpass"
-            android:layout_width="@dimen/dimen_280"
+            android:id="@+id/editPass"
+            android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"
             android:hint="@string/pass_tips"
-            android:layout_marginTop="@dimen/layout_marginTop30" />
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.INVISIBLE : View.VISIBLE}"/>
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="@dimen/dimen_110"
+            android:text="@string/welcome"
+            android:textColor="@color/gold"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:textSize="@dimen/textSize50"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
         <Button
             android:id="@+id/login"
-            android:layout_width="200dp"
-            android:layout_height="@dimen/dimen_50"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
             android:text="@string/login"
-            android:layout_marginTop="30dp"
-            android:enabled="@{loginvm.mLoginBtEnable}"/>
+            android:enabled="@{loginvm.mLoginBtEnable}"
+            app:layout_constraintTop_toBottomOf="@+id/editPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.INVISIBLE : View.VISIBLE}"/>
+
         <Button
             android:id="@+id/register"
-            android:layout_width="@dimen/dimen_200"
-            android:layout_height="@dimen/dimen_50"
-            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
             android:text="@string/register"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
             android:visibility="@{loginvm.mIsLoginVisible ? View.INVISIBLE : View.VISIBLE}"/>
         <Button
+            android:id="@+id/change"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/change"
+            app:layout_constraintTop_toBottomOf="@+id/editPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
+        <Button
             android:id="@+id/logout"
-            android:layout_width="@dimen/dimen_200"
-            android:layout_height="@dimen/dimen_50"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
             android:text="@string/logout"
-            android:layout_marginTop="@dimen/layout_marginTop_50"
-            android:enabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/change"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
             android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
         <Button
             android:id="@+id/quit"
-            android:layout_width="@dimen/dimen_200"
-            android:layout_height="@dimen/dimen_50"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
             android:text="@string/quit"
+            app:layout_constraintTop_toBottomOf="@+id/logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/layout_marginTop30"
-            android:enabled="true"
             android:visibility="@{loginvm.mIsLoginVisible ? View.VISIBLE : View.INVISIBLE}"/>
-    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

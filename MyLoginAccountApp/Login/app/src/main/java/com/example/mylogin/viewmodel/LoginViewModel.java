@@ -12,7 +12,7 @@ public class LoginViewModel extends ViewModel {
     public MutableLiveData<String> mInfo;
 
     public LoginViewModel() {
-        this.mIsLoginVisible = new MutableLiveData<>();
+        this.mIsLoginVisible = new MutableLiveData<>(Boolean.FALSE);
         this.mLoginBtEnable = new MutableLiveData<>();
         this.mInfo = new MutableLiveData<>(Constant.WAIT);
     }

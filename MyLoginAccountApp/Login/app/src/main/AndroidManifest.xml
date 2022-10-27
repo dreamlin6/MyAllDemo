@@ -28,6 +28,11 @@
             android:exported="true"
             android:launchMode="singleTop">
         </activity>
+        <activity
+            android:name=".view.ChangeActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+        </activity>
 
     </application>
     <queries>

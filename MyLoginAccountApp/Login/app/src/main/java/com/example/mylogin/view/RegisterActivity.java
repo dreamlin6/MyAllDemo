@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
             @Override
             public void onServiceDisconnected(ComponentName name) {
-                Log.i(TAG, "LoginActivity onServiceDisconnected");
+                Log.i(TAG, "onServiceDisconnected");
             }
         };
 
@@ -84,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Observer<Boolean> registerObserver = new Observer<Boolean>() {
         @Override
         public void onChanged(@Nullable Boolean isRegister) {
-            Log.i(TAG,"RegisterActivity onChanged isRegister = " + isRegister);
+            Log.i(TAG,"onChanged isRegister = " + isRegister);
             if (isRegister) {
                 String username = registerBinding.editUser.getText().toString();
                 String account = registerBinding.editAccount.getText().toString();
@@ -94,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if (iMyUser.isExistUser(username)) {
                         showToast("此用户名已存在! 请重新输入!");
                         registerBinding.editUser.setText(null);
-                        Log.i(TAG, "RegisterActivity onChanged username repeat");
+                        Log.i(TAG, "onChanged username repeat");
                     } else {
                         if (password.equals(password2)) {
                             try {
@@ -158,4 +158,11 @@ public class RegisterActivity extends AppCompatActivity {
         Toast.makeText(RegisterActivity.this, info, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
+    }
 }

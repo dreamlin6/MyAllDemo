@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             @Override
             public void onServiceDisconnected(ComponentName name) {
-                Log.i(TAG, "LoginActivity onServiceDisconnected");
+                Log.i(TAG, "onServiceDisconnected");
             }
         };
 
@@ -59,9 +59,9 @@ public class LoginActivity extends AppCompatActivity {
             loginViewModel = new ViewModelProvider(this, instance).get(LoginViewModel.class);  //创建viewmodel
         }
         mainBinding.setLoginvm(loginViewModel); //设置绑定 XML和Adapter
-        mainBinding.etuser.addTextChangedListener(watcher);
-        mainBinding.etpass.addTextChangedListener(watcher);
-        mainBinding.etpass.setTransformationMethod(PasswordTransformationMethod.getInstance());//隐藏密码显示
+        mainBinding.editUser.addTextChangedListener(watcher);
+        mainBinding.editPass.addTextChangedListener(watcher);
+        mainBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//隐藏密码显示
 
         mainBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,12 +74,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mString = new String[3];
-                account = mainBinding.etuser.getText().toString();
-                pass = mainBinding.etpass.getText().toString();
-                Log.i(TAG, "UserLoginActivity login onClick");
+                account = mainBinding.editUser.getText().toString();
+                pass = mainBinding.editPass.getText().toString();
+                Log.i(TAG, "login onClick");
                 try {
                     if (iMyUser.isNoUser()) {
-                        Log.i(TAG, "UserLoginActivity login onClick isNoUser True");
+                        Log.i(TAG, "login onClick isNoUser True");
                         mDialogShow("未注册任何用户！是否去注册新用户？", 1);
                     } else {
                         if (iMyUser.mLoginVerify(account, pass)) {
@@ -87,17 +87,31 @@ public class LoginActivity extends AppCompatActivity {
                             mid = mString[0];
                             name = mString[1];
                             pass2 = mString[2];
-                            Log.i(TAG, String.format("UserLoginActivity Login mid = %s name = %s pass2 = %s", mid, name, pass2));
-                            loginViewModel.mInfo.setValue(String.format(getResources().getString(R.string.welcome), name));
+                            Log.i(TAG, String.format("Login success mid = %s name = %s pass2 = %s", mid, name, pass2));
+                            mainBinding.info1.setText(String.format(getResources().getString(R.string.welcome), name));
+                            loginViewModel.mInfo.setValue("登录成功！");
+                            mainBinding.info.setTextColor(Color.parseColor("#008000"));
                             loginViewModel.mIsLoginVisible.setValue(true);
                         } else {
                             loginViewModel.mInfo.setValue("登录失败！");
+                            mainBinding.editPass.setText(null);
+                            mainBinding.info.setTextColor(Color.parseColor("#FF0000"));
                             loginViewModel.mIsLoginVisible.setValue(false);
                         }
                     }
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+        mainBinding.change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(LoginActivity.this, ChangeActivity.class);
+                Log.i(TAG, String.format("change onclick mid = %s pass2 = %s", mid, pass2));
+                intent2.putExtra("mId", mid);
+                intent2.putExtra("mPass", pass2);
+                startActivity(intent2);
             }
         });
         mainBinding.logout.setOnClickListener(new View.OnClickListener() {
@@ -110,9 +124,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loginViewModel.mInfo.setValue("未登录！");
+                mainBinding.info.setTextColor(Color.parseColor("#ffa500"));
                 loginViewModel.setmIsLoginVisible(false);
-                mainBinding.etuser.setText(null);
-                mainBinding.etpass.setText(null);
+                mainBinding.editUser.setText(null);
+                mainBinding.editPass.setText(null);
             }
         });
 
@@ -134,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            loginViewModel.setmLoginBtEnable(mainBinding.etuser.getText().length() > 0 && mainBinding.etpass.getText().length() > 0);
+            loginViewModel.setmLoginBtEnable(mainBinding.editUser.getText().length() > 0 && mainBinding.editPass.getText().length() > 0);
         }
     };
 
@@ -164,9 +179,9 @@ public class LoginActivity extends AppCompatActivity {
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
                                     }
-                                    Log.i(TAG, "LoginActivity resolver.delete id = " + id);
+                                    Log.i(TAG, "resolver.delete id = " + id);
                                     if (id > 0) {
-                                        Log.i(TAG, "LoginActivity delete logout OK!");
+                                        Log.i(TAG, "delete logout OK!");
                                     }
                                     myDialog.dismiss();
                                     break;
@@ -181,5 +196,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (myDialog != null) {
+            myDialog.dismiss();
+        }
     }
 }
