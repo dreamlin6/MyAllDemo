@@ -118,6 +118,11 @@ public class MyService extends Service {
             cursor.moveToNext();
         }
 
+        @Override
+        public void updateQuery() throws RemoteException {
+            cursor = resolver.query(uri, null, null, null, null);
+        }
+
         @SuppressLint("Range")
         @Override
         public String[] mQurey() {
@@ -131,7 +136,7 @@ public class MyService extends Service {
             mString[1] = cursor.getString(cursor.getColumnIndex("username"));
             mString[2] = cursor.getString(cursor.getColumnIndex("account"));
             mString[3] = cursor.getString(cursor.getColumnIndex("password"));
-            Log.i(TAG, "MyService mQurey mString = " + mString[0] + mString[1] + mString[2] + mString[3]);
+            Log.i(TAG, "MyService mQurey mString = " + mString[0] + " " + mString[1] + " " + mString[2] + " " + mString[3]);
             return mString;
         }
 

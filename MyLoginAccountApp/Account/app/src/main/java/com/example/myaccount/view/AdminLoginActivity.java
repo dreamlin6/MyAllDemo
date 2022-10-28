@@ -142,12 +142,6 @@ public class AdminLoginActivity extends AppCompatActivity {
                     }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            try {
-                                listCount = iMyUser.getListCount();
-                                Log.i(Constant.TAG, "count ========================== " + listCount);
-                            } catch (RemoteException e) {
-                                e.printStackTrace();
-                            }
                             Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
                             startActivity(intent);
                             myDialog.dismiss();

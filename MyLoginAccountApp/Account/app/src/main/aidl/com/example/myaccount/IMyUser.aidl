@@ -34,4 +34,6 @@ interface IMyUser {
     void toFirst();
 
     void toNext();
+
+    void updateQuery();
 }

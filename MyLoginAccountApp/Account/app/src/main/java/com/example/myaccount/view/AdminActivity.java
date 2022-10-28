@@ -42,7 +42,6 @@ public class AdminActivity extends AppCompatActivity {
     private IMyUser iMyUser;
     private ServiceConnection connection;
     private int listCount;
-    private Thread thread;
     private String mid, account, username, password;
 
     @Override
@@ -70,7 +69,6 @@ public class AdminActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-
             @Override
             public void onServiceDisconnected(ComponentName name) {
                 Log.i(Constant.TAG, "AdminActivity onServiceDisconnected");
@@ -127,6 +125,7 @@ public class AdminActivity extends AppCompatActivity {
                 try {
                     id = iMyUser.mDeleteUser(activityAdminBinding.mId.getText().toString());
                     activityAdminBinding.mId.setText(null);
+                    iMyUser.updateQuery();
                     initAdapter();
                     Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 } catch (RemoteException e) {
@@ -143,18 +142,6 @@ public class AdminActivity extends AppCompatActivity {
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
         bindService(intent,connection,BIND_AUTO_CREATE);
-//        thread = new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                Log.i(Constant.TAG, "AdminActivity new Thread run");
-//                try {
-//                    initAdapter();
-//                } catch (RemoteException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//        thread.start();
     }
 
     public void initAdapter() throws RemoteException {
