@@ -1,12 +1,8 @@
 package com.example.myaccount.view;
 
-import android.annotation.SuppressLint;
 import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -24,7 +20,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.myaccount.IMyUser;
-import com.example.myaccount.MyService;
 import com.example.myaccount.R;
 import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
@@ -35,7 +30,6 @@ import com.example.myaccount.viewmodel.AdminViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -43,12 +37,13 @@ public class AdminActivity extends AppCompatActivity {
     private AdminViewModel adminViewModel;
     private List<UserListBean> userLists;
     private UserListAdapter userListAdapter;
-    private ContentResolver resolver;
-    private ReentrantReadWriteLock readWriteLock;
-    private Cursor cursor;
+    private String[] mString;
     private MyDialog myDialog;
     private IMyUser iMyUser;
     private ServiceConnection connection;
+    private int listCount;
+    private Thread thread;
+    private String mid, account, username, password;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,14 +56,19 @@ public class AdminActivity extends AppCompatActivity {
                         .getInstance(getApplication()); //viewmodel实例
         adminViewModel = new ViewModelProvider(this, instance).get(AdminViewModel.class);  //创建viewmodel
         activityAdminBinding.setAdminvm(adminViewModel); //设置绑定 XML和Adapter
-        readWriteLock = new ReentrantReadWriteLock();
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
         connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "AdminActivity onServiceConnected");
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
+                try {
+                    initAdapter();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
@@ -76,12 +76,12 @@ public class AdminActivity extends AppCompatActivity {
                 Log.i(Constant.TAG, "AdminActivity onServiceDisconnected");
             }
         };
-
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
                 startActivity(intent1);
+                finish();
             }
         });
         activityAdminBinding.deleteall.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +127,7 @@ public class AdminActivity extends AppCompatActivity {
                 try {
                     id = iMyUser.mDeleteUser(activityAdminBinding.mId.getText().toString());
                     activityAdminBinding.mId.setText(null);
+                    initAdapter();
                     Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -136,49 +137,88 @@ public class AdminActivity extends AppCompatActivity {
                 } else {
                     show("删除失败！");
                 }
-                initAdapter();
             }
         });
-        initAdapter();
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
         bindService(intent,connection,BIND_AUTO_CREATE);
+//        thread = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.i(Constant.TAG, "AdminActivity new Thread run");
+//                try {
+//                    initAdapter();
+//                } catch (RemoteException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//        thread.start();
     }
 
-    public void initAdapter() {
+    public void initAdapter() throws RemoteException {
         Log.i(Constant.TAG, "AdminActivity initAdapter");
         userLists =new ArrayList<>();
         userListAdapter = new UserListAdapter(this, userLists);
         activityAdminBinding.userList.setLayoutManager(new GridLayoutManager(this,1)); // 一列
         activityAdminBinding.userList.setAdapter(userListAdapter);
         updateUserList(userLists, userListAdapter);
+        listCount = iMyUser.getListCount();
+        activityAdminBinding.listTitle.setText(String.format(getResources().getString(R.string.userList), listCount));
         adminViewModel.setmDeleteAllBbtEnableStatus(userListAdapter.getItemCount() > 0);
     }
 
-    public void updateUserList(List<UserListBean> list, UserListAdapter adapter) {
-        list.clear();
-        readWriteLock.readLock().lock();
-        resolver = getContentResolver();
-        Uri uri = Uri.parse("content://com.example.myaccount/users");
-        cursor = resolver.query(uri, null, null, null, null, null);
-        while (cursor.moveToNext()) {  //循环读取数据
-            @SuppressLint("Range") String mid = cursor.getString(cursor.getColumnIndex("_id"));
-            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
-            @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
-            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
-            UserListBean bean = new UserListBean();
-
-            bean.setmId(mid);
-            bean.setUserName(username);
-            bean.setAccount(account);
-            bean.setPassWord(password);
-
-            Log.i(Constant.TAG, "AdminActivity updateUserList " + mid + " " + username + " " + account + " " + password);
-            list.add(bean);
+    public void updateUserList(List<UserListBean> list, UserListAdapter adapter) throws RemoteException {
+        if (iMyUser.isNoUser()) {
+            Log.i(Constant.TAG, "AdminActivity updateUserList isNoUser true ");
+            return;
+        } else {
+            mString = new String[4];
+            listCount = iMyUser.getListCount();
+            Log.i(Constant.TAG, "AdminActivity updateUserList listCount = " + listCount);
+            list.clear();
+            iMyUser.toFirst();
+            try {
+                for (int i = 0; i < listCount; i++) {
+                    mString = iMyUser.mQurey();
+                    mid = mString[0];
+                    username = mString[1];
+                    account = mString[2];
+                    password = mString[3];
+                    UserListBean bean = new UserListBean();
+                    bean.setmId(mid);
+                    bean.setUserName(username);
+                    bean.setAccount(account);
+                    bean.setPassWord(password);
+                    Log.i(Constant.TAG, "AdminActivity updateUserList " + mid + " " + username + " " + account + " " + password);
+                    list.add(bean);
+                }
+                adapter.notifyDataSetChanged();
+            } catch (RemoteException e) {
+                Log.i(Constant.TAG, "AdminActivity updateUserList mQurey ERROR!");
+                e.printStackTrace();
+            }
         }
-        adapter.notifyDataSetChanged();
-        readWriteLock.readLock().unlock();
+//        resolver = getContentResolver();
+//        Uri uri = Uri.parse("content://com.example.myaccount/users");
+//        cursor = resolver.query(uri, null, null, null, null, null);
+//        while (cursor.moveToNext()) {  //循环读取数据
+//            @SuppressLint("Range") String mid = cursor.getString(cursor.getColumnIndex("_id"));
+//            @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
+//            @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
+//            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+//
+//            UserListBean bean = new UserListBean();
+//            bean.setmId(mid);
+//            bean.setUserName(username);
+//            bean.setAccount(account);
+//            bean.setPassWord(password);
+//
+//            Log.i(Constant.TAG, "AdminActivity updateUserList " + mid + " " + username + " " + account + " " + password);
+//            list.add(bean);
+//        }
+//        adapter.notifyDataSetChanged();
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -203,10 +243,11 @@ public class AdminActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        Log.i(Constant.TAG, "AdminActivity onDestroy");
         super.onDestroy();
         if (myDialog != null) {
             myDialog.dismiss();
         }
-        this.unbindService(connection);
+        unbindService(connection);
     }
 }

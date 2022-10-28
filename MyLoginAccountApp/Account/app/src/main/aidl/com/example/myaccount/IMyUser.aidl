@@ -15,7 +15,7 @@ interface IMyUser {
 
     void mRegister(String username, String account, String password);
 
-    void mQurey();
+    String[] mQurey();
 
     int mUpdate(String mId, String newPass);
 
@@ -28,4 +28,10 @@ interface IMyUser {
     boolean isNoUser();
 
     boolean mLoginVerify(String theUser, String thePass);
+
+    int getListCount();
+
+    void toFirst();
+
+    void toNext();
 }

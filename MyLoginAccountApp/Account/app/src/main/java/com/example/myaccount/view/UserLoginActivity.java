@@ -55,6 +55,7 @@ public class UserLoginActivity extends AppCompatActivity {
         connection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "UserLoginActivity onServiceConnected");
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
             }
 
@@ -186,6 +187,12 @@ public class UserLoginActivity extends AppCompatActivity {
                                     myDialog.dismiss();
                                     break;
                                 case 2:
+                                    try {
+                                        int listCount = iMyUser.getListCount();
+                                        Log.i(Constant.TAG, "UserLoginActivity admin onclick listCount = " + listCount);
+                                    } catch (RemoteException e) {
+                                        e.printStackTrace();
+                                    }
                                     Intent intent2 = new Intent(UserLoginActivity.this, AdminActivity.class);
                                     startActivity(intent2);
                                     myDialog.dismiss();

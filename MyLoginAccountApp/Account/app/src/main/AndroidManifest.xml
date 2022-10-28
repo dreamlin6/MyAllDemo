@@ -52,7 +52,6 @@
             android:name=".view.UserChangeActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
-
         <provider
             android:name=".bean.UserProvider"
             android:authorities="com.example.myaccount"

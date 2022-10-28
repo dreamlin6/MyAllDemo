@@ -18,7 +18,7 @@
     <string name="quit">退出登录</string>
     <string name="logout">注销用户</string>
     <string name="change">修改密码</string>
-    <string name="userList">用户列表</string>
+    <string name="userList">用户列表(%d)</string>
     <string name="idtip">删除ID:</string>
     <string name="delete">删除</string>
     <string name="deleteall">删除全部</string>

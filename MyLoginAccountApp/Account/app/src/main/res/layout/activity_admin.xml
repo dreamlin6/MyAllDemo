@@ -29,6 +29,7 @@
                 android:background="@color/purple_200"
                 android:src="@drawable/left"/>
             <TextView
+                android:id="@+id/listTitle"
                 android:layout_width="@dimen/dimen_300"
                 android:layout_height="wrap_content"
                 android:text="@string/userList"

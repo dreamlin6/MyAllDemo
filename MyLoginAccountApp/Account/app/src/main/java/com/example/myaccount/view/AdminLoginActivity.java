@@ -1,8 +1,12 @@
 package com.example.myaccount.view;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
@@ -15,6 +19,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myaccount.IMyUser;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminloginBinding;
@@ -27,6 +32,9 @@ public class AdminLoginActivity extends AppCompatActivity {
     private ActivityAdminloginBinding activityAdminloginBinding;
     private AdminLoginViewModel adminLoginViewModel;
     private MyDialog myDialog;
+    private ServiceConnection connection;
+    private IMyUser iMyUser;
+    private int listCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +50,18 @@ public class AdminLoginActivity extends AppCompatActivity {
         }
         activityAdminloginBinding.setAdminloginvm(adminLoginViewModel); //设置绑定 XML和Adapter
 
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "AdminLoginActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "AdminLoginActivity onServiceDisconnected");
+            }
+        };
 
         activityAdminloginBinding.adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +102,11 @@ public class AdminLoginActivity extends AppCompatActivity {
             }
         });
         adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
+
+        Intent intent = new Intent();
+        intent.setAction("com.example.service.action");
+        intent.setPackage("com.example.myaccount");
+        bindService(intent,connection,BIND_AUTO_CREATE);
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -117,6 +142,12 @@ public class AdminLoginActivity extends AppCompatActivity {
                     }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            try {
+                                listCount = iMyUser.getListCount();
+                                Log.i(Constant.TAG, "count ========================== " + listCount);
+                            } catch (RemoteException e) {
+                                e.printStackTrace();
+                            }
                             Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
                             startActivity(intent);
                             myDialog.dismiss();
@@ -136,5 +167,6 @@ public class AdminLoginActivity extends AppCompatActivity {
         if (myDialog != null) {
             myDialog.dismiss();
         }
+        unbindService(connection);
     }
 }
