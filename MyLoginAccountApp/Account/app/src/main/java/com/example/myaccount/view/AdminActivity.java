@@ -3,8 +3,12 @@ package com.example.myaccount.view;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +17,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -58,6 +63,9 @@ public class AdminActivity extends AppCompatActivity {
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
+        Uri uri = Uri.parse("content://com.example.myaccount/users");
+        this.getContentResolver().registerContentObserver(uri, true, contentObserver);
+
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +92,6 @@ public class AdminActivity extends AppCompatActivity {
                                     try {
                                         int id = iMyUser.mDeleteAllUser();
                                         Log.i(Constant.TAG, "AdminActivity deleteall onClick id = " + id);
-                                        initAdapter();
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
                                     }
@@ -110,7 +117,6 @@ public class AdminActivity extends AppCompatActivity {
                     id = iMyUser.mDeleteUser(activityAdminBinding.mId.getText().toString());
                     activityAdminBinding.mId.setText(null);
                     iMyUser.updateQuery();
-                    initAdapter();
                     Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -124,6 +130,27 @@ public class AdminActivity extends AppCompatActivity {
         });
         mBindService();
     }
+
+    private Handler handler  = new Handler(new Handler.Callback() {
+        @Override
+        public boolean handleMessage(@NonNull Message msg) {
+            return false;
+        }
+    });
+
+    private ContentObserver contentObserver = new ContentObserver(handler) {
+        @Override
+        public void onChange(boolean selfChange) {
+            super.onChange(selfChange);
+            Log.i(Constant.TAG, "AdminActivity contentObserver onChange!");
+            try {
+                initAdapter();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+
+    };
 
     public void mBindService() {
         connection = new ServiceConnection() {
@@ -239,11 +266,6 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
     protected void onDestroy() {
         Log.i(Constant.TAG, "AdminActivity onDestroy");
         super.onDestroy();
@@ -251,5 +273,6 @@ public class AdminActivity extends AppCompatActivity {
             myDialog.dismiss();
         }
         unbindService(connection);
+        getContentResolver().unregisterContentObserver(contentObserver);
     }
 }
