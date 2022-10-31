@@ -23,7 +23,6 @@ import com.example.myaccount.IMyUser;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminloginBinding;
-import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 
 public class AdminLoginActivity extends AppCompatActivity {
@@ -31,10 +30,8 @@ public class AdminLoginActivity extends AppCompatActivity {
     private final String WAIT_LOGIN = "未登录";
     private ActivityAdminloginBinding activityAdminloginBinding;
     private AdminLoginViewModel adminLoginViewModel;
-    private MyDialog myDialog;
     private ServiceConnection connection;
     private IMyUser iMyUser;
-    private int listCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,19 +46,6 @@ public class AdminLoginActivity extends AppCompatActivity {
             adminLoginViewModel = new ViewModelProvider(this, instance).get(AdminLoginViewModel.class);  //创建viewmodel
         }
         activityAdminloginBinding.setAdminloginvm(adminLoginViewModel); //设置绑定 XML和Adapter
-
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "AdminLoginActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "AdminLoginActivity onServiceDisconnected");
-            }
-        };
 
         activityAdminloginBinding.adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +87,22 @@ public class AdminLoginActivity extends AppCompatActivity {
         });
         adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
 
+        mBindService();
+    }
+
+    public void mBindService() {
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "AdminLoginActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "AdminLoginActivity onServiceDisconnected " + name);
+            }
+        };
+
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
@@ -131,26 +131,11 @@ public class AdminLoginActivity extends AppCompatActivity {
         public void onChanged(@Nullable Integer isLogin) {
             Log.i(Constant.TAG,"AdminLoginActivity LoginActivity onChanged isLogin = " + isLogin);
             if (isLogin == 1) {
-                if (myDialog == null) {
-                    myDialog = new MyDialog(AdminLoginActivity.this);
-                    myDialog.setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            activityAdminloginBinding.loginTips.setText(WAIT_LOGIN);
-                            myDialog.dismiss();
-                        }
-                    }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
-                            startActivity(intent);
-                            myDialog.dismiss();
-                        }
-                    }).show();
-                } else {
-                    myDialog.show();
-                }
+                activityAdminloginBinding.loginTips.setText("登录成功！");
+                Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
+                startActivity(intent);
             } else {
+                activityAdminloginBinding.loginTips.setText("登录失败！");
             }
         }
     };
@@ -158,9 +143,6 @@ public class AdminLoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (myDialog != null) {
-            myDialog.dismiss();
-        }
         unbindService(connection);
     }
 }

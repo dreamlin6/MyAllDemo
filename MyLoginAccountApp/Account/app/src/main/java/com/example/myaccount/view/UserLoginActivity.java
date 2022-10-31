@@ -52,19 +52,6 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//输入框密码格式
 
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceDisconnected");
-            }
-        };
-
         activityLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,10 +135,27 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.editUser.addTextChangedListener(watcher);
         activityLoginBinding.editPass.addTextChangedListener(watcher);
 
+        mBindService();
+    }
+
+    public void mBindService() {
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "UserLoginActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "UserLoginActivity onServiceDisconnected " + name);
+            }
+        };
+
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
-        bindService(intent,connection,BIND_AUTO_CREATE);
+        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
+        Log.i(Constant.TAG, "UserLoginActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {

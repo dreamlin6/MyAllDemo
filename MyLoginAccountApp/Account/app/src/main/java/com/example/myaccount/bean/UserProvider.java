@@ -18,7 +18,7 @@ public class UserProvider extends ContentProvider {
     static UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        matcher.addURI("com.example.myaccount","users",100);
+        matcher.addURI("com.example.myaccount","users",100); //URI统一资源标识符
     }
     public UserProvider() {
 
@@ -46,7 +46,10 @@ public class UserProvider extends ContentProvider {
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
-        db.insert("users", null, values);
+        long id = db.insert("users", null, values);
+        if (id != -1) {
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
         return uri;
     }
 
@@ -54,6 +57,7 @@ public class UserProvider extends ContentProvider {
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
         int resultId = 0;
         resultId = db.delete("users", selection, selectionArgs);	//返回删除成功的行号值,失败返回-1
+        getContext().getContentResolver().notifyChange(uri, null);
         return resultId;
     }
 
@@ -61,6 +65,7 @@ public class UserProvider extends ContentProvider {
     public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
         int resultId = 0;
         resultId = db.update("users", values, selection, selectionArgs);
+        getContext().getContentResolver().notifyChange(uri, null);
         return resultId;
     }
 }

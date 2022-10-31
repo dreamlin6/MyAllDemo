@@ -58,18 +58,6 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.editPass.addTextChangedListener(watcher);
         activityRegisterBinding.editPass2.addTextChangedListener(watcher);
 
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserRegisterActivity onServiceDisconnected");
-            }
-        };
-
         userRegisterViewModel.getmRegisterDialogCtrl().observe(this, registerObserver);
 
         activityRegisterBinding.back.setOnClickListener(new View.OnClickListener() {
@@ -80,10 +68,27 @@ public class UserRegisterActivity extends AppCompatActivity {
             }
         });
 
+        mBindService();
+    }
+
+    public void mBindService() {
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "UserRegisterActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "UserRegisterActivity onServiceDisconnected " + name);
+            }
+        };
+
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
-        bindService(intent,connection,BIND_AUTO_CREATE);
+        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
+        Log.i(Constant.TAG, "UserRegisterActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {

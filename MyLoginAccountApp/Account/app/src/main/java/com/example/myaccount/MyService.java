@@ -98,7 +98,7 @@ public class MyService extends Service {
 
         @Override
         public int getListCount() {
-            Log.i(Constant.TAG, "MyService getListCount");
+            Log.i(Constant.TAG, "MyService getListCount!");
             uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
             Cursor cursor = resolver.query(uri, null, null, null, null, null);
@@ -109,29 +109,31 @@ public class MyService extends Service {
 
         @Override
         public void toFirst() {
+            Log.i(TAG, "MyService toFirst!");
             cursor.moveToFirst();
             cursor.moveToPrevious();
         }
 
         @Override
         public void toNext() {
+            Log.i(TAG, "MyService toNext!");
             cursor.moveToNext();
         }
 
         @Override
-        public void updateQuery() throws RemoteException {
+        public void updateQuery(){
             cursor = resolver.query(uri, null, null, null, null);
         }
 
         @SuppressLint("Range")
         @Override
         public String[] mQurey() {
-            Log.i(TAG, "MyService mQurey");
+            Log.i(TAG, "MyService mQurey!");
             String[] mString = new String[4];
             uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
 //            cursor = resolver.query(uri, null, null, null, null);
-            cursor.moveToNext();//下一行 循环
+            toNext();
             mString[0] = cursor.getString(cursor.getColumnIndex("_id"));
             mString[1] = cursor.getString(cursor.getColumnIndex("username"));
             mString[2] = cursor.getString(cursor.getColumnIndex("account"));
@@ -143,45 +145,45 @@ public class MyService extends Service {
         @Override
         public void mRegister(String username, String account, String password) {
             resolver = getContentResolver();
-            readWriteLock.writeLock().lock();
+//            readWriteLock.writeLock().lock();
             ContentValues values = new ContentValues();
             values.put("username", username);
             values.put("account", account);
             values.put("password", password);
             resolver.insert(uri, values);
-            readWriteLock.writeLock().unlock();
-            Log.i(TAG, "MyService mRegister" + uri + values);
+//            readWriteLock.writeLock().unlock();
+            Log.i(TAG, "MyService mRegister " + uri + " " + values);
         }
 
         @Override
         public int mUpdate(String mId, String newPass) {
             resolver = getContentResolver();
-            readWriteLock.readLock().lock();
+//            readWriteLock.readLock().lock();
             ContentValues values = new ContentValues();
             values.put("password", newPass);
             int id = resolver.update(uri, values, "_id = ?", new String[]{mId});
-            readWriteLock.readLock().unlock();
+//            readWriteLock.readLock().unlock();
             Log.i(TAG, "MyService mUpdate id = " + id);
             return id;
         }
 
         @Override
         public int mDeleteUser(String mId) {
-            resolver = getContentResolver();
             Log.i(TAG, "MyService mDeleteUser mId = " + mId);
+            resolver = getContentResolver();
             return resolver.delete(uri, "_id = ?", new String[]{mId});
         }
 
         @Override
         public int mDeleteAllUser() {
+            Log.i(TAG, "MyService mDeleteAllUser!");
             resolver = getContentResolver();
-            Log.i(TAG, "MyService mDeleteAllUser");
             return resolver.delete(uri, null, null);
         }
 
         @Override
         public boolean isNoUser() {
-            Log.i(Constant.TAG, "MyService isNoUser");
+            Log.i(Constant.TAG, "MyService isNoUser!");
             uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
             Cursor cursor = resolver.query(uri, null, null, null, null);
@@ -220,6 +222,7 @@ public class MyService extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
+        Log.i(Constant.TAG, "MyService onUnbind!");
         return super.onUnbind(intent);
     }
 
@@ -229,7 +232,14 @@ public class MyService extends Service {
     }
 
     @Override
+    public void onRebind(Intent intent) {
+        Log.i(Constant.TAG, "MyService onRebind!");
+        super.onRebind(intent);
+    }
+
+    @Override
     public void onDestroy() {
+        Log.i(Constant.TAG, "MyService onDestroy!");
         super.onDestroy();
     }
 

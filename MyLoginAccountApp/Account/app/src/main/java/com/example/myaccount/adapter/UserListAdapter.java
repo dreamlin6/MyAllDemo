@@ -21,7 +21,6 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
 
     private Context context;
     private List<UserListBean> list;
-    private TextView mTvId, mTvUser, mTvAccount, mTvPass;
 
     public UserListAdapter(Context context, List<UserListBean> list) {
         this.context = context;
@@ -32,23 +31,20 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     @Override
     public UserListAdapter.ListViewHodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.userlist, parent, false);
-        return new ListViewHodler(view);
+        ListViewHodler vewHolder = new ListViewHodler(view);
+        return vewHolder;
     }
     @Override
     public void onBindViewHolder(@NonNull UserListAdapter.ListViewHodler holder, int position) {
-        mTvId.setText(list.get(position).getmId());
-        mTvUser.setText(list.get(position).getUserName());
-        mTvAccount.setText(list.get(position).getAccount());
-        mTvPass.setText(list.get(position).getPassWord());
+        holder.mTvId.setText(list.get(position).getmId());
+        holder.mTvUser.setText(list.get(position).getUserName());
+        holder.mTvAccount.setText(list.get(position).getAccount());
+        holder.mTvPass.setText(list.get(position).getPassWord());
     }
 
     @Override
     public int getItemCount() {
-        if (list == null) {
-            return 0;
-        } else {
-            return list.size();
-        }
+        return list == null ? 0 : list.size();
     }
 
     @Override
@@ -62,7 +58,9 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     }
 
     public class ListViewHodler extends RecyclerView.ViewHolder {
-        public ListViewHodler(@NonNull View userlist) {
+        public TextView mTvId, mTvUser, mTvAccount, mTvPass;
+
+        public ListViewHodler(View userlist) {
             super(userlist);
 
             mTvId = (TextView) itemView.findViewById(R.id.ul_id);

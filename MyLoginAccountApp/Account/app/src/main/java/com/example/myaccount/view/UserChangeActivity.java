@@ -49,18 +49,6 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.newpass.addTextChangedListener(watcher);
         activityChangeBinding.newpass2.addTextChangedListener(watcher);
 
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserChangeActivity onServiceDisconnected");
-            }
-        };
-
         activityChangeBinding.changepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,11 +79,27 @@ public class UserChangeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mBindService();
+    }
+
+    public void mBindService() {
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "UserChangeActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+            }
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "UserChangeActivity onServiceDisconnected " + name);
+            }
+        };
 
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
-        bindService(intent,connection,BIND_AUTO_CREATE);
+        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
+        Log.i(Constant.TAG, "UserChangeActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {

@@ -58,22 +58,6 @@ public class AdminActivity extends AppCompatActivity {
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "AdminActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-                try {
-                    initAdapter();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "AdminActivity onServiceDisconnected");
-            }
-        };
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,6 +122,32 @@ public class AdminActivity extends AppCompatActivity {
                 }
             }
         });
+        mBindService();
+    }
+
+    public void mBindService() {
+        connection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                Log.i(Constant.TAG, "AdminActivity onServiceConnected");
+                iMyUser = IMyUser.Stub.asInterface(iBinder);
+                try {
+                    try {
+                        iMyUser.updateQuery();
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                    initAdapter();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(Constant.TAG, "AdminActivity onServiceDisconnected " + name);
+            }
+        };
+
         Intent intent = new Intent();
         intent.setAction("com.example.service.action");
         intent.setPackage("com.example.myaccount");
@@ -150,8 +160,8 @@ public class AdminActivity extends AppCompatActivity {
         userListAdapter = new UserListAdapter(this, userLists);
         activityAdminBinding.userList.setLayoutManager(new GridLayoutManager(this,1)); // 一列
         activityAdminBinding.userList.setAdapter(userListAdapter);
-        updateUserList(userLists, userListAdapter);
         listCount = iMyUser.getListCount();
+        updateUserList(userLists, userListAdapter);
         activityAdminBinding.listTitle.setText(String.format(getResources().getString(R.string.userList), listCount));
         adminViewModel.setmDeleteAllBbtEnableStatus(userListAdapter.getItemCount() > 0);
     }
@@ -226,6 +236,11 @@ public class AdminActivity extends AppCompatActivity {
 
     public void show(String info){
         Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override
