@@ -25,6 +25,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
@@ -48,6 +49,9 @@ public class AdminActivity extends AppCompatActivity {
     private ServiceConnection connection;
     private int listCount;
     private String mid, account, username, password;
+    private final int INIT_ADAPTER = 1;
+    private final int BIND_INIT = 2;
+    private MyServiceManager serviceManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,11 +125,7 @@ public class AdminActivity extends AppCompatActivity {
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
-                if (id > 0) {
-                    show("删除成功！");
-                } else {
-                    show("删除失败！");
-                }
+                show(id > 0 ? "删除成功！" : "删除失败！");
             }
         });
         mBindService();
@@ -134,22 +134,39 @@ public class AdminActivity extends AppCompatActivity {
     private Handler handler  = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(@NonNull Message msg) {
+            switch (msg.what) {
+                case INIT_ADAPTER:
+                    Log.i(Constant.TAG, "AdminActivity handleMessage msg 1!");
+                    try {
+                        initAdapter();
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case BIND_INIT:
+                    Log.i(Constant.TAG, "AdminActivity handleMessage msg 2!");
+                    try {
+                        try {
+                            iMyUser.updateQuery();
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
+                        }
+                        initAdapter();
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+            }
             return false;
         }
     });
-
     private ContentObserver contentObserver = new ContentObserver(handler) {
         @Override
         public void onChange(boolean selfChange) {
             super.onChange(selfChange);
             Log.i(Constant.TAG, "AdminActivity contentObserver onChange!");
-            try {
-                initAdapter();
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
+            handler.sendEmptyMessage(INIT_ADAPTER);
         }
-
     };
 
     public void mBindService() {
@@ -158,16 +175,7 @@ public class AdminActivity extends AppCompatActivity {
             public void onServiceConnected(ComponentName name, IBinder iBinder) {
                 Log.i(Constant.TAG, "AdminActivity onServiceConnected");
                 iMyUser = IMyUser.Stub.asInterface(iBinder);
-                try {
-                    try {
-                        iMyUser.updateQuery();
-                    } catch (RemoteException e) {
-                        e.printStackTrace();
-                    }
-                    initAdapter();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
+                handler.sendEmptyMessage(BIND_INIT);
             }
             @Override
             public void onServiceDisconnected(ComponentName name) {

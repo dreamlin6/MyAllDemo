@@ -36,6 +36,7 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        Log.i(Constant.TAG, "MyService onBind!");
         return new MyBinder();
     }
 
