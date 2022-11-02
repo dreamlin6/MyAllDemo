@@ -1,0 +1,271 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\4dbda0adc51ca75b28ba552ae995ffb7\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:viewbinding:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\6509385ff8ec8e676099ca8dd74d3249\transformed\viewbinding-7.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\28fd1c29d8271204d6ab96725f4f82b0\transformed\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\558a376c9715ce970c82065b28321b39\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\SWL\.gradle\caches\transforms-3\0905dc0fe66c0dd89c2a2cad1382bc77\transformed\fragment-1.3.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\SWL\.gradle\caches\transforms-3\73dee82b4b45abae36bb8156c2203f9f\transformed\activity-1.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\4ab0acd75a5c80f47e43f65481bac2e0\transformed\appcompat-resources-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\28987daf94618d12a626039a1bcb819f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\8a6303413022a75475e0d43fea7dc5ec\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\92389d42dacee50431fdf899a9097c97\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\SWL\.gradle\caches\transforms-3\44f59b81c87b69ad5a2c3b803c83780d\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\22af41d6efc01e2b1f6684642bfbf4e6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\2ffd33c42ee9142780d270ad93a06b80\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\e1b23a5846fa69c62ae6c2763eaeb253\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9b680f4524c73cf4651435f7b7ab96a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\a9f454f90017dca7389400a6976be6d0\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\d55f9b1c6cb2370e24af439e7aff662a\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\167a7615f5c326be626c34db5c113190\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\c952d0b8ff75b964d5e2a94e673b2da3\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\b62f021449e53cd8f85a380c2a59df94\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\66f9b208a55f1e985a46a9881be71b71\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\875969fcab760a2bfd8e26232a38f178\transformed\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\d6364469d2dca85a8f85e8beeb73ccf4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\7c7a8c29ecce42e20d903e3a51f8df85\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\SWL\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\SWL\.gradle\caches\transforms-3\18bea7d8b6ce63feab6ed492d57d56cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SWL\.gradle\caches\transforms-3\a32d82e6af18449b0f4026f574aea670\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\19db707dbaf9b389e2209eac0e8e8558\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\f11a2796b54455e05ab8603854e4e469\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\c91ee04b2e3e2b4e3408d247f58d785c\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\daafd13ed6472e5d90ee94a442cae491\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\bd2b858bc6569916fd0b165974e7ef03\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+	package
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:4:5-36
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:6:5-60:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SWL\.gradle\caches\transforms-3\a32d82e6af18449b0f4026f574aea670\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SWL\.gradle\caches\transforms-3\a32d82e6af18449b0f4026f574aea670\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:11:9-41
+	android:fullBackupContent
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:9:9-54
+	android:roundIcon
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:12:9-54
+	tools:targetApi
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:15:9-29
+	android:icon
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:14:9-47
+	android:dataExtractionRules
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:8:9-65
+service#com.example.myaccount.MyService
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:16:9-23:19
+	android:enabled
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:18:13-35
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:19:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:17:13-38
+intent-filter#action:name:com.example.service.action
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:20:13-22:29
+action#com.example.service.action
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:17-68
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:25-66
+activity#com.example.myaccount.view.MainActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:25:9-34:20
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:26:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:29:13-33:29
+action#android.intent.action.MAIN
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:27-74
+activity#com.example.myaccount.view.AdminActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:35:9-38:55
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:38:13-43
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:36:13-47
+activity#com.example.myaccount.view.AdminLoginActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:39:9-42:55
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:42:13-43
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:41:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:40:13-52
+activity#com.example.myaccount.view.UserLoginActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:43:9-46:55
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:46:13-43
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:45:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:44:13-51
+activity#com.example.myaccount.view.UserRegisterActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:47:9-50:55
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:50:13-43
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:49:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:48:13-54
+activity#com.example.myaccount.view.UserChangeActivity
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:51:9-54:55
+	android:launchMode
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:54:13-43
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:52:13-52
+provider#com.example.myaccount.bean.UserProvider
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:55:9-59:39
+	android:enabled
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:58:13-35
+	android:authorities
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:57:13-56
+	android:exported
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:59:13-36
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:56:13-46
+queries
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:61:5-63:15
+package#com.example.myaccount
+ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:9-57
+	android:name
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:18-54
+uses-sdk
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\4dbda0adc51ca75b28ba552ae995ffb7\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\4dbda0adc51ca75b28ba552ae995ffb7\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\6509385ff8ec8e676099ca8dd74d3249\transformed\viewbinding-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\6509385ff8ec8e676099ca8dd74d3249\transformed\viewbinding-7.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\28fd1c29d8271204d6ab96725f4f82b0\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\28fd1c29d8271204d6ab96725f4f82b0\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\558a376c9715ce970c82065b28321b39\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\558a376c9715ce970c82065b28321b39\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\SWL\.gradle\caches\transforms-3\0905dc0fe66c0dd89c2a2cad1382bc77\transformed\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\SWL\.gradle\caches\transforms-3\0905dc0fe66c0dd89c2a2cad1382bc77\transformed\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\SWL\.gradle\caches\transforms-3\73dee82b4b45abae36bb8156c2203f9f\transformed\activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\SWL\.gradle\caches\transforms-3\73dee82b4b45abae36bb8156c2203f9f\transformed\activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\4ab0acd75a5c80f47e43f65481bac2e0\transformed\appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\SWL\.gradle\caches\transforms-3\4ab0acd75a5c80f47e43f65481bac2e0\transformed\appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\28987daf94618d12a626039a1bcb819f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\28987daf94618d12a626039a1bcb819f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\8a6303413022a75475e0d43fea7dc5ec\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\8a6303413022a75475e0d43fea7dc5ec\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\92389d42dacee50431fdf899a9097c97\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\92389d42dacee50431fdf899a9097c97\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\SWL\.gradle\caches\transforms-3\44f59b81c87b69ad5a2c3b803c83780d\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\SWL\.gradle\caches\transforms-3\44f59b81c87b69ad5a2c3b803c83780d\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\22af41d6efc01e2b1f6684642bfbf4e6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\22af41d6efc01e2b1f6684642bfbf4e6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\2ffd33c42ee9142780d270ad93a06b80\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\2ffd33c42ee9142780d270ad93a06b80\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\e1b23a5846fa69c62ae6c2763eaeb253\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\e1b23a5846fa69c62ae6c2763eaeb253\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9b680f4524c73cf4651435f7b7ab96a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9b680f4524c73cf4651435f7b7ab96a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\a9f454f90017dca7389400a6976be6d0\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\a9f454f90017dca7389400a6976be6d0\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\d55f9b1c6cb2370e24af439e7aff662a\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\d55f9b1c6cb2370e24af439e7aff662a\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\167a7615f5c326be626c34db5c113190\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\167a7615f5c326be626c34db5c113190\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\c952d0b8ff75b964d5e2a94e673b2da3\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\c952d0b8ff75b964d5e2a94e673b2da3\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\b62f021449e53cd8f85a380c2a59df94\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\b62f021449e53cd8f85a380c2a59df94\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\66f9b208a55f1e985a46a9881be71b71\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\66f9b208a55f1e985a46a9881be71b71\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\875969fcab760a2bfd8e26232a38f178\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\SWL\.gradle\caches\transforms-3\875969fcab760a2bfd8e26232a38f178\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\d6364469d2dca85a8f85e8beeb73ccf4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\d6364469d2dca85a8f85e8beeb73ccf4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\7c7a8c29ecce42e20d903e3a51f8df85\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\7c7a8c29ecce42e20d903e3a51f8df85\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\SWL\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\SWL\.gradle\caches\transforms-3\50d1210be62fa0ff51eb398d1f0c84bc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\SWL\.gradle\caches\transforms-3\229afd5b2ad29fd5e38d89c9d109bbfa\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\SWL\.gradle\caches\transforms-3\18bea7d8b6ce63feab6ed492d57d56cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\SWL\.gradle\caches\transforms-3\18bea7d8b6ce63feab6ed492d57d56cb\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SWL\.gradle\caches\transforms-3\a32d82e6af18449b0f4026f574aea670\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SWL\.gradle\caches\transforms-3\a32d82e6af18449b0f4026f574aea670\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\19db707dbaf9b389e2209eac0e8e8558\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\19db707dbaf9b389e2209eac0e8e8558\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\f11a2796b54455e05ab8603854e4e469\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\f11a2796b54455e05ab8603854e4e469\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\c91ee04b2e3e2b4e3408d247f58d785c\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\c91ee04b2e3e2b4e3408d247f58d785c\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\daafd13ed6472e5d90ee94a442cae491\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\daafd13ed6472e5d90ee94a442cae491\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\bd2b858bc6569916fd0b165974e7ef03\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\bd2b858bc6569916fd0b165974e7ef03\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+                                          
+
+                 
+                          
+                                                                  
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/activity_main_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:tag="binding_1"        
+            android:textColor="@color/orange"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:textSize="@dimen/textSize30" />
+        <EditText
+            android:id="@+id/editUser"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/account_tips"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:tag="binding_2"                                                        />
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass_tips"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:tag="binding_3"                                                        />
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="@dimen/dimen_110"
+            android:text="@string/welcome"
+            android:textColor="@color/gold"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:textSize="@dimen/textSize50"
+            android:tag="binding_4"                                                        />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:tag="binding_5"                    
+            app:layout_constraintTop_toBottomOf="@+id/editPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+                                                                                           />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:tag="binding_6"                                                        />
+        <Button
+            android:id="@+id/change"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/change"
+            app:layout_constraintTop_toBottomOf="@+id/editPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:tag="binding_7"                                                        />
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            app:layout_constraintTop_toBottomOf="@+id/change"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:tag="binding_8"                                                        />
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/quit"
+            app:layout_constraintTop_toBottomOf="@+id/logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"
+            android:tag="binding_9"                                                        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+         

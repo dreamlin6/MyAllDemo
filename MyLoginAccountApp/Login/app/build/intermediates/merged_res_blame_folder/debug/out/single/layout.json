@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-mergeDebugResources-4:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-mergeDebugResources-4:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-mergeDebugResources-4:\\layout\\activity_change.xml",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\layout\\activity_change.xml"
+    },
+    {
+        "merged": "com.example.mylogin.app-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "com.example.mylogin.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.mylogin.app-mergeDebugResources-4:/layout/activity_change.xml",
+        "source": "com.example.mylogin.app-main-7:/layout/activity_change.xml"
+    },
+    {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-mergeDebugResources-4:\\layout\\dialog.xml",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\layout\\dialog.xml"
+    }
+]
