@@ -135,6 +135,7 @@ public class UserLoginActivity extends AppCompatActivity {
         if (serviceManager == null) {
             serviceManager = new MyServiceManager(this);
         }
+        serviceManager.mBindService();
     }
 
     TextWatcher watcher = new TextWatcher() {

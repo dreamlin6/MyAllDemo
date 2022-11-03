@@ -139,7 +139,17 @@ public class AdminActivity extends AppCompatActivity {
         if (serviceManager == null) {
             serviceManager = new MyServiceManager(this);
         }
-        handler.sendEmptyMessage(BIND_INIT);
+        serviceManager.mBindService();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //等待取得mService
+                if(null != serviceManager){
+                    //  绑定服务成功了
+                    handler.sendEmptyMessage(BIND_INIT);
+                }
+            }
+        }).start();
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {
