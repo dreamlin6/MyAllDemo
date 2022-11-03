@@ -44,13 +44,7 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("登录");
 
-        ViewModelProvider.AndroidViewModelFactory instance =
-                ViewModelProvider.AndroidViewModelFactory
-                        .getInstance(getApplication()); //viewmodel实例
-        if (userLoginViewModel == null) {
-            userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
-        }
-        activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
+        initViewModel();
         activityLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//输入框密码格式
 
         activityLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
@@ -151,6 +145,17 @@ public class UserLoginActivity extends AppCompatActivity {
             userLoginViewModel.setmLoginEnableStatus(activityLoginBinding.editUser.getText().length() > 0 && activityLoginBinding.editPass.getText().length() > 0);
         }
     };
+
+    public void initViewModel() {
+        Log.i(Constant.TAG,"UserLoginActivity initViewModel!");
+        ViewModelProvider.AndroidViewModelFactory instance =
+                ViewModelProvider.AndroidViewModelFactory
+                        .getInstance(getApplication()); //viewmodel实例
+        if (userLoginViewModel == null) {
+            userLoginViewModel = new ViewModelProvider(this, instance).get(UserLoginViewModel.class);  //创建viewmodel
+        }
+        activityLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
+    }
 
     public void mIsLogin() {
         userLoginViewModel.setmBtLoginedVisibleStatus(true);

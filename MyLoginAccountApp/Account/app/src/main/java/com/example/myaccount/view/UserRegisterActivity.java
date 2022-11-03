@@ -43,13 +43,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("注册");
 
-        ViewModelProvider.AndroidViewModelFactory instance =
-                ViewModelProvider.AndroidViewModelFactory
-                        .getInstance(getApplication()); //viewmodel实例
-        if (userRegisterViewModel == null) {
-            userRegisterViewModel = new ViewModelProvider(this, instance).get(UserRegisterViewModel.class);  //创建viewmodel
-        }
-        activityRegisterBinding.setUserregistervm(userRegisterViewModel); //设置绑定 XML和Adapter
+        initViewModel();
 
         activityRegisterBinding.editAccount.addTextChangedListener(watcher);
         activityRegisterBinding.editUser.addTextChangedListener(watcher);
@@ -143,6 +137,17 @@ public class UserRegisterActivity extends AppCompatActivity {
             }
         }
     };
+
+    public void initViewModel() {
+        Log.i(Constant.TAG,"UserRegisterActivity initViewModel!");
+        ViewModelProvider.AndroidViewModelFactory instance =
+                ViewModelProvider.AndroidViewModelFactory
+                        .getInstance(getApplication()); //viewmodel实例
+        if (userRegisterViewModel == null) {
+            userRegisterViewModel = new ViewModelProvider(this, instance).get(UserRegisterViewModel.class);  //创建viewmodel
+        }
+        activityRegisterBinding.setUserregistervm(userRegisterViewModel); //设置绑定 XML和Adapter
+    }
 
     @Override
     protected void onDestroy() {

@@ -39,13 +39,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         activityAdminloginBinding = DataBindingUtil.setContentView(this, R.layout.activity_adminlogin);
         activityAdminloginBinding.setLifecycleOwner(this);
 
-        ViewModelProvider.AndroidViewModelFactory instance =
-                ViewModelProvider.AndroidViewModelFactory
-                        .getInstance(getApplication()); //viewmodel实例
-        if (adminLoginViewModel == null) {
-            adminLoginViewModel = new ViewModelProvider(this, instance).get(AdminLoginViewModel.class);  //创建viewmodel
-        }
-        activityAdminloginBinding.setAdminloginvm(adminLoginViewModel); //设置绑定 XML和Adapter
+        initViewModel();
 
         activityAdminloginBinding.adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +102,17 @@ public class AdminLoginActivity extends AppCompatActivity {
                     activityAdminloginBinding.editAdminPass.getText().length() > 0);
         }
     };
+
+    public void initViewModel() {
+        Log.i(Constant.TAG,"AdminLoginActivity initViewModel!");
+        ViewModelProvider.AndroidViewModelFactory instance =
+                ViewModelProvider.AndroidViewModelFactory
+                        .getInstance(getApplication()); //viewmodel实例
+        if (adminLoginViewModel == null) {
+            adminLoginViewModel = new ViewModelProvider(this, instance).get(AdminLoginViewModel.class);  //创建viewmodel
+        }
+        activityAdminloginBinding.setAdminloginvm(adminLoginViewModel); //设置绑定 XML和Adapter
+    }
 
     private Observer<Integer> loginObserve = new Observer<Integer>() {
         @Override

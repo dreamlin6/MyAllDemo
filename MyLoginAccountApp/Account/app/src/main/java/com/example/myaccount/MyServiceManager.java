@@ -81,10 +81,6 @@ public class MyServiceManager {
         iMyUser.toFirst();
     }
 
-    public void toNext() throws RemoteException {
-        iMyUser.toNext();
-    }
-
     public String[] mQuery() throws RemoteException {
         return iMyUser.mQurey();
     }

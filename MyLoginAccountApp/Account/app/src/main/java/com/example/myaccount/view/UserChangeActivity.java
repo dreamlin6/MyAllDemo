@@ -37,13 +37,7 @@ public class UserChangeActivity extends AppCompatActivity {
         activityChangeBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("修改密码");
 
-        ViewModelProvider.AndroidViewModelFactory instance =
-                ViewModelProvider.AndroidViewModelFactory
-                        .getInstance(getApplication()); //viewmodel实例
-        if (userChangeViewModel == null) {
-            userChangeViewModel = new ViewModelProvider(this, instance).get(UserChangeViewModel.class);  //创建viewmodel
-        }
-        activityChangeBinding.setChangevm(userChangeViewModel); //设置绑定 XML和Adapter
+        initViewModel();
 
         activityChangeBinding.oldpass.addTextChangedListener(watcher);
         activityChangeBinding.newpass.addTextChangedListener(watcher);
@@ -59,11 +53,7 @@ public class UserChangeActivity extends AppCompatActivity {
                     try {
                         int id = serviceManager.mUpdate(mId, activityChangeBinding.newpass.getText().toString());
                         Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,mId, id));
-                        if(id > 0){
-                            show("密码更新成功！");
-                        }else{
-                            show("密码更新失败！");
-                        }
+                        show(id > 0 ? "密码更新成功！" : "密码更新失败！");
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
@@ -102,6 +92,17 @@ public class UserChangeActivity extends AppCompatActivity {
                     activityChangeBinding.newpass2.getText().length() > 0);
         }
     };
+
+    public void initViewModel() {
+        Log.i(Constant.TAG,"UserChangeActivity initViewModel!");
+        ViewModelProvider.AndroidViewModelFactory instance =
+            ViewModelProvider.AndroidViewModelFactory
+                .getInstance(getApplication()); //viewmodel实例
+        if (userChangeViewModel == null) {
+            userChangeViewModel = new ViewModelProvider(this, instance).get(UserChangeViewModel.class);  //创建viewmodel
+        }
+        activityChangeBinding.setChangevm(userChangeViewModel); //设置绑定 XML和Adapter
+    }
 
     public void show(String tips) {
         Toast.makeText(UserChangeActivity.this, tips, Toast.LENGTH_SHORT).show();

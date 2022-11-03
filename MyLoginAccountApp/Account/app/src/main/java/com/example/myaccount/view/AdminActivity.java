@@ -57,11 +57,7 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding = DataBindingUtil.setContentView(this, R.layout.activity_admin);
         activityAdminBinding.setLifecycleOwner(this);
 
-        ViewModelProvider.AndroidViewModelFactory instance =
-                ViewModelProvider.AndroidViewModelFactory
-                        .getInstance(getApplication()); //viewmodel实例
-        adminViewModel = new ViewModelProvider(this, instance).get(AdminViewModel.class);  //创建viewmodel
-        activityAdminBinding.setAdminvm(adminViewModel); //设置绑定 XML和Adapter
+        initViewModel();
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
@@ -149,7 +145,7 @@ public class AdminActivity extends AppCompatActivity {
                     handler.sendEmptyMessage(BIND_INIT);
                 }
             }
-        }).start();
+            }).start();
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {
@@ -189,6 +185,15 @@ public class AdminActivity extends AppCompatActivity {
             handler.sendEmptyMessage(INIT_ADAPTER);
         }
     };
+
+    public void initViewModel() {
+        Log.i(Constant.TAG, "AdminActivity initViewModel!");
+        ViewModelProvider.AndroidViewModelFactory instance =
+                ViewModelProvider.AndroidViewModelFactory
+                        .getInstance(getApplication()); //viewmodel实例
+        adminViewModel = new ViewModelProvider(this, instance).get(AdminViewModel.class);  //创建viewmodel
+        activityAdminBinding.setAdminvm(adminViewModel); //设置绑定 XML和Adapter
+    }
 
     public void initAdapter() throws RemoteException {
         Log.i(Constant.TAG, "AdminActivity initAdapter");
