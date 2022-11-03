@@ -73,8 +73,7 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                mIsUnLogin();
                 userLoginViewModel.setmTvllVisibleStatus(false);
                 activityLoginBinding.editUser.setText(null);
                 activityLoginBinding.editPass.setText(null);
@@ -117,13 +116,11 @@ public class UserLoginActivity extends AppCompatActivity {
                                 Log.i(Constant.TAG, String.format("UserLoginActivity Login mid = %s name = %s pass2 = %s", mid, name, pass2));
                                 activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
-                                userLoginViewModel.setmBtLoginedVisibleStatus(true);
-                                userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                                mIsLogin();
                             } else {
                                 activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                                userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                mIsUnLogin();
                             }
                             userLoginViewModel.setmTvllVisibleStatus(true);
                         }
@@ -151,6 +148,17 @@ public class UserLoginActivity extends AppCompatActivity {
         }
     };
 
+    public void mIsLogin() {
+        userLoginViewModel.setmBtLoginedVisibleStatus(true);
+        userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+        userLoginViewModel.setmLoginEnableStatus(false);
+    }
+
+    public void mIsUnLogin() {
+        userLoginViewModel.setmBtLoginedVisibleStatus(false);
+        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+    }
+
     public void mDialogShow(String str, int i) {
         if (myDialog == null) {
             myDialog = new MyDialog(UserLoginActivity.this);
@@ -171,6 +179,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                     break;
                                 case 2:
                                     Intent intent2 = new Intent(UserLoginActivity.this, AdminActivity.class);
+                                    intent2.putExtra("page", 2);
                                     startActivity(intent2);
                                     myDialog.dismiss();
                                     break;
@@ -178,8 +187,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                     int id = 0;
                                     try {
                                         id = serviceManager.deleteUser(mid);
-                                        userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                        mIsUnLogin();
                                         userLoginViewModel.setmTvllVisibleStatus(false);
                                     } catch (RemoteException e) {
                                         e.printStackTrace();

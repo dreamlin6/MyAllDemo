@@ -206,9 +206,9 @@ public class MyService extends Service {
                 cursor.moveToPrevious();
                 for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
                     cursor.moveToNext();
-                    @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
-                    Log.i(Constant.TAG, "MyService mExistUser username = " + username);
-                    if (name.equals(username)) {
+                    @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
+                    Log.i(Constant.TAG, "MyService mExistUser account = " + account);
+                    if (name.equals(account)) {
                         bool = true;
                         break;
                     } else {

@@ -71,9 +71,19 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
-                startActivity(intent1);
-                finish();
+                int page = getIntent().getIntExtra("page", 1);
+                switch (page) {
+                    case 1:
+                        Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
+                        startActivity(intent1);
+                        finish();
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(AdminActivity.this, UserLoginActivity.class);
+                        startActivity(intent2);
+                        finish();
+                        break;
+                }
             }
         });
         activityAdminBinding.deleteall.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +137,9 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
         serviceManager = new MyServiceManager(this);
-        handler.sendEmptyMessage(INIT_ADAPTER);
+        if (serviceManager != null) {
+            handler.sendEmptyMessage(BIND_INIT);
+        }
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {

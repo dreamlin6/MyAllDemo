@@ -97,10 +97,10 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
                 try {
-                    if (serviceManager.isExistUser(username)) {
-                        Toast.makeText(UserRegisterActivity.this, "此用户名已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
+                    if (serviceManager.isExistUser(account)) {
+                        Toast.makeText(UserRegisterActivity.this, "此账号已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
                         activityRegisterBinding.editUser.setText(null);
-                        Log.i(Constant.TAG, "UserRegisterActivity onChanged username repeat");
+                        Log.i(Constant.TAG, "UserRegisterActivity onChanged account repeat");
                     } else {
                         if (password.equals(password2)) {
                             try {

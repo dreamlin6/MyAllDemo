@@ -47,10 +47,9 @@ public class MyServiceManager {
                 boolean res = mContext.bindService(intent, connection, Context.BIND_AUTO_CREATE); //在bindService后马上调用Service中的方法，结果返回了空指针，因为bindservice是异步操作，有时候没有办法马上绑定服务就可以用
                 Log.i(Constant.TAG, "MyServiceManager bindService res = " + res);
 
-                if (count == 3) {
+                if (count++ == 2) {
                     return;
                 }
-                count++;
                 Thread.sleep(200);
             }
         }catch(Exception e){

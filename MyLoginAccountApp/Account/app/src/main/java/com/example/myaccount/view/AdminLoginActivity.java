@@ -113,6 +113,7 @@ public class AdminLoginActivity extends AppCompatActivity {
             if (isLogin == 1) {
                 activityAdminloginBinding.loginTips.setText("登录成功！");
                 Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
+                intent.putExtra("page", 1);
                 startActivity(intent);
             } else {
                 activityAdminloginBinding.loginTips.setText("登录失败！");
