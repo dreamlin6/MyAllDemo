@@ -18,6 +18,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityChangeBinding;
@@ -26,13 +27,13 @@ import com.example.myaccount.viewmodel.UserChangeViewModel;
 public class UserChangeActivity extends AppCompatActivity {
     private ActivityChangeBinding activityChangeBinding;
     private UserChangeViewModel userChangeViewModel;
-    private IMyUser iMyUser;
-    private ServiceConnection connection;
+    private MyServiceManager serviceManager;
     private String mId, mPass;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        serviceManager = new MyServiceManager(this);
         activityChangeBinding = DataBindingUtil.setContentView(this, R.layout.activity_change);
         activityChangeBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("修改密码");
@@ -57,7 +58,7 @@ public class UserChangeActivity extends AppCompatActivity {
                 Log.i(Constant.TAG, "UserChangeActivity changepass onClick mPass = " + mPass);
                 if (activityChangeBinding.oldpass.getText().toString().equals(mPass)) {
                     try {
-                        int id = iMyUser.mUpdate(mId, activityChangeBinding.newpass.getText().toString());
+                        int id = serviceManager.mUpdate(mId, activityChangeBinding.newpass.getText().toString());
                         Log.i(Constant.TAG,String.format("UserChangeActivity changepass onClick mId = %s id = %s" ,mId, id));
                         if(id > 0){
                             show("密码更新成功！");
@@ -79,27 +80,6 @@ public class UserChangeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mBindService();
-    }
-
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "UserChangeActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserChangeActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
-        Log.i(Constant.TAG, "UserChangeActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -127,6 +107,6 @@ public class UserChangeActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        this.unbindService(connection);
+        serviceManager.unBindService();
     }
 }

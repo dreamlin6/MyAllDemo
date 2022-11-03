@@ -19,6 +19,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityRegisterBinding;
@@ -33,9 +34,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding activityRegisterBinding;
     private UserRegisterViewModel userRegisterViewModel;
     private MyDialog myDialog;
-    private ReentrantReadWriteLock readWriteLock;
-    private IMyUser iMyUser;
-    private ServiceConnection connection;
+    private MyServiceManager serviceManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("注册");
 
-        readWriteLock = new ReentrantReadWriteLock();
+        serviceManager = new MyServiceManager(this);
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
@@ -67,28 +66,6 @@ public class UserRegisterActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
-        mBindService();
-    }
-
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "UserRegisterActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserRegisterActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
-        Log.i(Constant.TAG, "UserRegisterActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -120,14 +97,14 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String password = activityRegisterBinding.editPass.getText().toString();
                 String password2 = activityRegisterBinding.editPass2.getText().toString();
                 try {
-                    if (iMyUser.isExistUser(username)) {
+                    if (serviceManager.isExistUser(username)) {
                         Toast.makeText(UserRegisterActivity.this, "此用户名已存在! 请重新输入!", Toast.LENGTH_SHORT).show();
                         activityRegisterBinding.editUser.setText(null);
                         Log.i(Constant.TAG, "UserRegisterActivity onChanged username repeat");
                     } else {
                         if (password.equals(password2)) {
                             try {
-                                iMyUser.mRegister(username, account, password);
+                                serviceManager.mRegister(username, account, password);
                                 if (myDialog == null) {
                                     myDialog = new MyDialog(UserRegisterActivity.this);
                                     myDialog.setsMessage("注册成功!确认跳转到登录吗?")
@@ -170,6 +147,6 @@ public class UserRegisterActivity extends AppCompatActivity {
             myDialog.dismiss();
         }
         super.onDestroy();
-        this.unbindService(connection);
+        serviceManager.unBindService();
     }
 }

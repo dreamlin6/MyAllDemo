@@ -45,8 +45,6 @@ public class AdminActivity extends AppCompatActivity {
     private UserListAdapter userListAdapter;
     private String[] mString;
     private MyDialog myDialog;
-    private IMyUser iMyUser;
-    private ServiceConnection connection;
     private int listCount;
     private String mid, account, username, password;
     private final int INIT_ADAPTER = 1;
@@ -94,7 +92,7 @@ public class AdminActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                     try {
-                                        int id = iMyUser.mDeleteAllUser();
+                                        int id = serviceManager.deleteAllUser();
                                         Log.i(Constant.TAG, "AdminActivity deleteall onClick id = " + id);
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
@@ -118,9 +116,9 @@ public class AdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int id = 0;
                 try {
-                    id = iMyUser.mDeleteUser(activityAdminBinding.mId.getText().toString());
+                    id = serviceManager.deleteUser(activityAdminBinding.mId.getText().toString());
                     activityAdminBinding.mId.setText(null);
-                    iMyUser.updateQuery();
+                    serviceManager.updateQuery();
                     Log.i(Constant.TAG, "AdminActivity delete onClick id = " + id);
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -128,7 +126,8 @@ public class AdminActivity extends AppCompatActivity {
                 show(id > 0 ? "删除成功！" : "删除失败！");
             }
         });
-        mBindService();
+        serviceManager = new MyServiceManager(this);
+        handler.sendEmptyMessage(INIT_ADAPTER);
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {
@@ -147,7 +146,7 @@ public class AdminActivity extends AppCompatActivity {
                     Log.i(Constant.TAG, "AdminActivity handleMessage msg 2!");
                     try {
                         try {
-                            iMyUser.updateQuery();
+                            serviceManager.updateQuery();
                         } catch (RemoteException e) {
                             e.printStackTrace();
                         }
@@ -169,51 +168,31 @@ public class AdminActivity extends AppCompatActivity {
         }
     };
 
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "AdminActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-                handler.sendEmptyMessage(BIND_INIT);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "AdminActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        bindService(intent,connection,BIND_AUTO_CREATE);
-    }
-
     public void initAdapter() throws RemoteException {
         Log.i(Constant.TAG, "AdminActivity initAdapter");
         userLists =new ArrayList<>();
         userListAdapter = new UserListAdapter(this, userLists);
         activityAdminBinding.userList.setLayoutManager(new GridLayoutManager(this,1)); // 一列
         activityAdminBinding.userList.setAdapter(userListAdapter);
-        listCount = iMyUser.getListCount();
+        listCount = serviceManager.getCount();
         updateUserList(userLists, userListAdapter);
         activityAdminBinding.listTitle.setText(String.format(getResources().getString(R.string.userList), listCount));
         adminViewModel.setmDeleteAllBbtEnableStatus(userListAdapter.getItemCount() > 0);
     }
 
     public void updateUserList(List<UserListBean> list, UserListAdapter adapter) throws RemoteException {
-        if (iMyUser.isNoUser()) {
+        if (serviceManager.isNoUser()) {
             Log.i(Constant.TAG, "AdminActivity updateUserList isNoUser true ");
             return;
         } else {
             mString = new String[4];
-            listCount = iMyUser.getListCount();
+            listCount = serviceManager.getCount();
             Log.i(Constant.TAG, "AdminActivity updateUserList listCount = " + listCount);
             list.clear();
-            iMyUser.toFirst();
+            serviceManager.toFirst();
             try {
                 for (int i = 0; i < listCount; i++) {
-                    mString = iMyUser.mQurey();
+                    mString = serviceManager.mQuery();
                     mid = mString[0];
                     username = mString[1];
                     account = mString[2];
@@ -280,7 +259,7 @@ public class AdminActivity extends AppCompatActivity {
         if (myDialog != null) {
             myDialog.dismiss();
         }
-        unbindService(connection);
+        serviceManager.unBindService();
         getContentResolver().unregisterContentObserver(contentObserver);
     }
 }

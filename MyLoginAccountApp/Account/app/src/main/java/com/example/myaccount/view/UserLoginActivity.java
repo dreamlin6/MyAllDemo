@@ -20,6 +20,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityLoginBinding;
@@ -33,12 +34,12 @@ public class UserLoginActivity extends AppCompatActivity {
     private MyDialog myDialog;
     private String mid, account, pass, name, pass2;
     private String[] mString;
-    private IMyUser iMyUser;
-    private ServiceConnection connection;
+    private MyServiceManager serviceManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        serviceManager = new MyServiceManager(this);
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("登录");
@@ -104,12 +105,12 @@ public class UserLoginActivity extends AppCompatActivity {
                 } else {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick");
                     try {
-                        if (iMyUser.isNoUser()) {
+                        if (serviceManager.isNoUser()) {
                             Log.i(Constant.TAG, "UserLoginActivity login onClick isNoUser Null");
                             mDialogShow("未注册任何用户！是否去注册新用户？", 1);
                         } else {
-                            if (iMyUser.mLoginVerify(account, pass)) {
-                                mString = iMyUser.mLogin(account, pass);
+                            if (serviceManager.mLoginVerify(account, pass)) {
+                                mString = serviceManager.mLogin(account, pass);
                                 mid = mString[0];
                                 name = mString[1];
                                 pass2 = mString[2];
@@ -134,28 +135,6 @@ public class UserLoginActivity extends AppCompatActivity {
         });
         activityLoginBinding.editUser.addTextChangedListener(watcher);
         activityLoginBinding.editPass.addTextChangedListener(watcher);
-
-        mBindService();
-    }
-
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
-        Log.i(Constant.TAG, "UserLoginActivity bindService bool = " + bool);
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -198,7 +177,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 case 3:
                                     int id = 0;
                                     try {
-                                        id = iMyUser.mDeleteUser(mid);
+                                        id = serviceManager.deleteUser(mid);
                                         userLoginViewModel.setmBtLoginedVisibleStatus(false);
                                         userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
                                         userLoginViewModel.setmTvllVisibleStatus(false);
@@ -225,6 +204,6 @@ public class UserLoginActivity extends AppCompatActivity {
             myDialog.dismiss();
         }
         super.onDestroy();
-        this.unbindService(connection);
+        serviceManager.unBindService();
     }
 }
