@@ -42,7 +42,7 @@ public class MyServiceManager {
         }
 
         if (iMyUser == null) {
-            Intent intent = new Intent();
+            Intent intent = new Intent(mContext, MyService.class);
             intent.setAction("com.example.service.action");
             intent.setPackage("com.example.myaccount");
             boolean res = mContext.bindService(intent, connection, Context.BIND_AUTO_CREATE); //在bindService后马上调用Service中的方法，结果返回了空指针，因为bindservice是异步操作，有时候没有办法马上绑定服务就可以用

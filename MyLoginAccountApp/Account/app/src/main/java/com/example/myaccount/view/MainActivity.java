@@ -2,6 +2,7 @@ package com.example.myaccount.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.toUser:
                 Toast.makeText(MainActivity.this, "Test Toast", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(MainActivity.this, UserLoginActivity.class);
+//                Intent intent2 = new Intent(MainActivity.this, UserLoginActivity.class);
+                Intent intent2 = new Intent();
+                intent2.setAction("android.intent.action.Login");
                 startActivity(intent2);
                 break;
         }
