@@ -43,7 +43,6 @@ public class UserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("注册");
 
-        serviceManager = new MyServiceManager(this);
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
@@ -66,6 +65,9 @@ public class UserRegisterActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
     }
 
     TextWatcher watcher = new TextWatcher() {

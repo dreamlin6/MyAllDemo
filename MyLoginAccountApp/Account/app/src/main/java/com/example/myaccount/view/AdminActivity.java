@@ -136,10 +136,10 @@ public class AdminActivity extends AppCompatActivity {
                 show(id > 0 ? "删除成功！" : "删除失败！");
             }
         });
-        serviceManager = new MyServiceManager(this);
-        if (serviceManager != null) {
-            handler.sendEmptyMessage(BIND_INIT);
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
         }
+        handler.sendEmptyMessage(BIND_INIT);
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {
@@ -147,7 +147,7 @@ public class AdminActivity extends AppCompatActivity {
         public boolean handleMessage(@NonNull Message msg) {
             switch (msg.what) {
                 case INIT_ADAPTER:
-                    Log.i(Constant.TAG, "AdminActivity handleMessage msg 1!");
+                    Log.i(Constant.TAG, "AdminActivity handleMessage msg INIT_ADAPTER!");
                     try {
                         initAdapter();
                     } catch (RemoteException e) {
@@ -155,7 +155,7 @@ public class AdminActivity extends AppCompatActivity {
                     }
                     break;
                 case BIND_INIT:
-                    Log.i(Constant.TAG, "AdminActivity handleMessage msg 2!");
+                    Log.i(Constant.TAG, "AdminActivity handleMessage msg BIND_INIT!");
                     try {
                         try {
                             serviceManager.updateQuery();
@@ -171,7 +171,7 @@ public class AdminActivity extends AppCompatActivity {
             return false;
         }
     });
-    private ContentObserver contentObserver = new ContentObserver(handler) {
+    private ContentObserver contentObserver = new ContentObserver(handler) { //数据实时刷新
         @Override
         public void onChange(boolean selfChange) {
             super.onChange(selfChange);

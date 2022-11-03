@@ -39,7 +39,7 @@ public class UserLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        serviceManager = new MyServiceManager(this);
+
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("登录");
@@ -132,6 +132,9 @@ public class UserLoginActivity extends AppCompatActivity {
         });
         activityLoginBinding.editUser.addTextChangedListener(watcher);
         activityLoginBinding.editPass.addTextChangedListener(watcher);
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
     }
 
     TextWatcher watcher = new TextWatcher() {

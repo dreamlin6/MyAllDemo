@@ -39,7 +39,6 @@ public class AdminLoginActivity extends AppCompatActivity {
         activityAdminloginBinding = DataBindingUtil.setContentView(this, R.layout.activity_adminlogin);
         activityAdminloginBinding.setLifecycleOwner(this);
 
-        serviceManager = new MyServiceManager(this);
         ViewModelProvider.AndroidViewModelFactory instance =
                 ViewModelProvider.AndroidViewModelFactory
                         .getInstance(getApplication()); //viewmodel实例
@@ -87,6 +86,9 @@ public class AdminLoginActivity extends AppCompatActivity {
             }
         });
         adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
     }
 
     TextWatcher watcher = new TextWatcher() {

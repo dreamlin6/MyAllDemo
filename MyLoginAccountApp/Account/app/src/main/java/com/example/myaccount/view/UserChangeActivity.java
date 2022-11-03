@@ -33,7 +33,6 @@ public class UserChangeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        serviceManager = new MyServiceManager(this);
         activityChangeBinding = DataBindingUtil.setContentView(this, R.layout.activity_change);
         activityChangeBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("修改密码");
@@ -80,6 +79,9 @@ public class UserChangeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
     }
 
     TextWatcher watcher = new TextWatcher() {

@@ -20,9 +20,14 @@ public class MyServiceManager {
     private ServiceConnection connection;
 
     public MyServiceManager(Context context){
-        int count = 0;
         Log.i(Constant.TAG, "MyServiceManager MyServiceManager!");
         mContext = context;
+        mBindService();
+    }
+
+    public void mBindService() {
+        Log.i(Constant.TAG, "MyServiceManager mBindService!");
+        int count = 0;
         if (connection == null) {
             Log.i(Constant.TAG, "MyServiceManager MyServiceManager connection == null");
             connection = new ServiceConnection() {
