@@ -19,11 +19,9 @@ public class MyService extends Service {
     public final String TAG = "TestLog";
     public ContentResolver resolver;
     public Uri uri;
-    private ReentrantReadWriteLock readWriteLock;
     private Cursor cursor;
 
     public MyService () {
-        readWriteLock = new ReentrantReadWriteLock();
         uri = Uri.parse("content://com.example.myaccount/users");
     }
 
@@ -44,7 +42,7 @@ public class MyService extends Service {
         //实现接口
         @SuppressLint("Range")
         @Override
-        public String[] mLogin(String theUser, String thePass) {
+        public String[] onLogin(String theUser, String thePass) {
             String[] mString = new String[3];
             uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
@@ -71,7 +69,7 @@ public class MyService extends Service {
         }
 
         @Override
-        public boolean mLoginVerify(String theUser, String thePass) {
+        public boolean onLoginVerify(String theUser, String thePass) {
             Boolean mBool = false;
             uri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
@@ -122,13 +120,13 @@ public class MyService extends Service {
         }
 
         @Override
-        public void updateQuery(){
+        public void onUpdateQuery(){
             cursor = resolver.query(uri, null, null, null, null);
         }
 
         @SuppressLint("Range")
         @Override
-        public String[] mQurey() {
+        public String[] onQurey() {
             Log.i(TAG, "MyService mQurey!");
             String[] mString = new String[4];
             uri = Uri.parse("content://com.example.myaccount/users");
@@ -144,7 +142,7 @@ public class MyService extends Service {
         }
 
         @Override
-        public void mRegister(String username, String account, String password) {
+        public void onRegister(String username, String account, String password) {
             resolver = getContentResolver();
 //            readWriteLock.writeLock().lock();
             ContentValues values = new ContentValues();
@@ -157,7 +155,7 @@ public class MyService extends Service {
         }
 
         @Override
-        public int mUpdate(String mId, String newPass) {
+        public int onUpdate(String mId, String newPass) {
             resolver = getContentResolver();
 //            readWriteLock.readLock().lock();
             ContentValues values = new ContentValues();
@@ -169,14 +167,14 @@ public class MyService extends Service {
         }
 
         @Override
-        public int mDeleteUser(String mId) {
+        public int onDeleteUser(String mId) {
             Log.i(TAG, "MyService mDeleteUser mId = " + mId);
             resolver = getContentResolver();
             return resolver.delete(uri, "_id = ?", new String[]{mId});
         }
 
         @Override
-        public int mDeleteAllUser() {
+        public int onDeleteAllUser() {
             Log.i(TAG, "MyService mDeleteAllUser!");
             resolver = getContentResolver();
             return resolver.delete(uri, null, null);
@@ -206,9 +204,9 @@ public class MyService extends Service {
                 cursor.moveToPrevious();
                 for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据
                     cursor.moveToNext();
-                    @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex("username"));
-                    Log.i(Constant.TAG, "MyService mExistUser username = " + username);
-                    if (name.equals(username)) {
+                    @SuppressLint("Range") String account = cursor.getString(cursor.getColumnIndex("account"));
+                    Log.i(Constant.TAG, "MyService mExistUser account = " + account);
+                    if (name.equals(account)) {
                         bool = true;
                         break;
                     } else {

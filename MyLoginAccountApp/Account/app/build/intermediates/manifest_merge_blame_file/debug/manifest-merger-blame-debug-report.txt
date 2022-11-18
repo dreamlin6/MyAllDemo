@@ -6,126 +6,126 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="28"
-8-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+8-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+9-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 10
 11    <queries>
-11-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:61:5-63:15
+11-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:61:5-63:15
 12        <package android:name="com.example.myaccount" />
-12-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:9-57
-12-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:18-54
+12-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:9-57
+12-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:18-54
 13    </queries>
 14
 15    <application
-15-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:6:5-60:19
+15-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:6:5-60:19
 16        android:allowBackup="true"
-16-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:7:9-35
+16-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:7:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 18        android:dataExtractionRules="@xml/data_extraction_rules"
-18-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:8:9-65
+18-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:8:9-65
 19        android:debuggable="true"
 20        android:extractNativeLibs="false"
 21        android:fullBackupContent="@xml/backup_rules"
-21-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:9:9-54
+21-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:9:9-54
 22        android:icon="@mipmap/ic_launcher"
-22-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:10:9-43
+22-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:10:9-43
 23        android:label="@string/app_name"
-23-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:11:9-41
+23-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:11:9-41
 24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:12:9-54
+24-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:12:9-54
 25        android:supportsRtl="true"
-25-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:13:9-35
+25-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:13:9-35
 26        android:testOnly="true"
 27        android:theme="@style/Theme.MyAccount" >
-27-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:14:9-47
+27-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:14:9-47
 28        <service
-28-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:16:9-23:19
+28-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:16:9-23:19
 29            android:name="com.example.myaccount.MyService"
-29-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:17:13-38
+29-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:17:13-38
 30            android:enabled="true"
-30-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:18:13-35
+30-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:18:13-35
 31            android:exported="true" >
-31-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:19:13-36
+31-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:19:13-36
 32            <intent-filter>
-32-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:20:13-22:29
+32-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:20:13-22:29
 33                <action android:name="com.example.service.action" />
-33-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:17-68
-33-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:25-66
+33-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:17-68
+33-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:25-66
 34            </intent-filter>
 35        </service>
 36
 37        <activity
-37-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:25:9-34:20
+37-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:25:9-34:20
 38            android:name="com.example.myaccount.view.MainActivity"
-38-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:26:13-46
+38-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:26:13-46
 39            android:exported="true"
-39-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:27:13-36
+39-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:27:13-36
 40            android:launchMode="singleTask" >
-40-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:28:13-44
+40-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:28:13-44
 41            <intent-filter>
-41-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:29:13-33:29
+41-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:29:13-33:29
 42                <action android:name="android.intent.action.MAIN" />
-42-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:17-69
-42-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:25-66
+42-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:17-69
+42-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:25-66
 43
 44                <category android:name="android.intent.category.LAUNCHER" />
-44-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:17-77
-44-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:27-74
+44-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:17-77
+44-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:27-74
 45            </intent-filter>
 46        </activity>
 47        <activity
-47-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:35:9-38:55
+47-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:35:9-38:55
 48            android:name="com.example.myaccount.view.AdminActivity"
-48-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:36:13-47
+48-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:36:13-47
 49            android:exported="true"
-49-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:37:13-36
+49-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:37:13-36
 50            android:launchMode="singleTop" />
-50-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:38:13-43
+50-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:38:13-43
 51        <activity
-51-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:39:9-42:55
+51-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:39:9-42:55
 52            android:name="com.example.myaccount.view.AdminLoginActivity"
-52-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:40:13-52
+52-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:40:13-52
 53            android:exported="true"
-53-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:41:13-36
+53-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:41:13-36
 54            android:launchMode="singleTop" />
-54-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:42:13-43
+54-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:42:13-43
 55        <activity
-55-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:43:9-46:55
+55-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:43:9-46:55
 56            android:name="com.example.myaccount.view.UserLoginActivity"
-56-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:44:13-51
+56-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:44:13-51
 57            android:exported="true"
-57-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:45:13-36
+57-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:45:13-36
 58            android:launchMode="singleTop" />
-58-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:46:13-43
+58-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:46:13-43
 59        <activity
-59-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:47:9-50:55
+59-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:47:9-50:55
 60            android:name="com.example.myaccount.view.UserRegisterActivity"
-60-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:48:13-54
+60-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:48:13-54
 61            android:exported="true"
-61-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:49:13-36
+61-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:49:13-36
 62            android:launchMode="singleTop" />
-62-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:50:13-43
+62-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:50:13-43
 63        <activity
-63-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:51:9-54:55
+63-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:51:9-54:55
 64            android:name="com.example.myaccount.view.UserChangeActivity"
-64-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:52:13-52
+64-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:52:13-52
 65            android:exported="true"
-65-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:53:13-36
+65-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:53:13-36
 66            android:launchMode="singleTop" />
-66-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:54:13-43
+66-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:54:13-43
 67
 68        <provider
-68-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:55:9-59:39
+68-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:55:9-59:39
 69            android:name="com.example.myaccount.bean.UserProvider"
-69-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:56:13-46
+69-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:56:13-46
 70            android:authorities="com.example.myaccount"
-70-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:57:13-56
+70-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:57:13-56
 71            android:enabled="true"
-71-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:58:13-35
+71-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:58:13-35
 72            android:exported="true" />
-72-->C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:59:13-36
+72-->C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:59:13-36
 73    </application>
 74
 75</manifest>

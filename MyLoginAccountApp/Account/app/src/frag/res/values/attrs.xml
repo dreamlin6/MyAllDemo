@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SWTabLayout">
+        <attr name="sw_tab_left_text" format="string"/>
+        <attr name="sw_tab_right_text" format="string"/>
+
+    </declare-styleable>
+</resources>

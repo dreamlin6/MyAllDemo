@@ -11,23 +11,23 @@ interface IMyUser {
 
     //增加接口
 
-    String[] mLogin(String theUser, String thePass);
+    String[] onLogin(String theUser, String thePass);
 
-    void mRegister(String username, String account, String password);
+    void onRegister(String username, String account, String password);
 
-    String[] mQurey();
+    String[] onQurey();
 
-    int mUpdate(String mId, String newPass);
+    int onUpdate(String mId, String newPass);
 
-    int mDeleteUser(String mId);
+    int onDeleteUser(String mId);
 
-    int mDeleteAllUser();
+    int onDeleteAllUser();
 
     boolean isExistUser(String name);
 
     boolean isNoUser();
 
-    boolean mLoginVerify(String theUser, String thePass);
+    boolean onLoginVerify(String theUser, String thePass);
 
     int getListCount();
 
@@ -35,5 +35,5 @@ interface IMyUser {
 
     void toNext();
 
-    void updateQuery();
+    void onUpdateQuery();
 }

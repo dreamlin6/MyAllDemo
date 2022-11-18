@@ -7,66 +7,105 @@ import android.content.ServiceConnection;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.os.RemoteException;
+import android.util.Log;
+
+import com.example.myaccount.constant.Constant;
 
 public class MyServiceManager {
 
     private Context mContext;
-    private final String TAG = "MyServiceManager";
+    private final String TAG = "TestLog";
     private IMyUser iMyUser;
-    private Handler mMsgHander;
-    private static final int SERVICE_CONNECTED = 1;
-    private static final int BIND_SERVICE = 2;
+    private ServiceConnection connection;
 
-    public MyServiceManager(Context context) {
+    public MyServiceManager(Context context){
+        Log.i(Constant.TAG, "MyServiceManager MyServiceManager!");
         mContext = context;
     }
 
     public void bindService() {
+        Log.i(Constant.TAG, "MyServiceManager mBindService!");
+        if (connection == null) {
+            connection = new ServiceConnection() {
+                @Override
+                public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+                    Log.i(Constant.TAG, "MyServiceManager onServiceConnected!");
+                    iMyUser = IMyUser.Stub.asInterface(iBinder);
+                }
+
+                @Override
+                public void onServiceDisconnected(ComponentName name) {
+                    Log.i(Constant.TAG, "MyServiceManager onServiceDisconnected! name = " + name);
+                }
+            };
+        }
+
         if (iMyUser == null) {
             Intent intent = new Intent();
             intent.setAction("com.example.service.action");
             intent.setPackage("com.example.myaccount");
-            mContext.bindService(intent, connection, Context.BIND_AUTO_CREATE);
+            boolean res = mContext.bindService(intent, connection, Context.BIND_AUTO_CREATE); //在bindService后马上调用Service中的方法，结果返回了空指针，因为bindservice是异步操作，有时候没有办法马上绑定服务就可以用
+            Log.i(Constant.TAG, "MyServiceManager bindService res = " + res);
         }
     }
 
     public void unBindService() {
-        mContext.unbindService(connection);
+        if (connection != null) {
+            Log.i(Constant.TAG, "MyServiceManager unBindService!");
+            mContext.unbindService(connection);
+        }
     }
 
-    private ServiceConnection connection = new ServiceConnection() {
-        @Override
+    public int getCount() throws RemoteException {
+        return iMyUser.getListCount();
+    }
 
-        public void onServiceDisconnected(ComponentName name) {
-            if (mMsgHander != null) {
-                mMsgHander.sendEmptyMessage(SERVICE_CONNECTED);
-            }
-        }
+    public void onUpdateQuery() throws RemoteException {
+        iMyUser.onUpdateQuery();
+    }
 
-        @Override
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            iMyUser = IMyUser.Stub.asInterface(iBinder);
-            if (iMyUser != null) {
+    public int onDeleteUser(String str) throws RemoteException {
+        return iMyUser.onDeleteUser(str);
+    }
 
-            } else {
-            }
-            if (mMsgHander != null) {
-                mMsgHander.sendEmptyMessage(BIND_SERVICE);
-            }
-        }
-    };
+    public int onDeleteAllUser() throws RemoteException {
+        return iMyUser.onDeleteAllUser();
+    }
 
-    public void handleMessage(Message msg) {
-        int what = msg.what;
-        switch (what) {
-            case BIND_SERVICE:
-                Intent intent = new Intent();
-                intent.setAction("com.example.service.action");
-                intent.setPackage("com.example.myaccount");
-                mContext.bindService(intent, connection, Context.BIND_AUTO_CREATE);
-                break;
-            case SERVICE_CONNECTED:
-                break;
-        }
+    public boolean isNoUser() throws RemoteException {
+        return iMyUser.isNoUser();
+    }
+
+    public void toFirst() throws RemoteException {
+        iMyUser.toFirst();
+    }
+
+    public void toNext() throws RemoteException {
+        iMyUser.toNext();
+    }
+
+    public String[] onQuery() throws RemoteException {
+        return iMyUser.onQurey();
+    }
+
+    public int onUpdate(String mId, String newPass) throws RemoteException {
+        return iMyUser.onUpdate(mId, newPass);
+    }
+
+    public boolean onLoginVerify(String theUser, String thePass) throws RemoteException {
+        return iMyUser.onLoginVerify(theUser, thePass);
+    }
+
+    public String[] onLogin(String theUser, String thePass) throws RemoteException {
+        return iMyUser.onLogin(theUser, thePass);
+    }
+
+    public boolean isExistUser(String name) throws RemoteException {
+        return iMyUser.isExistUser(name);
+    }
+
+    public void onRegister(String username, String account, String password) throws RemoteException {
+        iMyUser.onRegister(username, account, password);
     }
 }

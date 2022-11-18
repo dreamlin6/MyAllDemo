@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\layout\\activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mylogin.app-merged_res-5:/layout_activity_login.xml.flat",
+        "source": "com.example.mylogin.app-main-7:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -70,10 +78,6 @@
     {
         "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-main-7:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.example.mylogin.app-merged_res-5:/layout_activity_change.xml.flat",
-        "source": "com.example.mylogin.app-main-7:/layout/activity_change.xml"
     },
     {
         "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.mylogin.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher.webp.flat",

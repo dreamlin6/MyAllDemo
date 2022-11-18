@@ -1,4 +1,4 @@
-#Wed Nov 02 11:59:05 GMT+08:00 2022
+#Wed Nov 02 16:49:03 GMT+08:00 2022
 path.4=15/classes.dex
 path.3=14/classes.dex
 path.2=11/classes.dex
@@ -7,19 +7,19 @@ path.7=9/classes.dex
 path.6=4/classes.dex
 path.5=1/classes.dex
 path.0=classes.dex
-base.4=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.3=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.2=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.1=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.3=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.2=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.1=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 renamed.7=classes8.dex
 renamed.6=classes7.dex
-base.7=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.7=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 renamed.5=classes6.dex
-base.6=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.6=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 renamed.4=classes5.dex
-base.5=C\:\\MyDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.5=C\:\\main\\MyAllDemo\\MyLoginAccountApp\\Account\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\4dbda0adc51ca75b28ba552ae995ffb7\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\6509385ff8ec8e676099ca8dd74d3249\transformed\viewbinding-7.2.1\AndroidManifest.xml:17:1-24:12
@@ -42,27 +42,27 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\SWL\.gradle\cach
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\daafd13ed6472e5d90ee94a442cae491\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\bd2b858bc6569916fd0b165974e7ef03\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:4:5-36
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:4:5-36
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:6:5-60:19
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:6:5-60:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\SWL\.gradle\caches\transforms-3\35c69b59585be5ab8e4b75884f21579b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\SWL\.gradle\caches\transforms-3\269e4029f92be0f4884805b72f00e70b\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -74,115 +74,115 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\SW
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\SWL\.gradle\caches\transforms-3\4cb2d3ae910a25e4d3b75b6b0d8d1b11\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:11:9-41
 	android:fullBackupContent
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:9:9-54
 	android:roundIcon
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:12:9-54
 	tools:targetApi
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:15:9-29
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:15:9-29
 	android:icon
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:14:9-47
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:14:9-47
 	android:dataExtractionRules
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:8:9-65
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:8:9-65
 service#com.example.myaccount.MyService
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:16:9-23:19
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:16:9-23:19
 	android:enabled
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:18:13-35
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:18:13-35
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:17:13-38
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:17:13-38
 intent-filter#action:name:com.example.service.action
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:20:13-22:29
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:20:13-22:29
 action#com.example.service.action
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:17-68
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:17-68
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:21:25-66
 activity#com.example.myaccount.view.MainActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:25:9-34:20
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:25:9-34:20
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:28:13-44
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:28:13-44
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:26:13-46
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:26:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:29:13-33:29
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.example.myaccount.view.AdminActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:35:9-38:55
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:35:9-38:55
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:38:13-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:38:13-43
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:36:13-47
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:36:13-47
 activity#com.example.myaccount.view.AdminLoginActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:39:9-42:55
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:39:9-42:55
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:42:13-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:42:13-43
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:41:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:41:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:40:13-52
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:40:13-52
 activity#com.example.myaccount.view.UserLoginActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:43:9-46:55
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:43:9-46:55
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:46:13-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:46:13-43
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:45:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:44:13-51
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:44:13-51
 activity#com.example.myaccount.view.UserRegisterActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:47:9-50:55
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:47:9-50:55
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:50:13-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:50:13-43
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:49:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:48:13-54
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:48:13-54
 activity#com.example.myaccount.view.UserChangeActivity
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:51:9-54:55
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:51:9-54:55
 	android:launchMode
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:54:13-43
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:54:13-43
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:53:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:53:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:52:13-52
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:52:13-52
 provider#com.example.myaccount.bean.UserProvider
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:55:9-59:39
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:55:9-59:39
 	android:enabled
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:58:13-35
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:58:13-35
 	android:authorities
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:57:13-56
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:57:13-56
 	android:exported
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:59:13-36
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:59:13-36
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:56:13-46
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:56:13-46
 queries
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:61:5-63:15
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:61:5-63:15
 package#com.example.myaccount
-ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:9-57
+ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:9-57
 	android:name
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:18-54
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml:62:18-54
 uses-sdk
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\828f00dceb594239b7fd3d9682abe18d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\SWL\.gradle\caches\transforms-3\4dbda0adc51ca75b28ba552ae995ffb7\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:20:5-22:41
@@ -259,13 +259,13 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-
 MERGED from [androidx.print:print:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\bd2b858bc6569916fd0b165974e7ef03\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\SWL\.gradle\caches\transforms-3\9f60b1f42e8b864cc2a6229748027403\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		ADDED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
-		INJECTED from C:\MyDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		ADDED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml
+		INJECTED from C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\main\AndroidManifest.xml

@@ -13,6 +13,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
     }
 
     buildTypes {
@@ -31,6 +32,30 @@ android {
     viewBinding {
         enabled = true
     }
+
+    sourceSets {
+        act {
+            manifest.srcFile('src/act/AndroidManifest.xml')
+            res.srcDir('src/act/res')
+            java.srcDir("src/act/java")
+        }
+        frag {
+            manifest.srcFile('src/frag/AndroidManifest.xml')
+            res.srcDir('src/frag/res')
+            java.srcDir("src/frag/java")
+        }
+    }
+    productFlavors {
+        act {
+            manifestPlaceholders = [SHARED_ID: 'com.example']
+            matchingFallbacks = ['act']
+        }
+        frag {
+            manifestPlaceholders = [SHARED_ID: 'com.example']
+            matchingFallbacks = ['frag']
+        }
+    }
+
 }
 
 dependencies {

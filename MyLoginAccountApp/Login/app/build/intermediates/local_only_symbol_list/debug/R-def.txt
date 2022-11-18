@@ -222,6 +222,7 @@ id register
 id title
 id yes
 layout activity_change
+layout activity_login
 layout activity_main
 layout activity_register
 layout dialog

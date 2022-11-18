@@ -214,6 +214,7 @@ id editAdminUser
 id editPass
 id editPass2
 id editUser
+id fragment1
 id info
 id listTitle
 id login
@@ -247,6 +248,7 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout dialog
+layout fragment_main
 layout userlist
 mipmap ic_launcher
 mipmap ic_launcher_round

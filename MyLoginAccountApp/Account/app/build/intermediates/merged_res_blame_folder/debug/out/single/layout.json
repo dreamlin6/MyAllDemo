@@ -1,46 +1,38 @@
 [
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_admin.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_admin.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_login.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\dialog.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\dialog.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_change.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_change.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_adminlogin.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_adminlogin.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/dialog.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/dialog.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_login.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_main.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_change.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_change.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/userlist.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/userlist.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_user.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_user.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/fragment_main.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/fragment_main.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_main.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_admin.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_admin.xml"
     },
     {
-        "merged": "com.example.myaccount.app-mergeDebugResources-4:/layout/activity_admin.xml",
-        "source": "com.example.myaccount.app-main-7:/layout/activity_admin.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_adminlogin.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_adminlogin.xml"
     },
     {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\userlist.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\userlist.xml"
-    },
-    {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_info.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_info.xml"
-    },
-    {
-        "merged": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-mergeDebugResources-4:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\SWL\\.gradle\\daemon\\7.3.3\\com.example.myaccount.app-main-7:\\layout\\activity_register.xml"
+        "merged": "com.example.myaccount.app-mergeDebugResources-20:/layout/activity_register.xml",
+        "source": "com.example.myaccount.app-main-23:/layout/activity_register.xml"
     }
 ]

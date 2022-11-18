@@ -73,9 +73,9 @@ public class AdminActivity extends AppCompatActivity {
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
-                startActivity(intent1);
-                finish();
+//                Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
+//                startActivity(intent1);
+//                finish();
             }
         });
         activityAdminBinding.deleteall.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +83,7 @@ public class AdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(Constant.TAG, "AdminActivity deleteall onClick getItemCount = " + userListAdapter.getItemCount());
                 if (myDialog == null) {
-                    myDialog = new MyDialog(AdminActivity.this);
+//                    myDialog = new MyDialog(AdminActivity.this);
                     myDialog.setsMessage("确定删除全部用户吗？")
                             .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                                 @Override
@@ -270,7 +270,7 @@ public class AdminActivity extends AppCompatActivity {
     };
 
     public void show(String info){
-        Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -4,7 +4,7 @@ package com.example.myaccount.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,16 +20,11 @@ public final class ActivityMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button toAdmin;
+  public final FrameLayout fragment1;
 
-  @NonNull
-  public final Button toUser;
-
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button toAdmin,
-      @NonNull Button toUser) {
+  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull FrameLayout fragment1) {
     this.rootView = rootView;
-    this.toAdmin = toAdmin;
-    this.toUser = toUser;
+    this.fragment1 = fragment1;
   }
 
   @Override
@@ -59,19 +54,13 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.toAdmin;
-      Button toAdmin = ViewBindings.findChildViewById(rootView, id);
-      if (toAdmin == null) {
+      id = R.id.fragment1;
+      FrameLayout fragment1 = ViewBindings.findChildViewById(rootView, id);
+      if (fragment1 == null) {
         break missingId;
       }
 
-      id = R.id.toUser;
-      Button toUser = ViewBindings.findChildViewById(rootView, id);
-      if (toUser == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((LinearLayout) rootView, toAdmin, toUser);
+      return new ActivityMainBinding((LinearLayout) rootView, fragment1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
