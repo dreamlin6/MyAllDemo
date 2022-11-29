@@ -121,6 +121,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                                                 public void onClick(View view) {
                                                     Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
                                                     startActivity(intent);
+                                                    finish();
                                                 }
                                             }).show();
                                 } else {

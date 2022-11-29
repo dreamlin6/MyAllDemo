@@ -12,13 +12,68 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9018aa24-913d-4b16-886d-1d3e1fec309f" name="Changes" comment="" />
+    <list default="true" id="9018aa24-913d-4b16-886d-1d3e1fec309f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyAccount.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/admin/AdminActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/admin/AdminActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/admin/AdminLoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/admin/AdminLoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/change/UserChangeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/change/UserChangeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/login/UserLoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/login/UserLoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/register/UserRegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/java/com/example/myaccount/activity/register/UserRegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/act/res/layout/activity_adminlogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/act/res/layout/activity_adminlogin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/Fragment_main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/admin/AdminFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/admin/AdminLoginFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/change/UserChangeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/login/UserLoginFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/fragment/register/UserRegisterFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com.example.myaccount/util/SwTabLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/admin/AdminFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/admin/AdminFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/admin/AdminLoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/admin/AdminLoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/change/UserChangeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/change/UserChangeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/login/UserLoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/login/UserLoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/register/UserRegisterFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/fragment/register/UserRegisterFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_admin_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_admin_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_change.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_change.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/fragment_user_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/frag/res/layout/sw_tablayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/frag/res/layout/sw_tablayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/aidl/com/example/myaccount/IMyUser.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/aidl/com/example/myaccount/IMyUser.aidl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/MyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/MyServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/MyServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/provider/AdminProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/provider/MyProviderConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/viewmodel/AdminLoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myaccount/viewmodel/AdminLoginViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_adminlogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_change.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\SWL\.android\avd\Pixel_2_API_30_1.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -28,8 +83,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +122,7 @@
     <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java_SwTabLayout_DIMENSIONS" value="1080&#10;1920" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../MyDemo/MyFragment" />
     <property name="settings.editor.selected.configurable" value="emulator" />
   </component>
   <component name="RecentsManager">

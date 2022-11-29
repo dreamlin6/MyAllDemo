@@ -7,16 +7,14 @@
     android:orientation="vertical"
     android:gravity="center|top">
 
-        <TableLayout
-            android:layout_height="60dp"
-            android:layout_width="match_parent"
-            android:background="@drawable/tab_bg_selecte"/>
+        <com.example.myaccount.util.SwTabLayout
+            android:id="@+id/tab"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_width="match_parent" />
 
-        <fragment
-            android:id="@+id/toUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/user"
-            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </LinearLayout>

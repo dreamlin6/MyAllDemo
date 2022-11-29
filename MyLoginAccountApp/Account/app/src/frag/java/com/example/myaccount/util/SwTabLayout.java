@@ -54,4 +54,12 @@ public class SwTabLayout extends ConstraintLayout {
     public void setRight(String text) {
         right.setText(text);
     }
+
+    public void setLeftListener(OnClickListener listener) {
+        left.setOnClickListener(listener);
+    }
+
+    public void setRightListener(OnClickListener listener) {
+        right.setOnClickListener(listener);
+    }
 }

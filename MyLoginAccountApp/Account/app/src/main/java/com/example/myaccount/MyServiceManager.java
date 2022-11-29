@@ -17,6 +17,8 @@ public class MyServiceManager {
     private Context mContext;
     private final String TAG = "TestLog";
     private IMyUser iMyUser;
+    private static final int USERS = 1;
+    private static final int ADMINS = 2;
     private ServiceConnection connection;
 
     public MyServiceManager(Context context){
@@ -58,11 +60,11 @@ public class MyServiceManager {
     }
 
     public int getCount() throws RemoteException {
-        return iMyUser.getListCount();
+        return iMyUser.getListCount(USERS);
     }
 
     public void onUpdateQuery() throws RemoteException {
-        iMyUser.onUpdateQuery();
+        iMyUser.onUpdateQuery(USERS);
     }
 
     public int onDeleteUser(String str) throws RemoteException {
@@ -74,38 +76,54 @@ public class MyServiceManager {
     }
 
     public boolean isNoUser() throws RemoteException {
-        return iMyUser.isNoUser();
+        return iMyUser.isNoUser(USERS);
     }
 
     public void toFirst() throws RemoteException {
-        iMyUser.toFirst();
+        iMyUser.toFirst(USERS);
     }
 
     public void toNext() throws RemoteException {
-        iMyUser.toNext();
+        iMyUser.toNext(USERS);
     }
 
     public String[] onQuery() throws RemoteException {
-        return iMyUser.onQurey();
+        return iMyUser.onQuery(USERS);
     }
 
     public int onUpdate(String mId, String newPass) throws RemoteException {
-        return iMyUser.onUpdate(mId, newPass);
+        return iMyUser.onUpdate(USERS, mId, newPass);
     }
 
     public boolean onLoginVerify(String theUser, String thePass) throws RemoteException {
-        return iMyUser.onLoginVerify(theUser, thePass);
+        return iMyUser.onLoginVerify(USERS, theUser, thePass);
     }
 
     public String[] onLogin(String theUser, String thePass) throws RemoteException {
-        return iMyUser.onLogin(theUser, thePass);
+        return iMyUser.onLogin(USERS, theUser, thePass);
     }
 
     public boolean isExistUser(String name) throws RemoteException {
-        return iMyUser.isExistUser(name);
+        return iMyUser.isExistUser(USERS, name);
     }
 
     public void onRegister(String username, String account, String password) throws RemoteException {
-        iMyUser.onRegister(username, account, password);
+        iMyUser.onRegister(USERS, username, account, password);
+    }
+
+    public void onAdminRegister(String account, String password) throws RemoteException {
+        iMyUser.onRegister(ADMINS, null, account, password);
+    }
+
+    public boolean onAdminLoginVerify(String theUser, String thePass) throws RemoteException {
+        return iMyUser.onLoginVerify(ADMINS, theUser, thePass);
+    }
+
+    public int onAdminUpdate(String mId, String newPass) throws RemoteException {
+        return iMyUser.onUpdate(ADMINS, mId, newPass);
+    }
+
+    public int getAdminCount() throws RemoteException {
+        return iMyUser.getListCount(ADMINS);
     }
 }

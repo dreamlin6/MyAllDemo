@@ -22,6 +22,8 @@ public class MyService extends Service {
     public Uri adminsUri;
     private Cursor usersCursor;
     private Cursor adminsCursor;
+    private static final int USERS = 1;
+    private static final int ADMINS = 2;
     private String tableUsers = "content://com.example.myaccount/users";
     private String tableAdmins = "content://com.example.myaccount/admins";
 
@@ -48,160 +50,283 @@ public class MyService extends Service {
         //实现接口
         @SuppressLint("Range")
         @Override
-        public String[] onLogin(String theUser, String thePass) {
-            String[] mString = new String[3];
+        public String[] onLogin(int type, String theUser, String thePass) {
+            String[] userString = new String[3];
             usersUri = Uri.parse(tableUsers);
+            adminsUri = Uri.parse(tableAdmins);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(usersUri, null, null, null, null);
-            cursor.moveToFirst(); //第一行
-            cursor.moveToPrevious(); //前一行
-            if (cursor != null) {
-                while (cursor.moveToNext()) {  //下一行 循环
-                    String account1 = cursor.getString(cursor.getColumnIndex("account"));
-                    String pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                    Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
-                    if (theUser.equals(account1) && thePass.equals(pass1)) {
-                        mString[0] = cursor.getString(cursor.getColumnIndex("_id"));
-                        mString[1] = cursor.getString(cursor.getColumnIndex("username"));
-                        mString[2] = cursor.getString(cursor.getColumnIndex("password"));
-                        return mString;
+            Cursor cursor = null;
+            switch (type) {
+                case USERS:
+                    cursor = resolver.query(usersUri, null, null, null, null);
+                    cursor.moveToFirst(); //第一行
+                    cursor.moveToPrevious(); //前一行
+                    if (cursor != null) {
+                        while (cursor.moveToNext()) {  //下一行 循环
+                            String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                            String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                            Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                            if (theUser.equals(account1) && thePass.equals(pass1)) {
+                                userString[0] = cursor.getString(cursor.getColumnIndex("_id"));
+                                userString[1] = cursor.getString(cursor.getColumnIndex("username"));
+                                userString[2] = cursor.getString(cursor.getColumnIndex("password"));
+                            }
+                        }
+                    } else {
+                        Log.i(Constant.TAG, "MyService cursor = null");
                     }
-                }
-                return mString;
-            } else {
-                Log.i(Constant.TAG, "MyService cursor = null");
-                return mString;
+                    break;
+                case ADMINS:
+                    cursor = resolver.query(adminsUri, null, null, null, null);
+                    cursor.moveToFirst(); //第一行
+                    cursor.moveToPrevious(); //前一行
+                    if (cursor != null) {
+                        while (cursor.moveToNext()) {  //下一行 循环
+                            String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                            String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                            Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                            if (theUser.equals(account1) && thePass.equals(pass1)) {
+                                userString[0] = cursor.getString(cursor.getColumnIndex("_id"));
+                                userString[1] = cursor.getString(cursor.getColumnIndex("username"));
+                                userString[2] = cursor.getString(cursor.getColumnIndex("password"));
+                            }
+                        }
+                    } else {
+                        Log.i(Constant.TAG, "MyService cursor = null");
+                    }
+                    break;
             }
+            return userString;
         }
 
         @Override
-        public boolean onLoginVerify(String theUser, String thePass) {
+        public boolean onLoginVerify(int type, String theUser, String thePass) {
+            Log.i(Constant.TAG, "MyService onLoginVerify! type = " + type);
             Boolean mBool = false;
             usersUri = Uri.parse(tableUsers);
+            adminsUri = Uri.parse(tableAdmins);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(usersUri, null, null, null, null);
-            cursor.moveToFirst(); //第一行
-            cursor.moveToPrevious(); //前一行
-            if (cursor != null) {
-                while (cursor.moveToNext()) {  //下一行 循环
-                    @SuppressLint("Range") String account1 = cursor.getString(cursor.getColumnIndex("account"));
-                    @SuppressLint("Range") String pass1 = cursor.getString(cursor.getColumnIndex("password"));
-                    Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
-                    if (theUser.equals(account1) && thePass.equals(pass1)) {
-                        mBool = true;
-                        break;
+            Cursor cursor = null;
+            switch (type) {
+                case USERS:
+                    cursor = resolver.query(usersUri, null, null, null, null);
+                    cursor.moveToFirst(); //第一行
+                    cursor.moveToPrevious(); //前一行
+                    if (cursor != null) {
+                        while (cursor.moveToNext()) {  //下一行 循环
+                            @SuppressLint("Range") String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                            @SuppressLint("Range") String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                            Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                            if (theUser.equals(account1) && thePass.equals(pass1)) {
+                                mBool = true;
+                                break;
+                            } else {
+                                mBool = false;
+                            }
+                        }
                     } else {
-                        mBool = false;
+                        Log.i(Constant.TAG, "MyService onLoginVerify cursor = null");
                     }
-                }
-            } else {
-                Log.i(Constant.TAG, "MyService mLoginVerify cursor = null");
+                    break;
+                case ADMINS:
+                    cursor = resolver.query(adminsUri, null, null, null, null);
+                    cursor.moveToFirst(); //第一行
+                    cursor.moveToPrevious(); //前一行
+                    if (cursor != null) {
+                        while (cursor.moveToNext()) {  //下一行 循环
+                            @SuppressLint("Range") String account1 = cursor.getString(cursor.getColumnIndex("account"));
+                            @SuppressLint("Range") String pass1 = cursor.getString(cursor.getColumnIndex("password"));
+                            Log.i(Constant.TAG, String.format("MyService cursor user1 = %s pass1 = %s", account1, pass1));
+                            if (theUser.equals(account1) && thePass.equals(pass1)) {
+                                mBool = true;
+                                break;
+                            } else {
+                                mBool = false;
+                            }
+                        }
+                    } else {
+                        Log.i(Constant.TAG, "MyService onLoginVerify cursor = null");
+                    }
+                    break;
             }
-            Log.i(Constant.TAG, "MyService mLoginVerify mBool = " + mBool);
+            Log.i(Constant.TAG, "MyService onLoginVerify mBool = " + mBool);
             return mBool;
         }
 
         @Override
-        public int getListCount() {
-            Log.i(Constant.TAG, "MyService getListCount!");
-            usersUri = Uri.parse(tableUsers);
+        public int getListCount(int type) {
+            Log.i(Constant.TAG, "MyService getListCount! type = " + type);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(usersUri, null, null, null, null, null);
-            int count = cursor.getCount();
+            Cursor cursor = null;
+            int count = 0;
+            switch (type) {
+                case USERS:
+                    usersUri = Uri.parse(tableUsers);
+                    cursor = resolver.query(usersUri, null, null, null, null, null);
+                    count = cursor.getCount();
+                    break;
+                case ADMINS:
+                    adminsUri = Uri.parse(tableAdmins);
+                    cursor = resolver.query(adminsUri, null, null, null, null, null);
+                    count = cursor.getCount();
+                    break;
+            }
             Log.i(Constant.TAG, "MyService getListCount count = " + count);
             return count;
         }
 
         @Override
-        public void toFirst() {
-            Log.i(TAG, "MyService toFirst!");
-            usersCursor.moveToFirst();
-            usersCursor.moveToPrevious();
+        public void toFirst(int type) {
+            Log.i(TAG, "MyService toFirst! type = " + type);
+            switch (type) {
+                case USERS:
+                    usersCursor.moveToFirst();
+                    usersCursor.moveToPrevious();
+                    break;
+                case ADMINS:
+                    adminsCursor.moveToFirst();
+                    adminsCursor.moveToPrevious();
+                    break;
+            }
         }
 
         @Override
-        public void toNext() {
-            Log.i(TAG, "MyService toNext!");
-            usersCursor.moveToNext();
-        }
-
-        @Override
-        public void onUpdateQuery(){
-            usersCursor = resolver.query(usersUri, null, null, null, null);
+        public void toNext(int type) {
+            Log.i(TAG, "MyService toNext! type = " + type);
+            switch (type) {
+                case USERS:
+                    usersCursor.moveToNext();
+                    break;
+                case ADMINS:
+                    adminsCursor.moveToNext();
+                    break;
+            }
         }
 
         @SuppressLint("Range")
         @Override
-        public String[] onQurey() {
-            Log.i(TAG, "MyService mQurey!");
-            String[] mString = new String[4];
-            usersUri = Uri.parse(tableUsers);
-            resolver = getContentResolver();
-//            cursor = resolver.query(uri, null, null, null, null);
-            toNext();
-            mString[0] = usersCursor.getString(usersCursor.getColumnIndex("_id"));
-            mString[1] = usersCursor.getString(usersCursor.getColumnIndex("username"));
-            mString[2] = usersCursor.getString(usersCursor.getColumnIndex("account"));
-            mString[3] = usersCursor.getString(usersCursor.getColumnIndex("password"));
-            Log.i(TAG, "MyService mQurey mString = " + mString[0] + " " + mString[1] + " " + mString[2] + " " + mString[3]);
-            return mString;
+        public void onUpdateQuery(int type) {
+            switch (type) {
+                case USERS:
+                    usersCursor = resolver.query(usersUri, null, null, null, null);
+                    break;
+                case ADMINS:
+                    adminsCursor = resolver.query(usersUri, null, null, null, null);
+                    break;
+            }
         }
 
+        @SuppressLint("Range")
         @Override
-        public void onRegister(String username, String account, String password) {
+        public String[] onQuery(int type){
+                Log.i(TAG, "MyService onQurey! type = " + type);
+                String[] userString = new String[4];
+                switch (type) {
+                    case USERS:
+                        usersUri = Uri.parse(tableUsers);
+                        resolver = getContentResolver();
+                        toNext(USERS);
+                        userString[0] = usersCursor.getString(usersCursor.getColumnIndex("_id"));
+                        userString[1] = usersCursor.getString(usersCursor.getColumnIndex("username"));
+                        userString[2] = usersCursor.getString(usersCursor.getColumnIndex("account"));
+                        userString[3] = usersCursor.getString(usersCursor.getColumnIndex("password"));
+                        Log.i(TAG, "MyService onQuery mString = " + userString[0] + " " + userString[1] + " " + userString[2] + " " + userString[3]);
+                        break;
+                    case ADMINS:
+                        adminsUri = Uri.parse(tableAdmins);
+                        resolver = getContentResolver();
+                        toNext(ADMINS);
+                        userString[0] = adminsCursor.getString(usersCursor.getColumnIndex("account"));
+                        userString[1] = adminsCursor.getString(usersCursor.getColumnIndex("password"));
+                        Log.i(TAG, "MyService onQuery String = " + userString[0] + " " + userString[1]);
+                        break;
+                }
+                return userString;
+            }
+
+        @Override
+        public void onRegister(int type, String username, String account, String password) {
             resolver = getContentResolver();
-//            readWriteLock.writeLock().lock();
             ContentValues values = new ContentValues();
-            values.put("username", username);
-            values.put("account", account);
-            values.put("password", password);
-            resolver.insert(usersUri, values);
-//            readWriteLock.writeLock().unlock();
-            Log.i(TAG, "MyService mRegister " + usersUri + " " + values);
+            switch (type) {
+                case USERS:
+                    values.put("username", username);
+                    values.put("account", account);
+                    values.put("password", password);
+                    resolver.insert(usersUri, values);
+                    Log.i(TAG, "MyService onRegister " + USERS + " " + values);
+                    break;
+                case ADMINS:
+                    values.put("account", account);
+                    values.put("password", password);
+                    resolver.insert(adminsUri, values);
+                    Log.i(TAG, "MyService onRegister " + ADMINS + " " + values);
+                    break;
+            }
         }
 
         @Override
-        public int onUpdate(String mId, String newPass) {
+        public int onUpdate(int type, String mId, String newPass) {
             resolver = getContentResolver();
-//            readWriteLock.readLock().lock();
             ContentValues values = new ContentValues();
             values.put("password", newPass);
-            int id = resolver.update(usersUri, values, "_id = ?", new String[]{mId});
-//            readWriteLock.readLock().unlock();
-            Log.i(TAG, "MyService mUpdate id = " + id);
+            int id = 0;
+            switch (type) {
+                case USERS:
+                    id = resolver.update(usersUri, values, "_id = ?", new String[]{mId});
+                    Log.i(TAG, "MyService onUpdate id = " + id);
+                    break;
+                case ADMINS:
+                    id = resolver.update(adminsUri, values, "_id = ?", new String[]{mId});
+                    Log.i(TAG, "MyService onUpdate id = " + id);
+                    break;
+            }
             return id;
         }
 
         @Override
         public int onDeleteUser(String mId) {
-            Log.i(TAG, "MyService mDeleteUser mId = " + mId);
+            Log.i(TAG, "MyService onDeleteUser mId = " + mId);
             resolver = getContentResolver();
             return resolver.delete(usersUri, "_id = ?", new String[]{mId});
         }
 
         @Override
         public int onDeleteAllUser() {
-            Log.i(TAG, "MyService mDeleteAllUser!");
+            Log.i(TAG, "MyService onDeleteAllUser!");
             resolver = getContentResolver();
             return resolver.delete(usersUri, null, null);
         }
 
         @Override
-        public boolean isNoUser() {
-            Log.i(Constant.TAG, "MyService isNoUser!");
-            usersUri = Uri.parse("content://com.example.myaccount/users");
+        public boolean isNoUser(int type) {
+            Log.i(Constant.TAG, "MyService isNoUser! type = " + type);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(usersUri, null, null, null, null);
-            if (!cursor.moveToFirst()) {
-                Log.i(Constant.TAG, "MyService isNoUser true");
-                return true;
-            } else {
-                return false;
+            Cursor cursor = null;
+            boolean noUser = false;
+            switch (type) {
+                case USERS:
+                    cursor = resolver.query(usersUri, null, null, null, null);
+                    if (!cursor.moveToFirst()) {
+                        noUser = true;
+                    } else {
+                        noUser = false;
+                    }
+                    break;
+                case ADMINS:
+                    cursor = resolver.query(adminsUri, null, null, null, null);
+                    if (!cursor.moveToFirst()) {
+                        noUser = true;
+                    } else {
+                        noUser = false;
+                    }
+                    break;
             }
+            return noUser;
         }
 
         @Override
-        public boolean isExistUser(String name) {
+        public boolean isExistUser(int type, String name) {
             usersUri = Uri.parse(tableUsers);
             boolean bool = false;
             resolver = getContentResolver();

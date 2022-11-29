@@ -47,6 +47,7 @@ public class AdminActivity extends AppCompatActivity {
     private final int INIT_ADAPTER = 1;
     private final int BIND_INIT = 2;
     private MyServiceManager serviceManager;
+    private String tableUsers = "content://com.example.myaccount/users";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class AdminActivity extends AppCompatActivity {
 
         activityAdminBinding.mId.addTextChangedListener(watcher);
 
-        Uri uri = Uri.parse("content://com.example.myaccount/users");
+        Uri uri = Uri.parse(tableUsers);
         this.getContentResolver().registerContentObserver(uri, true, contentObserver);
 
         activityAdminBinding.back.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +131,7 @@ public class AdminActivity extends AppCompatActivity {
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
-                show(id > 0 ? "删除成功！" : "删除失败！");
+                showToast(id > 0 ? "删除成功" : "删除失败");
             }
         });
         if (serviceManager == null) {
@@ -226,7 +227,7 @@ public class AdminActivity extends AppCompatActivity {
                 }
                 adapter.notifyDataSetChanged();
             } catch (RemoteException e) {
-                Log.i(Constant.TAG, "AdminActivity updateUserList mQurey ERROR!");
+                Log.i(Constant.TAG, "AdminActivity updateUserList Query ERROR!");
                 e.printStackTrace();
             }
         }
@@ -248,7 +249,7 @@ public class AdminActivity extends AppCompatActivity {
         }
     };
 
-    public void show(String info){
+    public void showToast(String info){
         Toast.makeText(AdminActivity.this, info, Toast.LENGTH_SHORT).show();
     }
 

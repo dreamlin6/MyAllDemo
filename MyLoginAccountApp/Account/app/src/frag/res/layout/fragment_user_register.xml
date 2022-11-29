@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <import type="com.example.myaccount.constant.Constant" />
+
+        <variable
+            name="userregistervm"
+            type="com.example.myaccount.viewmodel.UserRegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editUser"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_tips"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimen_60"/>
+        <EditText
+            android:id="@+id/editAccount"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/account_tips"
+            app:layout_constraintTop_toBottomOf="@+id/editUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass_tips"
+            app:layout_constraintTop_toBottomOf="@+id/editAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <EditText
+            android:id="@+id/editPass2"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass2_tips"
+            app:layout_constraintTop_toBottomOf="@+id/editPass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:onClick="@{() -> userregistervm.mRegisterBtnOnclick()}"
+            android:enabled="@{userregistervm.mRegisterBtnEnable}"
+            app:layout_constraintTop_toBottomOf="@+id/editPass2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/toHome"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_marginTop30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

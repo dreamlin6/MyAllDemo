@@ -74,6 +74,7 @@ public class UserChangeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UserChangeActivity.this, UserLoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         if (serviceManager == null) {
