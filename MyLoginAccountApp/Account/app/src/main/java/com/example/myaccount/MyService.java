@@ -18,18 +18,24 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class MyService extends Service {
     public final String TAG = "TestLog";
     public ContentResolver resolver;
-    public Uri uri;
-    private Cursor cursor;
+    public Uri usersUri;
+    public Uri adminsUri;
+    private Cursor usersCursor;
+    private Cursor adminsCursor;
+    private String tableUsers = "content://com.example.myaccount/users";
+    private String tableAdmins = "content://com.example.myaccount/admins";
 
     public MyService () {
-        uri = Uri.parse("content://com.example.myaccount/users");
+        usersUri = Uri.parse(tableUsers);
+        adminsUri = Uri.parse(tableAdmins);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         resolver = getContentResolver();
-        cursor = resolver.query(uri, null, null, null, null);
+        usersCursor = resolver.query(usersUri, null, null, null, null);
+        adminsCursor = resolver.query(adminsUri, null, null, null, null);
     }
 
     @Override
@@ -44,9 +50,9 @@ public class MyService extends Service {
         @Override
         public String[] onLogin(String theUser, String thePass) {
             String[] mString = new String[3];
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse(tableUsers);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(uri, null, null, null, null);
+            Cursor cursor = resolver.query(usersUri, null, null, null, null);
             cursor.moveToFirst(); //第一行
             cursor.moveToPrevious(); //前一行
             if (cursor != null) {
@@ -71,9 +77,9 @@ public class MyService extends Service {
         @Override
         public boolean onLoginVerify(String theUser, String thePass) {
             Boolean mBool = false;
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse(tableUsers);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(uri, null, null, null, null);
+            Cursor cursor = resolver.query(usersUri, null, null, null, null);
             cursor.moveToFirst(); //第一行
             cursor.moveToPrevious(); //前一行
             if (cursor != null) {
@@ -98,9 +104,9 @@ public class MyService extends Service {
         @Override
         public int getListCount() {
             Log.i(Constant.TAG, "MyService getListCount!");
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse(tableUsers);
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(uri, null, null, null, null, null);
+            Cursor cursor = resolver.query(usersUri, null, null, null, null, null);
             int count = cursor.getCount();
             Log.i(Constant.TAG, "MyService getListCount count = " + count);
             return count;
@@ -109,19 +115,19 @@ public class MyService extends Service {
         @Override
         public void toFirst() {
             Log.i(TAG, "MyService toFirst!");
-            cursor.moveToFirst();
-            cursor.moveToPrevious();
+            usersCursor.moveToFirst();
+            usersCursor.moveToPrevious();
         }
 
         @Override
         public void toNext() {
             Log.i(TAG, "MyService toNext!");
-            cursor.moveToNext();
+            usersCursor.moveToNext();
         }
 
         @Override
         public void onUpdateQuery(){
-            cursor = resolver.query(uri, null, null, null, null);
+            usersCursor = resolver.query(usersUri, null, null, null, null);
         }
 
         @SuppressLint("Range")
@@ -129,14 +135,14 @@ public class MyService extends Service {
         public String[] onQurey() {
             Log.i(TAG, "MyService mQurey!");
             String[] mString = new String[4];
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse(tableUsers);
             resolver = getContentResolver();
 //            cursor = resolver.query(uri, null, null, null, null);
             toNext();
-            mString[0] = cursor.getString(cursor.getColumnIndex("_id"));
-            mString[1] = cursor.getString(cursor.getColumnIndex("username"));
-            mString[2] = cursor.getString(cursor.getColumnIndex("account"));
-            mString[3] = cursor.getString(cursor.getColumnIndex("password"));
+            mString[0] = usersCursor.getString(usersCursor.getColumnIndex("_id"));
+            mString[1] = usersCursor.getString(usersCursor.getColumnIndex("username"));
+            mString[2] = usersCursor.getString(usersCursor.getColumnIndex("account"));
+            mString[3] = usersCursor.getString(usersCursor.getColumnIndex("password"));
             Log.i(TAG, "MyService mQurey mString = " + mString[0] + " " + mString[1] + " " + mString[2] + " " + mString[3]);
             return mString;
         }
@@ -149,9 +155,9 @@ public class MyService extends Service {
             values.put("username", username);
             values.put("account", account);
             values.put("password", password);
-            resolver.insert(uri, values);
+            resolver.insert(usersUri, values);
 //            readWriteLock.writeLock().unlock();
-            Log.i(TAG, "MyService mRegister " + uri + " " + values);
+            Log.i(TAG, "MyService mRegister " + usersUri + " " + values);
         }
 
         @Override
@@ -160,7 +166,7 @@ public class MyService extends Service {
 //            readWriteLock.readLock().lock();
             ContentValues values = new ContentValues();
             values.put("password", newPass);
-            int id = resolver.update(uri, values, "_id = ?", new String[]{mId});
+            int id = resolver.update(usersUri, values, "_id = ?", new String[]{mId});
 //            readWriteLock.readLock().unlock();
             Log.i(TAG, "MyService mUpdate id = " + id);
             return id;
@@ -170,22 +176,22 @@ public class MyService extends Service {
         public int onDeleteUser(String mId) {
             Log.i(TAG, "MyService mDeleteUser mId = " + mId);
             resolver = getContentResolver();
-            return resolver.delete(uri, "_id = ?", new String[]{mId});
+            return resolver.delete(usersUri, "_id = ?", new String[]{mId});
         }
 
         @Override
         public int onDeleteAllUser() {
             Log.i(TAG, "MyService mDeleteAllUser!");
             resolver = getContentResolver();
-            return resolver.delete(uri, null, null);
+            return resolver.delete(usersUri, null, null);
         }
 
         @Override
         public boolean isNoUser() {
             Log.i(Constant.TAG, "MyService isNoUser!");
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse("content://com.example.myaccount/users");
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(uri, null, null, null, null);
+            Cursor cursor = resolver.query(usersUri, null, null, null, null);
             if (!cursor.moveToFirst()) {
                 Log.i(Constant.TAG, "MyService isNoUser true");
                 return true;
@@ -196,10 +202,10 @@ public class MyService extends Service {
 
         @Override
         public boolean isExistUser(String name) {
-            uri = Uri.parse("content://com.example.myaccount/users");
+            usersUri = Uri.parse(tableUsers);
             boolean bool = false;
             resolver = getContentResolver();
-            Cursor cursor = resolver.query(uri, null, null, null, null, null);
+            Cursor cursor = resolver.query(usersUri, null, null, null, null, null);
             if (cursor.moveToFirst()) {
                 cursor.moveToPrevious();
                 for (int i = 0; i < cursor.getCount(); i++) {  //循环读取数据

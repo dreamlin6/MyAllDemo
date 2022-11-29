@@ -1,43 +1,38 @@
-package com.example.myaccount.view;
+package com.example.myaccount.activity.admin;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myaccount.IMyUser;
+import com.example.myaccount.MainActivity;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
-import com.example.myaccount.databinding.FragmentMainBinding;
+import com.example.myaccount.databinding.ActivityAdminloginBinding;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 
-public class Fragment_adminlogin extends Fragment {
+public class AdminLoginActivity extends AppCompatActivity {
+
     private final String WAIT_LOGIN = "未登录";
-    private FragmentMainBinding activityAdminloginBinding;
+    private ActivityAdminloginBinding activityAdminloginBinding;
     private AdminLoginViewModel adminLoginViewModel;
-    private ServiceConnection connection;
-    private IMyUser iMyUser;
+    private MyServiceManager serviceManager;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityAdminloginBinding = DataBindingUtil.inflate(inflater, R.layout.activity_adminlogin, null, true);
+        activityAdminloginBinding = DataBindingUtil.setContentView(this, R.layout.activity_adminlogin);
         activityAdminloginBinding.setLifecycleOwner(this);
 
         ViewModelProvider.AndroidViewModelFactory instance =
@@ -87,27 +82,10 @@ public class Fragment_adminlogin extends Fragment {
             }
         });
         adminLoginViewModel.getmAdminLoginStatus().observe(this, loginObserve);
-
-        mBindService();
-    }
-
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "AdminLoginActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "AdminLoginActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        bindService(intent,connection,BIND_AUTO_CREATE);
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
+        serviceManager.bindService();
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -134,6 +112,7 @@ public class Fragment_adminlogin extends Fragment {
             if (isLogin == 1) {
                 activityAdminloginBinding.loginTips.setText("登录成功！");
                 Intent intent = new Intent(AdminLoginActivity.this, AdminActivity.class);
+                intent.putExtra("page", 1);
                 startActivity(intent);
             } else {
                 activityAdminloginBinding.loginTips.setText("登录失败！");
@@ -144,6 +123,5 @@ public class Fragment_adminlogin extends Fragment {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbindService(connection);
     }
 }

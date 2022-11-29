@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.myaccount.admin.AdminLoginActivity;
-import com.example.myaccount.login.UserLoginActivity;
+import com.example.myaccount.activity.admin.AdminLoginActivity;
+import com.example.myaccount.activity.login.UserLoginActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

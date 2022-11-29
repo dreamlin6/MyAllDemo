@@ -1,5 +1,6 @@
-package com.example.myaccount.view;
+package com.example.myaccount.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,7 +21,7 @@ public class Fragment_main extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("onCreateView", "Fragment_one");
+        Log.i("onCreateView", "fragment_main");
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         return view;
@@ -46,6 +47,7 @@ public class Fragment_main extends Fragment implements View.OnClickListener{
             case 0:
                 Log.i("setIndex","index" + index);
                 ft.hide(Fragment_main.this);
+                Intent intent = requireActivity().getIntent();
                 break;
             case 1:
                 Log.i("setIndex","index = " + index);

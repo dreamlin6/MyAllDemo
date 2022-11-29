@@ -1,4 +1,4 @@
-package com.example.myaccount.change;
+package com.example.myaccount.activity.change;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +16,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
+import com.example.myaccount.activity.login.UserLoginActivity;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityChangeBinding;
-import com.example.myaccount.login.UserLoginActivity;
 import com.example.myaccount.viewmodel.UserChangeViewModel;
 
 public class UserChangeActivity extends AppCompatActivity {

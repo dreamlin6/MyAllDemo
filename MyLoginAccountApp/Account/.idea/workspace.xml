@@ -6,16 +6,13 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="onServiceConnected" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9018aa24-913d-4b16-886d-1d3e1fec309f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../MVVMDemo" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVVMDemo" afterDir="false" />
-    </list>
+    <list default="true" id="9018aa24-913d-4b16-886d-1d3e1fec309f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +60,14 @@
     <property name="android-custom-viewC:/MyDemo/MyLoginAccountApp/Account/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java_SwTabLayout_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/SWL/AppData/Local/Android/Sdk/sources/android-32/android/widget/TableLayout.java_SELECTED" value="TableLayout" />
     <property name="android-custom-viewC:/Users/SWL/AppData/Local/Android/Sdk/sources/android-32/android/widget/TableLayout.java_TableLayout_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com.example.myaccount/fragment/SwTabLayout.java_SELECTED" value="SwTabLayout" />
+    <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com.example.myaccount/fragment/SwTabLayout.java_SwTabLayout_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com.example.myaccount/util/SwTabLayout.java_SELECTED" value="" />
+    <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java_SELECTED" value="SwTabLayout" />
+    <property name="android-custom-viewC:/main/MyAllDemo/MyLoginAccountApp/Account/app/src/frag/java/com/example/myaccount/util/SwTabLayout.java_SwTabLayout_DIMENSIONS" value="1080&#10;1920" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../HHcodeZ/common/libUIFramework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="emulator" />
   </component>
   <component name="RecentsManager">
@@ -77,11 +79,13 @@
       <recent name="C:\MyDemo\MyLoginAccountApp\Account\app\src\frag" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\main\MyAllDemo\MyLoginAccountApp\Account\app\src\act\java\com\example\myaccount\activity" />
       <recent name="C:\MyDemo\MyLoginAccountApp\Account\app\src\frag\res\drawable" />
       <recent name="C:\MyDemo\MyLoginAccountApp\Account\app\src\frag\res\values" />
       <recent name="C:\MyDemo\MyLoginAccountApp\Account\app\src\act\res" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.myaccount.util" />
       <recent name="com.example.myaccount" />
       <recent name="" />
     </key>

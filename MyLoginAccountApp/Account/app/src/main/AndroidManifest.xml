@@ -21,27 +21,6 @@
                 <action android:name="com.example.service.action"/>
             </intent-filter>
         </service>
-
-        <activity
-            android:name=".admin.AdminActivity"
-            android:exported="true"
-            android:launchMode="singleTop"></activity>
-        <activity
-            android:name=".admin.AdminLoginActivity"
-            android:exported="true"
-            android:launchMode="singleTop"></activity>
-        <activity
-            android:name=".login.UserLoginActivity"
-            android:exported="true"
-            android:launchMode="singleTop"></activity>
-        <activity
-            android:name=".register.UserRegisterActivity"
-            android:exported="true"
-            android:launchMode="singleTop"></activity>
-        <activity
-            android:name=".change.UserChangeActivity"
-            android:exported="true"
-            android:launchMode="singleTop"></activity>
         <provider
             android:name=".provider.UserProvider"
             android:authorities="com.example.myaccount"

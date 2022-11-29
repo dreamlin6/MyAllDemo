@@ -1,12 +1,9 @@
-package com.example.myaccount.view;
+package com.example.myaccount.activity.login;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.os.RemoteException;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,8 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myaccount.IMyUser;
+import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
+import com.example.myaccount.activity.admin.AdminActivity;
+import com.example.myaccount.activity.change.UserChangeActivity;
+import com.example.myaccount.activity.register.UserRegisterActivity;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityLoginBinding;
 import com.example.myaccount.util.MyDialog;
@@ -30,15 +30,15 @@ public class UserLoginActivity extends AppCompatActivity {
 
     private UserLoginViewModel userLoginViewModel;
     private ActivityLoginBinding activityLoginBinding;
-    private MyDialog myDialog;
+    private MyDialog dialog;
     private String mid, account, pass, name, pass2;
-    private String[] mString;
-    private IMyUser iMyUser;
-    private ServiceConnection connection;
+    private String[] userInfo;
+    private MyServiceManager serviceManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.setLifecycleOwner(this);
         getSupportActionBar().setTitle("登录");
@@ -55,8 +55,9 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(UserLoginActivity.this, MainActivity.class);
-                startActivity(intent1);
+//                Intent intent1 = new Intent(UserLoginActivity.this, MainActivity.class);
+//                startActivity(intent1);
+                finish();
             }
         });
         activityLoginBinding.change.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +73,7 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                isUnLogin();
                 userLoginViewModel.setmTvllVisibleStatus(false);
                 activityLoginBinding.editUser.setText(null);
                 activityLoginBinding.editPass.setText(null);
@@ -82,7 +82,7 @@ public class UserLoginActivity extends AppCompatActivity {
         activityLoginBinding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDialogShow("注销后该用户将无法登录。确定注销当前用户吗？", 3);
+                dialogShow("注销后该用户将无法登录。确定注销当前用户吗？", 3);
             }
         });
         activityLoginBinding.register.setOnClickListener(new View.OnClickListener() {
@@ -96,33 +96,31 @@ public class UserLoginActivity extends AppCompatActivity {
             @SuppressLint("Range")
             @Override
             public void onClick(View v) {
-                mString = new String[3];
+                userInfo = new String[3];
                 account = activityLoginBinding.editUser.getText().toString();
                 pass = activityLoginBinding.editPass.getText().toString();
                 if (account.equals("1") && pass.equals("1")) {
-                    mDialogShow("当前登录用户为管理员用户，是否跳转到管理员界面！", 2);
+                    dialogShow("当前登录用户为管理员用户，是否跳转到管理员界面！", 2);
                 } else {
                     Log.i(Constant.TAG, "UserLoginActivity login onClick");
                     try {
-                        if (iMyUser.isNoUser()) {
+                        if (serviceManager.isNoUser()) {
                             Log.i(Constant.TAG, "UserLoginActivity login onClick isNoUser Null");
-                            mDialogShow("未注册任何用户！是否去注册新用户？", 1);
+                            dialogShow("未注册任何用户！是否去注册新用户？", 1);
                         } else {
-                            if (iMyUser.mLoginVerify(account, pass)) {
-                                mString = iMyUser.mLogin(account, pass);
-                                mid = mString[0];
-                                name = mString[1];
-                                pass2 = mString[2];
+                            if (serviceManager.onLoginVerify(account, pass)) {
+                                userInfo = serviceManager.onLogin(account, pass);
+                                mid = userInfo[0];
+                                name = userInfo[1];
+                                pass2 = userInfo[2];
                                 Log.i(Constant.TAG, String.format("UserLoginActivity Login mid = %s name = %s pass2 = %s", mid, name, pass2));
                                 activityLoginBinding.info.setText(String.format(getResources().getString(R.string.welcome), name));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#008000"));
-                                userLoginViewModel.setmBtLoginedVisibleStatus(true);
-                                userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+                                isLogin();
                             } else {
                                 activityLoginBinding.info.setText(getResources().getString(R.string.loginFail));
                                 activityLoginBinding.info.setTextColor(Color.parseColor("#FF0000"));
-                                userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                isUnLogin();
                             }
                             userLoginViewModel.setmTvllVisibleStatus(true);
                         }
@@ -134,28 +132,10 @@ public class UserLoginActivity extends AppCompatActivity {
         });
         activityLoginBinding.editUser.addTextChangedListener(watcher);
         activityLoginBinding.editPass.addTextChangedListener(watcher);
-
-        mBindService();
-    }
-
-    public void mBindService() {
-        connection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder iBinder) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceConnected");
-                iMyUser = IMyUser.Stub.asInterface(iBinder);
-            }
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                Log.i(Constant.TAG, "UserLoginActivity onServiceDisconnected " + name);
-            }
-        };
-
-        Intent intent = new Intent();
-        intent.setAction("com.example.service.action");
-        intent.setPackage("com.example.myaccount");
-        boolean bool = bindService(intent,connection,BIND_AUTO_CREATE);
-        Log.i(Constant.TAG, "UserLoginActivity bindService bool = " + bool);
+        if (serviceManager == null) {
+            serviceManager = new MyServiceManager(this);
+        }
+        serviceManager.bindService();
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -172,14 +152,25 @@ public class UserLoginActivity extends AppCompatActivity {
         }
     };
 
-    public void mDialogShow(String str, int i) {
-        if (myDialog == null) {
-            myDialog = new MyDialog(UserLoginActivity.this);
-            myDialog.setsMessage(str)
+    public void isLogin() {
+        userLoginViewModel.setmBtLoginedVisibleStatus(true);
+        userLoginViewModel.setmBtUnLoginedVisibleStatus(false);
+        userLoginViewModel.setmLoginEnableStatus(false);
+    }
+
+    public void isUnLogin() {
+        userLoginViewModel.setmBtLoginedVisibleStatus(false);
+        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+    }
+
+    public void dialogShow(String str, int i) {
+        if (dialog == null) {
+            dialog = new MyDialog(UserLoginActivity.this);
+            dialog.setsMessage(str)
                     .setsCancel(getResources().getString(R.string.cancel), new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            myDialog.dismiss();
+                            dialog.dismiss();
                         }
                     }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                         @Override
@@ -188,19 +179,19 @@ public class UserLoginActivity extends AppCompatActivity {
                                 case 1:
                                     Intent intent1 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
                                     startActivity(intent1);
-                                    myDialog.dismiss();
+                                    dialog.dismiss();
                                     break;
                                 case 2:
                                     Intent intent2 = new Intent(UserLoginActivity.this, AdminActivity.class);
+                                    intent2.putExtra("page", 2);
                                     startActivity(intent2);
-                                    myDialog.dismiss();
+                                    dialog.dismiss();
                                     break;
                                 case 3:
                                     int id = 0;
                                     try {
-                                        id = iMyUser.mDeleteUser(mid);
-                                        userLoginViewModel.setmBtLoginedVisibleStatus(false);
-                                        userLoginViewModel.setmBtUnLoginedVisibleStatus(true);
+                                        id = serviceManager.onDeleteUser(mid);
+                                        isUnLogin();
                                         userLoginViewModel.setmTvllVisibleStatus(false);
                                     } catch (RemoteException e) {
                                         e.printStackTrace();
@@ -209,22 +200,22 @@ public class UserLoginActivity extends AppCompatActivity {
                                     if (id > 0) {
                                         Log.i(Constant.TAG, "UserLoginActivity delete logout OK!");
                                     }
-                                    myDialog.dismiss();
+                                    dialog.dismiss();
                                     break;
                             }
                         }
                     }).show();
         } else {
-            myDialog.show();
+            dialog.show();
         }
     }
 
     @Override
     protected void onDestroy() {
-        if (myDialog != null) {
-            myDialog.dismiss();
+        if (dialog != null) {
+            dialog.dismiss();
         }
         super.onDestroy();
-        this.unbindService(connection);
+        serviceManager.unBindService();
     }
 }

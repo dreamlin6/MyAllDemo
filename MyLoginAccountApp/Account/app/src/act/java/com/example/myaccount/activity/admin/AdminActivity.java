@@ -1,4 +1,4 @@
-package com.example.myaccount.admin;
+package com.example.myaccount.activity.admin;
 
 import android.content.Intent;
 import android.database.ContentObserver;
@@ -23,12 +23,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
+import com.example.myaccount.activity.login.UserLoginActivity;
 import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityAdminBinding;
 import com.example.myaccount.util.MyDialog;
-import com.example.myaccount.login.UserLoginActivity;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.myaccount.register;
+package com.example.myaccount.activity.register;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,9 +17,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
+import com.example.myaccount.activity.login.UserLoginActivity;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.ActivityRegisterBinding;
-import com.example.myaccount.login.UserLoginActivity;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserRegisterViewModel;
 

@@ -3,30 +3,30 @@
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="fragDebug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleFragDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileFragDebugSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="actDebug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleActDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileActDebugSources" />
         <afterSyncTasks>
-          <task>generateFragDebugSources</task>
+          <task>generateActDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/frag/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/src/fragDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/frag/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/frag/debug" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestFrag/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/src/androidTestFragDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/frag/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/frag/debug" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/act/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/src/actDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/act/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/act/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestAct/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/src/androidTestActDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/act/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/act/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/fragDebugUnitTest/out" />
+    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/actDebugUnitTest/out" />
     <content url="file://$MODULE_DIR$/../../../app/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../../app/src/testAct" />
+    <content url="file://$MODULE_DIR$/../../../app/src/testActDebug" />
     <content url="file://$MODULE_DIR$/../../../app/src/testDebug" />
-    <content url="file://$MODULE_DIR$/../../../app/src/testFrag" />
-    <content url="file://$MODULE_DIR$/../../../app/src/testFragDebug" />
     <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="MyAccount.app.main" scope="TEST" />

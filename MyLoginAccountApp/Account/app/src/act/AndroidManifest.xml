@@ -33,23 +33,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".admin.AdminActivity"
+            android:name=".activity.admin.AdminActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
         <activity
-            android:name=".admin.AdminLoginActivity"
+            android:name=".activity.admin.AdminLoginActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
         <activity
-            android:name=".login.UserLoginActivity"
+            android:name=".activity.login.UserLoginActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
         <activity
-            android:name=".register.UserRegisterActivity"
+            android:name=".activity.register.UserRegisterActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
         <activity
-            android:name=".change.UserChangeActivity"
+            android:name=".activity.change.UserChangeActivity"
             android:exported="true"
             android:launchMode="singleTop"></activity>
     </application>
