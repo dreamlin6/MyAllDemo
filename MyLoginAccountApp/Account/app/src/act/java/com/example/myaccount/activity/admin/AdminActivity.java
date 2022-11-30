@@ -23,7 +23,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
-import com.example.myaccount.activity.login.UserLoginActivity;
 import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
@@ -74,11 +73,6 @@ public class AdminActivity extends AppCompatActivity {
                     case 1:
                         Intent intent1 = new Intent(AdminActivity.this, AdminLoginActivity.class);
                         startActivity(intent1);
-                        finish();
-                        break;
-                    case 2:
-                        Intent intent2 = new Intent(AdminActivity.this, UserLoginActivity.class);
-                        startActivity(intent2);
                         finish();
                         break;
                 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <import type="com.example.myaccount.constant.Constant" />
+
+        <variable
+            name="adminloginvm"
+            type="com.example.myaccount.viewmodel.AdminLoginViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top|center">
+        <TextView
+            android:id="@+id/loginTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{adminloginvm.mLoginStatusTips}"
+            android:textSize="@dimen/textSize30"
+            android:textColor="@color/red"
+            android:layout_marginTop="@dimen/dimen_60"
+            app:loginStatus="@{adminloginvm.mAdminLoginStatus}"/>
+        <EditText
+            android:id="@+id/editAdminUser"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/account_tips"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <EditText
+            android:id="@+id/editAdminPass"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass_tips"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <Button
+            android:id="@+id/adminLogin"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:enabled="@{adminloginvm.mEditStatus}"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+        <Button
+            android:id="@+id/tohome"
+            android:layout_width="@dimen/dimen_300"
+            android:layout_height="wrap_content"
+            android:text="@string/toHome"
+            android:layout_marginTop="@dimen/layout_marginTop30"/>
+    </LinearLayout>
+</layout>

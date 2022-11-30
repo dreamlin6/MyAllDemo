@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/dimen_60"
+            android:layout_marginTop="@dimen/dimen_30"
             android:textSize="@dimen/textSize26"
             android:visibility="@{userloginvm.mTvllVisibleStatus ? View.VISIBLE : View.INVISIBLE}"/>
         <EditText

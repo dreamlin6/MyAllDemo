@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FrameLayout frameLayout;
     private SwTabLayout mTab;
-    private static FragmentManager fm;
-    FragmentTransaction ft;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
         mTab.setLeft("ADMIN");
         mTab.setRight("USER");
 
+        Fragment fragment = new AdminLoginFragment();
+        ft.add(R.id.framelayout, fragment).commit();
+
         mTab.setLeftListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new AdminLoginFragment();
-                ft.add(R.id.framelayout, fragment);
-                ft.commit();
+                FragmentTransaction ft1 = fm.beginTransaction();
+                ft1.replace(R.id.framelayout, fragment).commit();
             }
         });
 
@@ -50,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new UserLoginFragment();
-                ft.add(R.id.framelayout, fragment);
-                ft.commit();
+                FragmentTransaction ft2 = fm.beginTransaction();
+                ft2.replace(R.id.framelayout, fragment).commit();
             }
         });
     }
