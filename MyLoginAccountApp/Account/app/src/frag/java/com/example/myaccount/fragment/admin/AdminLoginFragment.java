@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -23,6 +24,7 @@ import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.FragmentAdminLoginBinding;
+import com.example.myaccount.fragment.login.UserLoginFragment;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
@@ -41,7 +43,6 @@ public class AdminLoginFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_admin_login, container,false);
 
         fragmentAdminLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin_login, container, false);
         fragmentAdminLoginBinding.setLifecycleOwner(this);
@@ -54,6 +55,7 @@ public class AdminLoginFragment extends Fragment {
         fragmentAdminLoginBinding.adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(Constant.TAG, "adminLogin onclick");
                 try {
                     if (serviceManager.getAdminCount() > 0) {
                         try {
@@ -62,23 +64,22 @@ public class AdminLoginFragment extends Fragment {
                         } catch (RemoteException e) {
                             e.printStackTrace();
                         }
-                        Log.i(Constant.TAG, "AdminLoginViewModel adminLoginVerify TRUE");
-                        adminLoginViewModel.setAdminLoginStatus( isLogin ? ONE : TWO);
+                        Log.i(Constant.TAG, "AdminLoginViewModel adminLoginVerify " + isLogin);
+                        adminLoginViewModel.setAdminLoginStatus(isLogin ? ONE : TWO);
                         adminLoginViewModel.mLoginStatusTips.setValue(isLogin ? LOGIN_SUCCESS : LOGIN_FAIL);
                         fragmentAdminLoginBinding.editAdminUser.setText(null);
                         fragmentAdminLoginBinding.editAdminPass.setText(null);
+                        if (isLogin) {
+                            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                            AdminFragment adminFragment = new AdminFragment();
+                            fragmentTransaction.replace(R.id.framelayout, adminFragment).commit();
+                        }
                     } else {
                         Toast.makeText(getContext(), "无管理员用户，请先注册", Toast.LENGTH_SHORT).show();
                     }
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
-            }
-        });
-        fragmentAdminLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
         fragmentAdminLoginBinding.adminRegister.setOnClickListener(new View.OnClickListener() {
@@ -129,7 +130,7 @@ public class AdminLoginFragment extends Fragment {
         }
         serviceManager.bindService();
 
-        return view;
+        return fragmentAdminLoginBinding.getRoot();
     }
 
     TextWatcher watcher = new TextWatcher() {

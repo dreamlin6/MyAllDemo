@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -21,6 +22,7 @@ import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.FragmentUserRegisterBinding;
+import com.example.myaccount.fragment.login.UserLoginFragment;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserRegisterViewModel;
 
@@ -34,7 +36,7 @@ public class UserRegisterFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user_register, container,false);
+
         registerBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_user_register, container, false);
         registerBinding.setLifecycleOwner(this);
         
@@ -53,7 +55,9 @@ public class UserRegisterFragment extends Fragment {
         registerBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                UserLoginFragment loginFragment = new UserLoginFragment();
+                fragmentTransaction.replace(R.id.framelayout, loginFragment).commit();
             }
         });
         if (serviceManager == null) {
@@ -61,7 +65,7 @@ public class UserRegisterFragment extends Fragment {
         }
         serviceManager.bindService();
         
-        return view;
+        return registerBinding.getRoot();
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -116,9 +120,9 @@ public class UserRegisterFragment extends Fragment {
                                             }).setsConfirm(getResources().getString(R.string.confirm), new View.OnClickListener() {
                                                 @Override
                                                 public void onClick(View view) {
-//                                                    Intent intent = new Intent(UserRegisterActivity.this, UserLoginActivity.class);
-//                                                    startActivity(intent);
-//                                                    finish();
+                                                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                                                    UserLoginFragment loginFragment = new UserLoginFragment();
+                                                    fragmentTransaction.replace(R.id.framelayout, loginFragment).commit();
                                                 }
                                             }).show();
                                 } else {

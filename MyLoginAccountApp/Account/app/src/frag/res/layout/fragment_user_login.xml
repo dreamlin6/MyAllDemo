@@ -80,17 +80,6 @@
             android:layout_marginTop="@dimen/layout_marginTop30"
             android:visibility="@{userloginvm.mBtLoginedVisibleStatus ? View.VISIBLE : View.INVISIBLE}"/>
         <Button
-            android:id="@+id/tohome"
-            android:layout_width="@dimen/dimen_300"
-            android:layout_height="wrap_content"
-            android:text="@string/toHome"
-            app:layout_constraintTop_toBottomOf="@+id/register"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/layout_marginTop30"
-            app:mBtLogin="@{userloginvm.mBtUnLoginedVisibleStatus}"
-            android:visibility="visible"/>
-        <Button
             android:id="@+id/logout"
             android:layout_width="@dimen/dimen_300"
             android:layout_height="wrap_content"

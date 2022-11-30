@@ -14,12 +14,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.FragmentUserChangeBinding;
+import com.example.myaccount.fragment.login.UserLoginFragment;
 import com.example.myaccount.viewmodel.AdminLoginViewModel;
 import com.example.myaccount.viewmodel.UserChangeViewModel;
 
@@ -33,7 +35,7 @@ public class UserChangeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user_change, container,false);
+
         fragmentUserChangeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_user_change, container, false);
         fragmentUserChangeBinding.setLifecycleOwner(this);
 
@@ -49,8 +51,9 @@ public class UserChangeFragment extends Fragment {
         fragmentUserChangeBinding.changepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mId = getIntent().getStringExtra("mId");
-//                mPass = getIntent().getStringExtra("mPass");
+                Bundle bundle = getArguments();
+                mId = bundle.getString("mId");
+                mPass = bundle.getString("mPass");
                 Log.i(Constant.TAG, "UserChangeActivity changepass onClick mPass = " + mPass);
                 if (fragmentUserChangeBinding.oldpass.getText().toString().equals(mPass)) {
                     try {
@@ -72,7 +75,9 @@ public class UserChangeFragment extends Fragment {
         fragmentUserChangeBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                UserLoginFragment loginFragment = new UserLoginFragment();
+                fragmentTransaction.replace(R.id.framelayout, loginFragment).commit();
             }
         });
         if (serviceManager == null) {
@@ -80,7 +85,7 @@ public class UserChangeFragment extends Fragment {
         }
         serviceManager.bindService();
         
-        return view;
+        return fragmentUserChangeBinding.getRoot();
     }
 
     TextWatcher watcher = new TextWatcher() {

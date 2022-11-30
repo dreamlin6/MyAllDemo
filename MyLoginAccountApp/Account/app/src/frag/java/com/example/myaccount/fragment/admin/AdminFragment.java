@@ -30,6 +30,7 @@ import com.example.myaccount.adapter.UserListAdapter;
 import com.example.myaccount.bean.UserListBean;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.FragmentAdminBinding;
+import com.example.myaccount.fragment.register.UserRegisterFragment;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.AdminViewModel;
 
@@ -56,7 +57,6 @@ public class AdminFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_admin, container,false);
 
         fragmentAdminBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_admin, container, false);
         fragmentAdminBinding.setLifecycleOwner(this);
@@ -72,7 +72,9 @@ public class AdminFragment extends Fragment {
         fragmentAdminBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                AdminLoginFragment adminLoginFragment = new AdminLoginFragment();
+                fragmentTransaction.replace(R.id.framelayout, adminLoginFragment).commit();
             }
         });
         fragmentAdminBinding.deleteall.setOnClickListener(new View.OnClickListener() {
@@ -140,7 +142,7 @@ public class AdminFragment extends Fragment {
             }
         }).start();
         
-        return view;
+        return fragmentAdminBinding.getRoot();
     }
 
     private Handler handler  = new Handler(new Handler.Callback() {

@@ -16,12 +16,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myaccount.MyServiceManager;
 import com.example.myaccount.R;
 import com.example.myaccount.constant.Constant;
 import com.example.myaccount.databinding.FragmentUserLoginBinding;
+import com.example.myaccount.fragment.change.UserChangeFragment;
+import com.example.myaccount.fragment.register.UserRegisterFragment;
 import com.example.myaccount.util.MyDialog;
 import com.example.myaccount.viewmodel.UserChangeViewModel;
 import com.example.myaccount.viewmodel.UserLoginViewModel;
@@ -40,7 +43,6 @@ public class UserLoginFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user_login, container,false);
 
         userLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_user_login, container, false);
         userLoginBinding.setLifecycleOwner(this);
@@ -51,19 +53,17 @@ public class UserLoginFragment extends Fragment {
         userLoginBinding.setUserloginvm(userLoginViewModel); //设置绑定 XML和Adapter
         userLoginBinding.editPass.setTransformationMethod(PasswordTransformationMethod.getInstance());//输入框密码格式
 
-        userLoginBinding.tohome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//
-            }
-        });
         userLoginBinding.change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(Constant.TAG, String.format("UserLoginActivity change onclick mid = %s pass2 = %s", mId, mPass2));
-//                intent2.putExtra("mId", mId);
-//                intent2.putExtra("mPass", mPass2);
-//                startActivity(intent2);
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                UserChangeFragment changeFragment = new UserChangeFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("mId", mId);
+                bundle.putString("mPass", mPass2);
+                changeFragment.setArguments(bundle);
+                fragmentTransaction.replace(R.id.framelayout, changeFragment).commit();
             }
         });
         userLoginBinding.quit.setOnClickListener(new View.OnClickListener() {
@@ -84,8 +84,9 @@ public class UserLoginFragment extends Fragment {
         userLoginBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent3 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
-//                startActivity(intent3);
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                UserRegisterFragment registerFragment = new UserRegisterFragment();
+                fragmentTransaction.replace(R.id.framelayout, registerFragment).commit();
             }
         });
         userLoginBinding.login.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +129,7 @@ public class UserLoginFragment extends Fragment {
             serviceManager = new MyServiceManager(getContext());
         }
         serviceManager.bindService();
-        return view;
+        return userLoginBinding.getRoot();
     }
 
     TextWatcher watcher = new TextWatcher() {
@@ -170,8 +171,9 @@ public class UserLoginFragment extends Fragment {
                         public void onClick(View view) {
                             switch (i) {
                                 case REGISTER_DIALOG:
-//                                    Intent intent1 = new Intent(UserLoginActivity.this, UserRegisterActivity.class);
-//                                    startActivity(intent1);
+                                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                                    UserRegisterFragment registerFragment = new UserRegisterFragment();
+                                    fragmentTransaction.replace(R.id.framelayout, registerFragment).commit();
                                     dialog.dismiss();
                                     break;
                                 case LOGOUT_DIALOG:

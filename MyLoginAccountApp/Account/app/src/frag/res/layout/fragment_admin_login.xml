@@ -53,11 +53,5 @@
             android:text="@string/register"
             android:enabled="@{adminloginvm.mEditStatus}"
             android:layout_marginTop="@dimen/layout_marginTop30"/>
-        <Button
-            android:id="@+id/tohome"
-            android:layout_width="@dimen/dimen_300"
-            android:layout_height="wrap_content"
-            android:text="@string/toHome"
-            android:layout_marginTop="@dimen/layout_marginTop30"/>
     </LinearLayout>
 </layout>
